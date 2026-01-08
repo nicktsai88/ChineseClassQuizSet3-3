@@ -3,729 +3,1293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>童軍科目互動練習</title>
-    <!-- 引入 React 和 ReactDOM -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <!-- 引入 Babel 用於解析 JSX -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- 引入 Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>國文改錯測驗 (第3冊)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
-        /* 自定義樣式 */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f3f4f6;
+        :root {
+            /* 配色系統 */
+            --primary-color: #00695c;   /* 改用深綠色系作為改錯題的主題色 */
+            --secondary-color: #4db6ac; 
+            --bg-color: #e0f2f1;        
+            --text-color: #004d40;      
+            --accent-color: #009688;    
+            --correct-color: #2e7d32;   
+            --wrong-color: #c62828;     
+            --favorite-color: #ff8f00;  
+            --player-bg: #ffffff;
+            --header-height: 100px;
         }
-        .scroll-smooth {
-            scroll-behavior: smooth;
+
+        /* 鎖定 Body 捲動 */
+        html, body {
+            height: 100%;
+            overflow: hidden; 
         }
+
+        body { 
+            font-family: 'Noto Sans TC', "Microsoft JhengHei", Arial, sans-serif; 
+            max-width: 98vw; 
+            margin: 0 auto; 
+            padding: calc(var(--header-height) + 20px) 20px 20px 20px; 
+            background-color: var(--bg-color); 
+            color: var(--text-color);
+            background-image: 
+                linear-gradient(30deg, #b2dfdb 12%, transparent 12.5%, transparent 87%, #b2dfdb 87.5%, #b2dfdb),
+                linear-gradient(150deg, #b2dfdb 12%, transparent 12.5%, transparent 87%, #b2dfdb 87.5%, #b2dfdb),
+                linear-gradient(30deg, #b2dfdb 12%, transparent 12.5%, transparent 87%, #b2dfdb 87.5%, #b2dfdb),
+                linear-gradient(150deg, #b2dfdb 12%, transparent 12.5%, transparent 87%, #b2dfdb 87.5%, #b2dfdb),
+                linear-gradient(60deg, #b2dfdb77 25%, transparent 25.5%, transparent 75%, #b2dfdb77 75%, #b2dfdb77),
+                linear-gradient(60deg, #b2dfdb77 25%, transparent 25.5%, transparent 75%, #b2dfdb77 75%, #b2dfdb77);
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+            background-attachment: fixed;
+            box-sizing: border-box; 
+        }
+
+        h1, h2, h3 { text-align: center; color: var(--text-color); }
+        h1 { color: var(--primary-color); text-shadow: 1px 1px 2px rgba(255,255,255,0.5); margin-top: 0;}
+
+        /* --- 音樂播放器固定列 --- */
+        #music-player-bar {
+            position: fixed; top: 0; left: 0; width: 100%; height: var(--header-height);
+            background-color: var(--player-bg); border-bottom: 3px solid var(--primary-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; align-items: center;
+            justify-content: space-between; padding: 0 15px; box-sizing: border-box;
+            z-index: 10000;
+        }
+        .player-left { flex: 1; display: flex; justify-content: flex-start; align-items: center; }
+        .player-right { flex: 1; display: flex; justify-content: flex-end; }
+        .player-icon { font-size: 1.5em; background: #e0f2f1; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 2px solid var(--primary-color); color: var(--primary-color);}
+
+        #yt-wrapper {
+            position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+            width: 144px; height: 81px; background: #000; border: 2px solid var(--text-color);
+            border-radius: 4px; overflow: hidden; transition: all 0.3s ease; z-index: 5;
+        }
+        .yt-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 20; }
+        #yt-wrapper.video-hidden { width: 0; height: 0; border: none; opacity: 0; }
+        
+        .player-controls { display: flex; align-items: center; gap: 8px; }
+        .ctrl-btn { background: none; border: none; cursor: pointer; color: #7f8c8d; font-size: 1.4em; padding: 5px; }
+        .ctrl-btn:hover, .ctrl-btn.active { color: var(--primary-color); }
+        .volume-container { display: flex; align-items: center; gap: 5px; }
+        .volume-slider { width: 60px; accent-color: var(--primary-color); cursor: pointer;}
+        .mode-btn { border: 1px solid #bdc3c7; background: #fff; padding: 5px 10px; border-radius: 20px; font-size: 0.8em; cursor: pointer; display: flex; align-items: center; gap: 5px;}
+        .mode-btn:hover { border-color: var(--primary-color); color: var(--primary-color); }
+
+        /* --- 容器通用 --- */
+        .container-box {
+            background: rgba(255, 255, 255, 0.95); padding: 25px; border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid rgba(0,0,0,0.05);
+            backdrop-filter: blur(10px); position: relative; margin-bottom: 20px;
+            max-height: calc(100vh - 180px); 
+            overflow-y: auto; 
+        }
+
+        /* --- Welcome Screen --- */
+        #welcome-screen {
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://www.transparenttextures.com/patterns/cubes.png');
+            border-left: 6px solid var(--primary-color);
+        }
+        .avatar-selection { display: flex; justify-content: center; gap: 15px; margin: 20px 0; }
+        .avatar-option {
+            width: 80px; height: 80px; border-radius: 50%; border: 4px solid #fff; cursor: pointer;
+            transition: 0.3s; object-fit: cover; background: #FFF; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .avatar-option.selected { border-color: var(--primary-color); transform: scale(1.1); }
+        .quick-login-area { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px; }
+        .user-tag { background: #fff; border: 1px solid #bdc3c7; padding: 6px 15px; border-radius: 20px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 0.95em;}
+        .delete-user { font-weight: bold; padding: 2px 6px; border-radius: 50%; background: #eee; color: #888; }
+        .delete-user:hover { background: var(--wrong-color); color: #fff; }
+        input[type="text"] { padding: 12px; font-size: 1.2em; border: 2px solid #bdc3c7; border-radius: 30px; width: 80%; text-align: center; margin: 10px 0;}
+
+        /* --- Dashboard (Level Screen) --- */
+        #level-screen-content {
+            display: flex; gap: 20px; align-items: flex-start;
+            min-height: 400px;
+            justify-content: center;
+        }
+        
+        #level-screen {
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8));
+        }
+
+        .dashboard-std-zone {
+            flex: 1; border: 1px solid #b2dfdb; border-radius: 12px; padding: 20px;
+            background: rgba(255,255,255,0.9); max-width: 900px;
+        }
+        .dashboard-title { 
+            font-size: 1.6em; 
+            color: var(--primary-color); margin-bottom: 20px; 
+            display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #b2dfdb; padding-bottom: 10px;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        .overall-progress { font-size: 1em; color: #555; background: #fff; padding: 8px 18px; border-radius: 20px; border: 1px solid #ddd; }
+
+        .level-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+            gap: 25px; justify-items: center; 
+            padding-bottom: 120px; 
+        }
+        .level-grid-btn {
+            width: 100%; aspect-ratio: 1; min-height: 140px; 
+            border-radius: 18px;
+            background: #fff; border: 4px solid var(--primary-color); 
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            cursor: pointer; transition: 0.2s; box-shadow: 0 6px 0 #80cbc4; color: var(--text-color);
+            padding: 15px;
+        }
+        .level-grid-btn:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 8px 0 #80cbc4; background: #e0f2f1; }
+        .level-grid-btn:active:not(:disabled) { transform: translateY(2px); box-shadow: none; }
+        .level-grid-btn:disabled { border-color: #bdc3c7; color: #bdc3c7; background: #f0f0f0; cursor: not-allowed; box-shadow: none;}
+        
+        .lvl-icon { 
+            font-size: 3.5em; 
+            margin-bottom: 10px; 
+            font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Android Emoji", sans-serif;
+            line-height: 1.1;
+        }
+        
+        .lvl-score { font-size: 1.1em; font-weight: bold; color: var(--correct-color); background: #e8f5e9; padding: 4px 10px; border-radius: 12px; margin-top: 8px; }
+        .lvl-label { font-size: 1.4em; font-weight: bold; font-family: "KaiTi", "BiauKai", serif;}
+        
+        .resume-text { 
+            font-size: 1em !important; 
+            color: #e67e22; 
+            font-weight: bold; 
+            margin-top: 5px; 
+            background: #fff3e0; 
+            padding: 2px 8px; 
+            border-radius: 10px; 
+        }
+
+        /* --- Button Styles --- */
+        .btn { padding: 12px 28px; border-radius: 30px; border: none; cursor: pointer; font-weight: bold; font-size: 1.2em; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); color: #fff; background: var(--primary-color); display: inline-flex; align-items: center; gap: 5px;}
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 10px rgba(0,0,0,0.15); }
+        .btn-red { background: var(--wrong-color); } .btn-red:hover { background: #b71c1c; }
+        .btn-green { background: var(--correct-color); } .btn-green:hover { background: #1b5e20; }
+        .btn-pink { background: var(--favorite-color); } .btn-pink:hover { background: #ef6c00; }
+        .btn-gray { background: #95a5a6; } .btn-gray:hover { background: #7f8c8d; }
+        .btn-sm { padding: 8px 18px; font-size: 1em; box-shadow: none; border: 1px solid rgba(255,255,255,0.3); }
+        .btn-sm:hover { transform: translateY(-1px); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+        /* --- Error Hunt Mode Styles --- */
+        .quiz-header { display: none; } 
+        
+        .question-box { 
+            background: #fff; 
+            padding: 0;
+            border-radius: 10px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            margin-bottom: 20px; 
+            display: flex;
+            flex-wrap: wrap; /* RWD */
+            overflow: hidden;
+            border-top: 5px solid var(--primary-color);
+            height: calc(100vh - 240px); 
+            align-items: stretch;
+        }
+
+        /* 左側：改錯句子區 */
+        .article-section {
+            flex: 2; /* 佔比較大 */
+            min-width: 300px;
+            padding: 40px;
+            background: #fafafa;
+            border-right: 1px solid #eee;
+            height: 100%;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            padding-bottom: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 垂直置中 */
+        }
+
+        /* 右側：選項區 */
+        .questions-section {
+            flex: 1; /* 佔比較小 */
+            min-width: 250px;
+            padding: 30px;
+            background: #e0f2f1;
+            height: 100%;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            padding-bottom: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* 句子樣式 */
+        .sentence-display {
+            font-size: 2.2em; /* 字體加大 */
+            line-height: 2;
+            color: #333;
+            letter-spacing: 0.1em;
+            text-align: justify;
+        }
+
+        /* 可互動的文字 */
+        .interactive-char {
+            cursor: pointer;
+            padding: 2px 4px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            position: relative;
+            display: inline-block;
+        }
+        .interactive-char:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.1);
+        }
+        
+        /* 已修正的正確字 */
+        .interactive-char.fixed {
+            color: var(--wrong-color); /* 改錯後的字顯示紅色，依照慣例 */
+            font-weight: bold;
+            pointer-events: none; /* 不可再點 */
+            animation: popIn 0.3s ease;
+        }
+        
+        /* 點選中的字 */
+        .interactive-char.active {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            80% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* 右側選項提示 */
+        .options-placeholder {
+            text-align: center;
+            color: #777;
+            font-size: 1.2em;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            animation: fadeIn 0.3s;
+        }
+
+        .option-btn { 
+            width: 100%; 
+            padding: 20px; 
+            background: #fff; 
+            border: 3px solid #b2dfdb; 
+            border-radius: 15px; 
+            cursor: pointer; 
+            font-size: 1.8em; 
+            text-align: center; 
+            transition: 0.2s; 
+            color: #004d40;
+            font-weight: bold;
+        }
+        .option-btn:hover:not(:disabled) { border-color: var(--primary-color); background: #b2dfdb; }
+        .option-btn.correct { background: #c8e6c9; border-color: var(--correct-color); color: #1b5e20; }
+        .option-btn.wrong { background: #ffcdd2; border-color: var(--wrong-color); color: #b71c1c; }
+
+        .article-title-bar {
+            display: flex; justify-content: flex-end; align-items: center; gap: 10px;
+            margin-bottom: 20px; 
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .fav-heart {
+            font-size: 2em; cursor: pointer; color: #ccc; transition: 0.3s;
+        }
+        .fav-heart.active { color: var(--favorite-color); }
+        .fav-heart:hover { transform: scale(1.1); }
+        .fav-heart:active { transform: scale(0.9); }
+
+        /* --- Collection & Mistake & History --- */
+        .list-screen-content { padding: 10px; }
+        .list-item-card {
+            background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 5px solid #ddd;
+            display: flex; justify-content: space-between; align-items: center;
+            cursor: pointer; transition: 0.2s;
+        }
+        .list-item-card:hover { transform: translateX(5px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .list-item-card.fav-item { border-left-color: var(--favorite-color); }
+        .list-item-card.mistake-item { border-left-color: var(--wrong-color); }
+        
+        .list-item-title { font-size: 1.3em; font-weight: bold; color: #333; }
+        .list-item-info { color: #666; font-size: 1em; margin-top: 5px; }
+        .list-empty-msg { text-align: center; color: #888; font-size: 1.3em; margin-top: 30px; }
+
+        /* --- Modal & AI Chat (Same as before but styles adjusted) --- */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 20000; display: none; justify-content: center; align-items: center; }
+        .modal-content { background: white; padding: 20px; border-radius: 10px; max-width: 90%; max-height: 90%; position: relative; text-align: center; }
+        .modal-close { position: absolute; top: -15px; right: -15px; background: red; color: white; width: 30px; height: 30px; border-radius: 50%; border: 2px solid white; cursor: pointer; font-weight: bold;}
+
+        #ai-chat-window {
+            position: fixed; bottom: 20px; right: 20px; width: 350px; height: 500px;
+            background: #fff; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            border: 2px solid var(--primary-color); z-index: 20001; display: none; flex-direction: column; overflow: hidden; font-size: 0.95em;
+        }
+        .ai-header {
+            background: var(--primary-color); color: white; padding: 12px 15px;
+            display: flex; justify-content: space-between; align-items: center; font-weight: bold;
+        }
+        .ai-header-close { cursor: pointer; font-size: 1.2em; background: rgba(255,255,255,0.2); border-radius: 50%; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center;}
+        .ai-header-close:hover { background: rgba(255,255,255,0.4); }
+        .ai-messages {
+            flex: 1; padding: 15px; overflow-y: auto; background: var(--bg-color);
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .ai-msg { padding: 8px 12px; border-radius: 10px; max-width: 85%; line-height: 1.4; word-wrap: break-word; }
+        .ai-msg.user { align-self: flex-end; background: var(--primary-color); color: white; border-bottom-right-radius: 2px; }
+        .ai-msg.bot { align-self: flex-start; background: white; border: 1px solid #ddd; color: #333; border-bottom-left-radius: 2px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .ai-input-area {
+            padding: 10px; background: white; border-top: 1px solid #eee; display: flex; gap: 8px;
+        }
+        .ai-input { flex: 1; padding: 8px 12px; border: 1px solid #ccc; border-radius: 20px; outline: none; transition: 0.3s; }
+        .ai-input:focus { border-color: var(--primary-color); }
+        .ai-send-btn { background: var(--primary-color); color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-weight: bold; }
+        .ai-send-btn:hover { background: #004d40; }
+
+        /* Floating Next Button */
+        #next-btn {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            right: 40px; 
+            width: auto;
+            padding: 15px 30px;
+            z-index: 10000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            font-size: 1.4em;
+            margin-top: 0;
+            animation: bounceIn 0.5s;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0); opacity: 0; }
+            60% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        
+        /* Toast Notification */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 50px;
+            padding: 16px;
+            position: fixed;
+            z-index: 20002;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 1.2em;
+        }
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+
+        /* RWD */
+        @media (max-width: 768px) {
+            #level-screen-content { flex-direction: column; }
+            .dashboard-std-zone { border-right: none; border-bottom: 1px solid #b2dfdb; }
+            #music-player-bar { height: 60px; padding: 0 10px; }
+            body { padding-top: 80px; }
+            #yt-wrapper { display: none; position: fixed; bottom: 10px; right: 10px; width: 120px; height: 67px; top: auto; left: auto; transform: none; }
+            #yt-wrapper.mobile-visible { display: block; }
+            
+            #ai-chat-window { width: 90%; right: 5%; bottom: 80px; height: 50vh; }
+
+            .question-box { 
+                flex-direction: column;
+                height: auto; 
+            }
+            .article-section { 
+                border-right: none; 
+                border-bottom: 1px solid #eee;
+                height: auto; 
+                min-height: 250px;
+                overflow-y: visible; 
+            }
+            .questions-section {
+                height: auto; 
+                min-height: 250px;
+                overflow-y: visible;
+            }
+            
+            .nav-text { display: none; }
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
-    <div id="root"></div>
 
-    <script type="text/babel">
-        // Lucide Icons 組件封裝
-        const Icon = ({ name, className }) => {
-            const lucide = window.lucide;
-            if (!lucide) return null;
+    <!-- 音樂播放器 -->
+    <div id="music-player-bar">
+        <div class="player-left">
+            <div class="player-icon">🎵</div>
             
-            React.useEffect(() => {
-                lucide.createIcons();
-            });
+            <div id="dashboard-nav-btns" style="display:none; align-items:center; gap:10px; margin-left:20px;">
+                <button class="btn btn-sm btn-red" onclick="showMistakes()">📕 <span class="nav-text">錯題本</span></button>
+                <button class="btn btn-sm btn-pink" onclick="showFavorites()">⭐ <span class="nav-text">我的最愛</span></button>
+                <button class="btn btn-sm btn-green" onclick="showHistory()">🏆 <span class="nav-text">金榜</span></button>
+                <button class="btn btn-sm btn-gray" onclick="logout()">🚪 <span class="nav-text">登出</span></button>
+            </div>
 
-            return <i data-lucide={name} className={className}></i>;
-        };
+            <div id="quiz-nav-info" style="display:none; align-items:center; gap:15px; margin-left:15px;">
+                <span id="nav-level-title" style="font-weight:bold; color:var(--primary-color); font-size: 1.3em;"></span>
+                <span style="font-weight:bold; color:#555; white-space: nowrap; font-size: 1.2em;">
+                    <span id="nav-current-q">1</span> / <span id="nav-total-q">10</span>
+                </span>
+                <button class="btn btn-gray" style="padding: 8px 18px; font-size: 1em;" onclick="exitQuiz()">🏠 離開</button>
+            </div>
+        </div>
+        
+        <div id="yt-wrapper">
+            <div id="yt-player"></div>
+            <div class="yt-overlay"></div>
+        </div>
+        
+        <div class="player-right">
+            <div class="player-controls">
+                <button class="ctrl-btn" onclick="prevTrack()">⏮</button>
+                <button id="main-play-btn" class="ctrl-btn" onclick="togglePlay()">▶</button>
+                <button class="ctrl-btn" onclick="nextTrack()">⏭</button>
+                
+                <div class="volume-container">
+                    <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="30" oninput="setVolume(this.value)">
+                </div>
 
-        const Play = ({ className }) => <Icon name="play" className={className} />;
-        const CheckCircle = ({ className }) => <Icon name="check-circle" className={className} />;
-        const XCircle = ({ className }) => <Icon name="x-circle" className={className} />;
-        const RefreshCw = ({ className }) => <Icon name="refresh-cw" className={className} />;
-        const ChevronRight = ({ className }) => <Icon name="chevron-right" className={className} />;
-        const Award = ({ className }) => <Icon name="award" className={className} />;
-        const BookOpen = ({ className }) => <Icon name="book-open" className={className} />;
-        const CheckSquare = ({ className }) => <Icon name="check-square" className={className} />;
-        const Eye = ({ className }) => <Icon name="eye" className={className} />;
-        const Home = ({ className }) => <Icon name="home" className={className} />;
+                <button id="toggle-video-btn" class="ctrl-btn active" onclick="toggleVideoDisplay()">👁️</button>
+                <button id="ai-btn" class="ctrl-btn" onclick="toggleChatWindow()" title="AI 書僮">🤖</button>
+                <button id="mode-btn" class="mode-btn" onclick="changeMode()">
+                    <span id="mode-icon">🔁</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
-        const ScoutQuizApp = () => {
-            // view 狀態: 'start' | 'quiz' | 'score' | 'study'
-            const [currentView, setCurrentView] = React.useState('start');
-            const [score, setScore] = React.useState(0);
-            
-            // answers 改為陣列，索引對應題目索引
-            const [answers, setAnswers] = React.useState(Array(30).fill(null));
+    <!-- 歡迎畫面 -->
+    <div id="welcome-screen" class="container-box fade-in">
+        <h1>國文改錯測驗 (第3冊)</h1>
+        <div style="font-size: 4em; text-align: center; margin: 20px;">🕵️‍♂️📝✅</div>
+        <p style="text-align: center; font-size: 1.2em;">眼明手快，找出錯別字！請輸入雅號，準備開始挑戰！</p>
+        
+        <div style="text-align:center;">
+            <input type="text" id="username" placeholder="請輸入雅號..." />
+        </div>
+        
+        <div class="avatar-selection">
+            <img src="images/Chris.png" class="avatar-option selected" onclick="selectAvatar('Chris.png', this)">
+            <img src="images/Louis.png" class="avatar-option" onclick="selectAvatar('Louis.png', this)">
+            <img src="images/kitty.png" class="avatar-option" onclick="selectAvatar('kitty.png', this)">
+        </div>
 
-            // 題目資料庫
-            const questions = [
-                {
-                    id: 1,
-                    question: "小美與奇奇想在小隊聯團露營時帶大家玩破冰遊戲,「為了確認大家都聽得懂遊戲規則,他們兩個示範了三次」。請問:示範的目的是什麼?",
-                    options: [
-                        "(A)加深參加者的印象",
-                        "(B)再次確認流程",
-                        "(C)遊戲變化由易至難",
-                        "(D)遊戲掌握公平公正"
-                    ],
-                    answer: "A"
-                },
-                {
-                    id: 2,
-                    question: "關於背包裝填原則如下,請選出正確的組合。(甲)不可壓縮物品。(乙)急需物品放上層。(丙)柔軟貼背。(丁)左右平衡。(戊)物品不外掛。(己)物品可外掛。",
-                    options: [
-                        "(A)甲丙丁戊",
-                        "(B)甲丙丁己",
-                        "(C)乙丙丁戊",
-                        "(D)乙丙丁己"
-                    ],
-                    answer: "C"
-                },
-                {
-                    id: 3,
-                    question: "打開網路搜尋關鍵字:危險露營。斗大的新聞標題即在眼前:知名爆紅露營區位「山崩地滑區」!官消極、民陷危機。記者調查30家桃竹苗知名營區,發現有16家位在「山崩與地滑、土石流潛勢區」的敏感地帶。請問:上述新聞是在提醒大家選擇營地時應注意什麼?",
-                    options: [
-                        "(A)水源補給",
-                        "(B)有無雨棚",
-                        "(C)海拔高度",
-                        "(D)遠離危險"
-                    ],
-                    answer: "D"
-                },
-                {
-                    id: 4,
-                    question: "乖乖童軍團預計到宜蘭清水公園附近的營地露營,順便搭上端午節的氣氛,在冬山河來場小隊龍舟競賽。請問:乖乖童軍團規畫此次主題是屬於什麼體驗?",
-                    options: [
-                        "(A)農村生活體驗",
-                        "(B)傳統文化體驗",
-                        "(C)觀星體驗",
-                        "(D)原住民文化體驗"
-                    ],
-                    answer: "B"
-                },
-                {
-                    id: 5,
-                    question: "臺灣山區風景迷人,百岳當中有些只需半日即可輕鬆完成攀登,也有些山需要好幾日才能完成,但山區天氣變化大,雨衣絕對是不可缺少的裝備。請問:雨衣的放置應考量哪一項打包技巧?",
-                    options: [
-                        "(A)平衡",
-                        "(B)易取",
-                        "(C)流線",
-                        "(D)壓縮"
-                    ],
-                    answer: "B"
-                },
-                {
-                    id: 6,
-                    question: "此類型營地的基本需求就是汽車可直接到達營位旁,提供充足水電,其次是對於休閒設施的要求。此類型營地於歐美國家相當盛行,臺灣近年來也愈來愈多,如新北市福隆營地、臺北市貴子坑露營場等。請問:上述是屬於何種露營?",
-                    options: [
-                        "(A)野營式露營",
-                        "(B)營舍式露營",
-                        "(C)綜合度假式露營",
-                        "(D)露營車式露營"
-                    ],
-                    answer: "D"
-                },
-                {
-                    id: 7,
-                    question: "曉菁和同學一起去參加隔宿露營,結果忘了帶□□,睡覺時覺得地面有異物感,半夜不斷冷醒,早上起床睡袋也有點溼溼的。請問:曉菁忘了帶什麼裝備?",
-                    options: [
-                        "(A)枕頭",
-                        "(B)睡墊",
-                        "(C)帳篷",
-                        "(D)雨衣"
-                    ],
-                    answer: "B"
-                },
-                {
-                    id: 8,
-                    question: "只要打開交通部觀光署露營區資訊查詢專區,就能查到全臺各地合法的露營場,這樣就能提供露營者選擇的營地。請問:□□應填入下列哪一個選項?",
-                    options: [
-                        "(A)便利",
-                        "(B)人氣",
-                        "(C)合格",
-                        "(D)國營"
-                    ],
-                    answer: "C"
-                },
-                {
-                    id: 9,
-                    question: "海南島曾經發生多宗在椰子樹下露營或者休息時,因濱海風大,被成熟的椰子「瓜熟蒂落」而造成人員受傷的事件。請問:上述在提醒我們選擇營地時必須注意什麼?",
-                    options: [
-                        "(A)遠離危險",
-                        "(B)水源補給",
-                        "(C)營地平整",
-                        "(D)交通便利"
-                    ],
-                    answer: "A"
-                },
-                {
-                    id: 10,
-                    question: "小丸子一群人在討論營火內容,大家分工如下:花輪表示他們家的管家可以協助搭建營火;班長表示他想負責營邊談話;豬太郎想負責點火;小丸子則認領帶大家哼唱晚會歌的重責大任。請將上述人員的工作依營火順序進行排列。",
-                    options: [
-                        "(A)花輪家→豬太郎→小丸子→班長",
-                        "(B)花輪家→豬太郎→班長→小丸子",
-                        "(C)花輪家→小丸子→豬太郎→班長",
-                        "(D)花輪家→班長→小丸子→豬太郎"
-                    ],
-                    answer: "C"
-                },
-                {
-                    id: 11,
-                    question: "國中生小萃希望拍照時能更纖細苗條,開始記錄自己的飲食與運動。下列哪天的記錄對維持健康體態較適宜?",
-                    options: [
-                        "(A)Day1飲食:早餐/蜂蜜水一杯;午餐/芭樂一顆+蜂蜜水一杯;晚餐/蔬菜豆腐清湯。運動:慢跑一小時。",
-                        "(B)Day2飲食:早餐/茶葉蛋+蘋果一顆;午餐/五穀飯一碗+青菜兩種+滷雞腿一支;晚餐/地瓜+水炒青菜+蒸魚肉。運動:慢跑半小時、重訓15分鐘。",
-                        "(C)Day3飲食:早餐/無;午餐/牛肉漢堡+薯條+可樂;晚餐/炸排骨便當+冬瓜檸檬。運動:空中腳踏半小時。",
-                        "(D)Day4飲食:早餐/小黃瓜一條;午餐/地瓜一條;晚餐/水煮白肉一掌心。運動:重訓半小時、跳舞半小時。"
-                    ],
-                    answer: "B"
-                },
-                {
-                    id: 12,
-                    question: "若為自己三代同堂的家人規畫露營,會以哪些條件為優先?(甲)距離。(乙)雨棚。(丙)採買。(丁)電源。",
-                    options: [
-                        "(A)甲乙丙",
-                        "(B)甲乙丁",
-                        "(C)乙丙丁",
-                        "(D)甲乙丙丁"
-                    ],
-                    answer: "D"
-                },
-                {
-                    id: 13,
-                    question: "奇奇為了參加隔宿露營,列出許多要買的東西。請問:關於新手準備裝備的原則,下列何者錯誤?",
-                    options: [
-                        "(A)工欲善其事,一定要一次到位添購完備",
-                        "(B)家中能用的就用",
-                        "(C)向親友詢問借用",
-                        "(D)到露營器材出租店租用"
-                    ],
-                    answer: "A"
-                },
-                {
-                    id: 14,
-                    question: "其實營火沒有固定的形式,但就如同阿美族的豐年祭、賽夏族人的矮靈祭等,童軍營火還是有特別的地方,下列哪些是童軍營火特別之處?(甲)火域的用火安全。(乙)懷著感恩的心。(丙)學習分工。(丁)邊烤食物邊唱歌跳舞,將火的功能發揮到最大。",
-                    options: [
-                        "(A)甲乙丙",
-                        "(B)甲乙丁",
-                        "(C)甲丙丁",
-                        "(D)乙丙丁"
-                    ],
-                    answer: "A"
-                },
-                {
-                    id: 15,
-                    question: "臺灣邁向高齡化社會,博暐95歲的爺爺這幾年總是懷疑家人偷他的錢;而且半夜睡不著,吵著要出去工作;忘記自己說過的話而責備家人。請問:博暐的爺爺可能面臨何種狀況?",
-                    options: [
-                        "(A)離婚",
-                        "(B)遭竊",
-                        "(C)失智",
-                        "(D)水災"
-                    ],
-                    answer: "C"
-                },
-                {
-                    id: 16,
-                    question: "羽絨背心的靈活穿搭,深受各年齡層的喜愛,一方面可將溫度鎖住,另一方面因背心剪裁使得雙手活動較方便。請問:這是屬於戶外活動穿搭系統的哪一層?",
-                    options: [
-                        "(A)保暖層",
-                        "(B)活動層",
-                        "(C)防水層",
-                        "(D)排汗層"
-                    ],
-                    answer: "A"
-                },
-                {
-                    id: 17,
-                    question: "鳳梨嫩雞沙拉,食譜如下: 食材:雞胸肉150克、罐頭鳳梨一片、各式生菜適量、和風沙拉醬兩茶匙。做法: 1.完整雞胸肉加入切丁鳳梨後蒸熟。2.雞胸肉取出斜切成片。3.放入生菜並擺上雞肉片,淋上雞汁及和風醬汁即可。製作這道菜看需要哪些工具?(甲)電鍋(乙)菜刀 (丙)砧板(丁)烤箱。",
-                    options: [
-                        "(A)甲乙丙",
-                        "(B)乙丙丁",
-                        "(C)丙丁",
-                        "(D)甲乙丙丁"
-                    ],
-                    answer: "A"
-                },
-                {
-                    id: 18,
-                    question: "近年流行的氣炸鍋,其原理為上方的加熱器產生高溫熱風,藉由對流的方式讓食物被熱空氣包圍、高溫烘烤,把食物本身的油脂逼出,產生「油炸」的效果。依據氣炸鍋的原理,下列何種菜肴不適合用氣炸鍋製作?",
-                    options: [
-                        "(A)地瓜QQ球",
-                        "(B)涼拌海蜇皮",
-                        "(C)香草烤雞腿",
-                        "(D)戚風蛋糕"
-                    ],
-                    answer: "B"
-                },
-                {
-                    id: 19,
-                    question: "海島型氣候的臺灣一到夏天就變得又悶又熱!穿著人造纖維材質的衣物,可減少肌膚與衣物黏在一塊兒的問溼感。上述是指戶外活動穿搭系統的哪一層?",
-                    options: [
-                        "(A)保暖層",
-                        "(B)活動層",
-                        "(C)防水層",
-                        "(D)排汗層"
-                    ],
-                    answer: "D"
-                },
-                {
-                    id: 20,
-                    question: "位在陽明山的營地有著得天獨厚的條件,營區旁就有國家公園,可以安排步道主題探訪露營;湍急的小溪也可以請專業人員評估,是否適合從事溯溪體驗。請問:上述露營是屬於哪一種類型?",
-                    options: [
-                        "(A)服務活動",
-                        "(B)體能活動",
-                        "(C)自然體驗活動",
-                        "(D)靜態活動"
-                    ],
-                    answer: "C"
-                },
-                {
-                    id: 21,
-                    question: "營地是非經人工規畫的自然野地,使用者的主要目的是登山,露營只是手段而已,此類露營地,通常處於深山之中。請問這屬於什麼類型的營地?",
-                    options: [
-                        "(A)野營式露營",
-                        "(B)營舍式露營",
-                        "(C)露營車式露營",
-                        "(D)綜合度假式露營"
-                    ],
-                    answer: "A"
-                },
-                {
-                    id: 22,
-                    question: "奇奇和蒂蒂參加學校隔宿露營活動,晚上則是住在廢棄校舍改建的大通鋪。請問:這是屬於哪一種形式的露營?",
-                    options: [
-                        "(A)野營式露營",
-                        "(B)營舍式露營",
-                        "(C)綜合度假式露營",
-                        "(D)露營車式露營"
-                    ],
-                    answer: "B"
-                },
-                {
-                    id: 23,
-                    question: "「綠林營地為休閒農場,有果園、稻田及可容納50人的平坦草地,鄰近老街、客家文化中心。」請問:綠林營地適合提供何種主題的露營體驗?",
-                    options: [
-                        "(A)溯溪體驗",
-                        "(B)童軍體驗",
-                        "(C)觀星體驗",
-                        "(D)農村生活體驗"
-                    ],
-                    answer: "D"
-                },
-                {
-                    id: 24,
-                    question: "露營除了活潑的團康活動外,還有各具意義的儀典,透過這些儀典,更能體驗露營活動的不同風貌。 , 就是露營最特殊的儀典之一。請問: 處可能是指下列哪個選項?",
-                    options: [
-                        "(A)營火",
-                        "(B)晨操",
-                        "(C)觀星",
-                        "(D)大地遊戲"
-                    ],
-                    answer: "A"
-                },
-                {
-                    id: 25,
-                    question: "在活動設計、帶領過程中,小隊內若意見不同時,應該會使用什麼方式溝通、解決問題?",
-                    options: [
-                        "(A)力爭到底",
-                        "(B)理性溝通",
-                        "(C)強力辯論",
-                        "(D)武力解決"
-                    ],
-                    answer: "B"
-                },
-                {
-                    id: 26,
-                    question: "遊戲是露營中的調劑活動,而好的遊戲帶領有以下幾個步驟,請選出正確的排列順序。(甲)示範。(乙)發問。(丙)行動。(丁)說明。(戊)適應。",
-                    options: [
-                        "(A)甲乙丙丁戊",
-                        "(B)乙甲丁戊丙",
-                        "(C)丙甲戊乙丁",
-                        "(D)丁甲乙丙戊"
-                    ],
-                    answer: "D"
-                },
-                {
-                    id: 27,
-                    question: "近來國人瘋露營,認為到戶外可放鬆心情,所以將許多設備都搬到戶外,如投影機、K歌麥克風、遊戲機等。請問:下列哪些選項較符合露營禮儀?(甲)沒有明定的露營法律或禮儀條文也需自我約束。(乙)不干擾與麻煩他人是最佳準則。(丙)通常十點後要降低音量,勿大聲喧譁。(丁)不要隨易點燃煙火或施放天燈。",
-                    options: [
-                        "(A)甲乙丙",
-                        "(B)甲丙丁",
-                        "(C)乙丙丁",
-                        "(D)甲乙丙丁"
-                    ],
-                    answer: "D"
-                },
-                {
-                    id: 28,
-                    question: "新北市龍門營地、宜蘭縣武荖坑露營區,以及臺南市走馬瀨農場等都是臺灣很棒的營地,此類營地通常會結合各類設施,如游泳池、漆彈場,或臨近海水浴場及溪流而衍伸戲水活動等。請問:上述是屬於何種露營?",
-                    options: [
-                        "(A)野營式露營",
-                        "(B)營舍式露營",
-                        "(C)綜合度假式露營",
-                        "(D)露營車式露營"
-                    ],
-                    answer: "C"
-                },
-                {
-                    id: 29,
-                    question: "上週末小新和家人去露營,在營區看到許多景象令他們大開眼界。爸爸:「我看到有年輕人以營燈代替燒營火耶!」媽媽:「居然還有人帶投影機放電影,儼然是蚊子電影院!」小新:「我看到別人家的晚餐根本滿漢全席!」妹妹:「我去洗碗的時候看到廚餘多到滿出來了,好噁心!」請問:上述哪一位家庭成員所看到景象較符合無痕露營?",
-                    options: [
-                        "(A)爸爸",
-                        "(B)媽媽",
-                        "(C)小新",
-                        "(D)妹妹"
-                    ],
-                    answer: "A"
-                },
-                {
-                    id: 30,
-                    question: "牛羚小隊規畫到原住民部落進行兩天一夜的原鄉體驗營露營活動。請問:他們需要考慮哪些因素?(甲)活動時間。(乙)交通方式。(丙)體驗內容。(丁)所需經費。",
-                    options: [
-                        "(A)甲乙丙",
-                        "(B)乙丙丁",
-                        "(C)甲乙丁",
-                        "(D)甲乙丙丁"
-                    ],
-                    answer: "D"
-                }
-            ];
+        <div id="quick-login-area" class="quick-login-area"></div>
 
-            const handleOptionClick = (questionIndex, optionIndex) => {
-                if (answers[questionIndex] !== null) return;
+        <div style="text-align:center; margin-top: 30px;">
+            <button class="btn" onclick="loginAndStart()">🚀 開始挑戰</button>
+        </div>
+    </div>
 
-                const choiceMap = ['A', 'B', 'C', 'D'];
-                const choice = choiceMap[optionIndex];
-                const correct = choice === questions[questionIndex].answer;
+    <!-- 儀表板 (Level Screen) -->
+    <div id="level-screen" class="container-box fade-in" style="display: none;">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img id="user-avatar-display" src="" style="width:50px; height:50px; border-radius:50%; vertical-align:middle; border:2px solid #fff; box-shadow:0 2px 5px rgba(0,0,0,0.2);">
+            <span style="font-size: 1.4em; font-weight: bold; margin-left: 10px;">挑戰者：<span id="display-name" style="color:var(--primary-color);"></span></span>
+        </div>
 
-                const newAnswers = [...answers];
-                newAnswers[questionIndex] = {
-                    correct,
-                    choice,
-                    correctAnswer: questions[questionIndex].answer,
-                    selectedIndex: optionIndex
-                };
-                setAnswers(newAnswers);
+        <div id="level-screen-content">
+            <div class="dashboard-std-zone">
+                <div class="dashboard-title">
+                    <span>📚 改錯挑戰模式</span>
+                    <span id="overall-progress" class="overall-progress">總進度：0%</span>
+                </div>
+                <div id="level-grid" class="level-grid"></div>
+            </div>
+        </div>
+    </div>
 
-                if (correct) {
-                    setScore(prev => prev + 1);
-                }
-            };
-
-            const handleFinish = () => {
-                setCurrentView('score');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            };
-
-            const restartQuiz = () => {
-                setScore(0);
-                setCurrentView('start');
-                setAnswers(Array(30).fill(null));
-            };
-
-            const startQuiz = () => {
-                setAnswers(Array(30).fill(null));
-                setScore(0);
-                setCurrentView('quiz');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            };
-
-            const startStudy = () => {
-                setCurrentView('study');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            };
-
-            const goHome = () => {
-                setCurrentView('start');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-
-            // Start Screen
-            if (currentView === 'start') {
-                return (
-                    <div className="flex flex-col items-center justify-center min-h-screen bg-green-50 p-4 font-sans text-gray-800">
-                        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl overflow-hidden p-8 text-center border-b-4 border-green-500">
-                            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <BookOpen className="w-10 h-10 text-green-600" />
-                            </div>
-                            <h1 className="text-3xl font-bold text-gray-800 mb-2">童軍科目互動練習</h1>
-                            <p className="text-gray-600 mb-8">精選 30 題童軍考題，請選擇練習模式！</p>
-                            
-                            <div className="space-y-4">
-                                <button 
-                                    onClick={startQuiz}
-                                    className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 text-white text-lg font-bold rounded-xl transition duration-200 flex items-center justify-center shadow-lg transform hover:-translate-y-1"
-                                >
-                                    <Play className="w-6 h-6 mr-3" />
-                                    開始挑戰
-                                </button>
-                                
-                                <button 
-                                    onClick={startStudy}
-                                    className="w-full py-4 px-6 bg-blue-500 hover:bg-blue-600 text-white text-lg font-bold rounded-xl transition duration-200 flex items-center justify-center shadow-lg transform hover:-translate-y-1"
-                                >
-                                    <Eye className="w-6 h-6 mr-3" />
-                                    學習模式 (含解答)
-                                </button>
-                            </div>
-                            
-                            <div className="mt-8 text-sm text-gray-500">
-                                祝你學習愉快，滿分通關！
-                            </div>
-                        </div>
+    <!-- 測驗介面 (Error Hunt) -->
+    <div id="quiz-content" class="container-box fade-in" style="display: none;">
+        <div class="quiz-header">
+            <h3 id="level-title" style="margin:0; color:var(--primary-color);">關卡 X</h3>
+        </div>
+        
+        <div id="question-container">
+            <div class="question-box">
+                <div class="article-section">
+                    <div class="article-title-bar">
+                        <div style="margin-right: auto; font-weight: bold; font-size: 1.2em;">請點擊句子中的錯別字：</div>
+                        <div id="fav-icon" class="fav-heart" title="加入最愛">♡</div>
                     </div>
-                );
-            }
-
-            // Score Screen
-            if (currentView === 'score') {
-                return (
-                    <div className="flex flex-col items-center justify-center min-h-screen bg-green-50 p-4 font-sans text-gray-800">
-                        <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
-                            
-                            <div className="p-8 text-center bg-green-600 text-white shrink-0">
-                                <h2 className="text-3xl font-bold mb-2">測驗完成！</h2>
-                                <div className="flex items-center justify-center space-x-2 text-xl">
-                                    <span>你的得分：</span>
-                                    <span className="text-4xl font-extrabold text-yellow-300">{score}</span>
-                                    <span className="text-2xl">/ {questions.length}</span>
-                                </div>
-                                <p className="mt-2 text-green-100">
-                                    {score === 30 ? "太神啦！童軍大師就是你！" : 
-                                    score >= 24 ? "很棒喔！擁有豐富的童軍知識！" : 
-                                    score >= 18 ? "不錯不錯，再接再厲！" : "別氣餒，多練習幾次就熟了！"}
-                                </p>
-                            </div>
-
-                            <div className="flex-1 overflow-y-auto p-6 bg-gray-50">
-                                <h3 className="text-lg font-bold text-gray-700 mb-4 flex items-center">
-                                    <BookOpen className="w-5 h-5 mr-2" /> 
-                                    答題檢討列表
-                                </h3>
-                                <div className="space-y-4">
-                                    {questions.map((q, index) => {
-                                        const answerState = answers[index];
-                                        const isUserCorrect = answerState?.correct;
-                                        const userChoice = answerState?.choice;
-                                        const hasAnswered = answerState !== null;
-
-                                        return (
-                                            <div key={q.id} className={`p-4 rounded-lg border-l-4 ${
-                                                !hasAnswered ? 'bg-gray-100 border-gray-300' :
-                                                isUserCorrect ? 'bg-white border-green-500 shadow-sm' : 'bg-red-50 border-red-500'
-                                            }`}>
-                                                <div className="flex justify-between items-start mb-2">
-                                                    <span className="font-bold text-gray-500 text-sm">第 {q.id} 題</span>
-                                                    {hasAnswered ? (
-                                                        isUserCorrect ? (
-                                                            <span className="flex items-center text-green-600 text-sm font-bold"><CheckCircle className="w-4 h-4 mr-1"/> 正確</span>
-                                                        ) : (
-                                                            <span className="flex items-center text-red-500 text-sm font-bold"><XCircle className="w-4 h-4 mr-1"/> 錯誤 (選了 {userChoice})</span>
-                                                        )
-                                                    ) : (
-                                                        <span className="flex items-center text-gray-400 text-sm font-bold">未作答</span>
-                                                    )}
-                                                </div>
-                                                <p className="text-gray-800 font-medium mb-2">{q.question}</p>
-                                                {(!isUserCorrect || !hasAnswered) && (
-                                                    <p className="text-sm text-green-700 font-bold bg-green-100 p-2 rounded">
-                                                        正確答案：({q.answer})
-                                                    </p>
-                                                )}
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-
-                            <div className="p-4 bg-white border-t border-gray-200 shrink-0">
-                                <button 
-                                    onClick={restartQuiz}
-                                    className="w-full py-3 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-xl transition duration-200 flex items-center justify-center"
-                                >
-                                    <RefreshCw className="w-5 h-5 mr-2" />
-                                    回到首頁
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                );
-            }
-
-            // Study Mode View
-            if (currentView === 'study') {
-                return (
-                    <div className="flex flex-col items-center min-h-screen bg-blue-50 font-sans text-gray-800">
-                        <div className="w-full bg-blue-600 text-white p-4 shadow-md sticky top-0 z-10 flex justify-between items-center">
-                            <h2 className="text-lg font-bold flex items-center"><Eye className="w-5 h-5 mr-2"/> 學習模式</h2>
-                            <button 
-                                onClick={goHome}
-                                className="px-3 py-1 bg-blue-700 hover:bg-blue-800 rounded-lg text-sm flex items-center transition"
-                            >
-                                <Home className="w-4 h-4 mr-1"/> 回首頁
-                            </button>
-                        </div>
-
-                        <div className="max-w-2xl w-full p-4 space-y-6 pb-12">
-                            {questions.map((q, qIndex) => (
-                                <div key={q.id} className="bg-white rounded-2xl shadow-md overflow-hidden">
-                                    <div className="p-4 border-b border-blue-100 bg-blue-50/50">
-                                        <div className="flex items-start">
-                                            <span className="bg-blue-200 text-blue-800 text-xs font-bold px-2 py-1 rounded mr-2 mt-1">
-                                                Q{q.id}
-                                            </span>
-                                            <h3 className="text-lg font-bold text-gray-800 leading-relaxed">
-                                                {q.question}
-                                            </h3>
-                                        </div>
-                                    </div>
-
-                                    <div className="p-4 space-y-2">
-                                        {q.options.map((option, optIndex) => {
-                                            const choiceMap = ['A', 'B', 'C', 'D'];
-                                            const isCorrect = choiceMap[optIndex] === q.answer;
-
-                                            return (
-                                                <div 
-                                                    key={optIndex}
-                                                    className={`w-full text-left p-3 rounded-xl border-2 font-medium flex items-center
-                                                        ${isCorrect 
-                                                            ? 'border-green-500 bg-green-50 text-green-900 shadow-sm' 
-                                                            : 'border-transparent text-gray-500'}`}
-                                                >
-                                                    <span className={`w-7 h-7 rounded-full border-2 flex items-center justify-center mr-3 text-xs font-bold shrink-0
-                                                        ${isCorrect ? 'border-green-600 bg-green-600 text-white' : 'border-gray-300 text-gray-400'}
-                                                    `}>
-                                                        {choiceMap[optIndex]}
-                                                    </span>
-                                                    <span className="text-sm">{option.substring(3)}</span>
-                                                    {isCorrect && <CheckCircle className="w-5 h-5 ml-auto text-green-600"/>}
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                );
-            }
-
-            // Quiz - Waterfall View
-            return (
-                <div className="flex flex-col items-center min-h-screen bg-gray-100 font-sans text-gray-800">
-                    <div className="w-full bg-gray-800 text-white p-4 shadow-md sticky top-0 z-10 flex justify-between items-center">
-                        <h2 className="text-lg font-bold">童軍科目測驗</h2>
-                        <div className="flex items-center space-x-3">
-                            <div className="text-sm bg-gray-700 px-3 py-1 rounded-full">
-                                已作答: {answers.filter(a => a !== null).length} / {questions.length}
-                            </div>
-                            <button 
-                                onClick={goHome}
-                                className="p-2 bg-gray-700 hover:bg-gray-600 rounded-full transition"
-                                title="回首頁"
-                            >
-                                <Home className="w-4 h-4"/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className="max-w-2xl w-full p-4 space-y-6 pb-24">
-                        {questions.map((q, qIndex) => {
-                            const answerState = answers[qIndex];
-                            const hasAnswered = answerState !== null;
-                            const isCorrect = answerState?.correct;
-
-                            return (
-                                <div key={q.id} className="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300">
-                                    <div className={`p-4 border-b ${hasAnswered 
-                                        ? (isCorrect ? 'bg-green-50 border-green-100' : 'bg-red-50 border-red-100') 
-                                        : 'bg-white border-gray-100'}`}>
-                                        <div className="flex items-start">
-                                            <span className="bg-gray-200 text-gray-700 text-xs font-bold px-2 py-1 rounded mr-2 mt-1">
-                                                Q{q.id}
-                                            </span>
-                                            <h3 className="text-lg font-bold text-gray-800 leading-relaxed">
-                                                {q.question}
-                                            </h3>
-                                        </div>
-                                    </div>
-
-                                    <div className="p-4 space-y-3">
-                                        {q.options.map((option, optIndex) => {
-                                            let btnClass = "w-full text-left p-3 rounded-xl border-2 transition-all duration-200 font-medium flex items-center ";
-                                            
-                                            if (!hasAnswered) {
-                                                btnClass += "border-gray-200 hover:border-green-500 hover:bg-green-50 text-gray-700 cursor-pointer";
-                                            } else {
-                                                const choiceMap = ['A', 'B', 'C', 'D'];
-                                                const isThisOptionCorrect = choiceMap[optIndex] === q.answer;
-                                                const isThisOptionSelected = answerState.selectedIndex === optIndex;
-
-                                                if (isThisOptionCorrect) {
-                                                    btnClass += "border-green-500 bg-green-100 text-green-800";
-                                                } else if (isThisOptionSelected && !isThisOptionCorrect) {
-                                                    btnClass += "border-red-500 bg-red-100 text-red-800";
-                                                } else {
-                                                    btnClass += "border-gray-100 text-gray-400 opacity-60 cursor-default";
-                                                }
-                                            }
-
-                                            return (
-                                                <button
-                                                    key={optIndex}
-                                                    onClick={() => handleOptionClick(qIndex, optIndex)}
-                                                    disabled={hasAnswered}
-                                                    className={btnClass}
-                                                >
-                                                    <span className={`w-7 h-7 rounded-full border-2 flex items-center justify-center mr-3 text-xs font-bold shrink-0
-                                                        ${hasAnswered && ['A','B','C','D'][optIndex] === q.answer ? 'border-green-600 bg-green-600 text-white' : 
-                                                        hasAnswered && answerState.selectedIndex === optIndex ? 'border-red-500 text-red-500' : 'border-gray-300 text-gray-500'}
-                                                    `}>
-                                                        {['A', 'B', 'C', 'D'][optIndex]}
-                                                    </span>
-                                                    <span className="text-sm">{option.substring(3)}</span>
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
-
-                                    {hasAnswered && (
-                                        <div className={`px-4 py-3 text-sm font-bold flex items-center ${isCorrect ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
-                                            {isCorrect ? (
-                                                <React.Fragment><CheckCircle className="w-5 h-5 mr-2" /> 答對了！</React.Fragment>
-                                            ) : (
-                                                <React.Fragment><XCircle className="w-5 h-5 mr-2" /> 答案是 ({q.answer})</React.Fragment>
-                                            )}
-                                        </div>
-                                    )}
-                                </div>
-                            );
-                        })}
-                    </div>
-
-                    <div className="fixed bottom-0 w-full bg-white border-t border-gray-200 p-4 shadow-lg flex justify-center z-20">
-                        <div className="max-w-2xl w-full flex space-x-4">
-                            <div className="flex-1 flex items-center justify-center text-gray-600 font-medium">
-                                目前得分: <span className="text-green-600 font-bold text-xl ml-2">{score}</span>
-                            </div>
-                            <button
-                                onClick={handleFinish}
-                                className="flex-1 py-3 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-xl shadow-lg flex items-center justify-center transition-colors"
-                            >
-                                <CheckSquare className="w-5 h-5 mr-2" />
-                                交卷看成績
-                            </button>
-                        </div>
+                    <div id="sentence-display" class="sentence-display"></div>
+                </div>
+                <div class="questions-section">
+                    <div id="options-area">
+                        <div class="options-placeholder">👈 請先在左側找出錯別字</div>
                     </div>
                 </div>
-            );
+            </div>
+        </div>
+        
+        <button id="next-btn" class="btn" onclick="nextQuestion()">下一題 ➡️</button>
+    </div>
+
+    <!-- 結算畫面 -->
+    <div id="score-box" class="container-box fade-in" style="display: none; text-align: center;">
+        <h2 style="color: var(--primary-color); font-size: 2.2em;">🎉 關卡完成</h2>
+        <p style="font-size: 1.8em; margin: 15px;">挑戰者：<span id="final-name"></span></p>
+        <div style="font-size: 5em; font-weight: bold; color: var(--accent-color); margin: 30px 0;">
+            <span id="final-score">0</span> <span style="font-size:0.4em; color:#777;">分</span>
+        </div>
+        <div id="score-comment" style="font-size: 1.5em; color: #e67e22; margin-bottom: 30px; font-weight: bold;"></div>
+        
+        <div id="unlock-msg" style="display:none; color:var(--correct-color); font-weight:bold; font-size:1.5em; margin-bottom:20px;">🔓 下一關卡開啟！</div>
+
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <button class="btn" style="padding: 15px 40px; font-size: 1.3em;" onclick="goToDashboard()">🗺️ 返回地圖</button>
+        </div>
+    </div>
+
+    <!-- 我的最愛畫面 -->
+    <div id="favorites-screen" class="container-box fade-in" style="display: none;">
+        <h2 style="color: var(--favorite-color);">⭐ 我的最愛</h2>
+        <div id="favorites-list" class="list-screen-content"></div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="btn" onclick="goToDashboard()">🗺️ 返回</button>
+        </div>
+    </div>
+
+    <!-- 錯題本畫面 -->
+    <div id="mistakes-screen" class="container-box fade-in" style="display: none;">
+        <h2 style="color: var(--wrong-color);">📕 錯題拾遺</h2>
+        <div id="mistakes-list" class="list-screen-content"></div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="btn" onclick="goToDashboard()">🗺️ 返回</button>
+        </div>
+    </div>
+
+    <!-- 其他畫面 (History) -->
+    <div id="history-screen" class="container-box fade-in" style="display: none;">
+        <h2>🏆 金榜</h2>
+        <ul id="history-list" style="list-style: none; padding: 0;"></ul>
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="btn" onclick="goToDashboard()">🗺️ 返回</button>
+        </div>
+    </div>
+
+    <!-- AI Chat Window -->
+    <div id="ai-chat-window">
+        <div class="ai-header">
+            <div style="display:flex; align-items:center; gap:10px;">
+                <span>🤖 AI 書僮</span>
+                <span class="ai-header-close" onclick="resetAiKey()" title="重設 API Key" style="font-size: 0.9em;">🔑</span>
+            </div>
+            <span class="ai-header-close" onclick="toggleChatWindow()">×</span>
+        </div>
+        <div id="ai-messages" class="ai-messages">
+            <div class="ai-msg bot">你好！我是你的 AI 書僮，對於改錯字有疑問都可以問我喔！</div>
+        </div>
+        <div class="ai-input-area">
+            <input type="text" id="ai-input" class="ai-input" placeholder="輸入問題..." onkeypress="handleAiKeypress(event)">
+            <button class="ai-send-btn" onclick="sendAiMessage()">發送</button>
+        </div>
+    </div>
+    
+    <!-- Toast Message -->
+    <div id="toast"></div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        // AI Configuration
+        const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=";
+
+        // 設定與全域變數
+        // 修改點：Level config updated to 26 levels (1-25: 10 questions, 26: 7 questions)
+        const LEVEL_CONFIG = Array(25).fill(10).concat([7]); // 26 levels total
+        
+        const YOUTUBE_PLAYLIST = ['iLAS0vy7-78', '5zeyr-_G_4w', 'aZXJATkkDoA', 'UKbZ4r88z3Q', 'aGZk0nEBWv4', 'advioIb8-gE'];
+        // LocalStorage 前綴
+        const APP_PREFIX = 'ChineseClassQuizSet3-3_';
+        
+        let player, isPlayerReady = false, isPlaying = false;
+        let allQuestions = [], currentQuizData = [];
+        let userName = "", currentAvatar = "Chris.png";
+        
+        // 影片索引追蹤 (隨機開始)
+        let currentVideoIdx = Math.floor(Math.random() * YOUTUBE_PLAYLIST.length);
+        
+        // 測驗狀態
+        let quizState = {
+            mode: 'level', // level, favorites, mistakes
+            level: 1,
+            score: 0, 
+            totalErrorsInLevel: 0, // 總共有幾個錯字要改
+            currentQuestionIndex: 0, // 目前第幾題 (句子)
+            fixedErrorsCount: 0, // 本題已修復的錯誤數
+            errorsFixedState: [], // 記錄本題哪些錯誤已被修復 (存錯誤的 index)
+            qIds: [] 
         };
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<ScoutQuizApp />);
+        const audioCorrect = new Audio('sounds/correct.mp3'); audioCorrect.volume = 0.4;
+        const audioFail = new Audio('sounds/fail.mp3'); audioFail.volume = 0.4;
+
+        // --- 初始化 ---
+        fetch('questions.json').then(res => res.json())
+            .then(data => { allQuestions = data; renderQuickLogin(); })
+            .catch(e => console.error("Error loading questions:", e));
+
+        function getUserKey(key) { return APP_PREFIX + userName + '_' + key; }
+
+        // --- 登入與導航 ---
+        function selectAvatar(img, el) {
+            currentAvatar = img;
+            document.querySelectorAll('.avatar-option').forEach(e => e.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+
+        function loginAndStart() {
+            const name = document.getElementById('username').value.trim();
+            if(!name) return alert('請輸入雅號');
+            userName = name;
+            saveUser();
+            if(isPlayerReady && !isPlaying) player.playVideo();
+            goToDashboard();
+        }
+
+        function saveUser() {
+            let users = JSON.parse(localStorage.getItem(APP_PREFIX+'savedUsers')) || [];
+            if(!users.some(u => u.name === userName)) {
+                users.push({name: userName, avatar: currentAvatar});
+                localStorage.setItem(APP_PREFIX+'savedUsers', JSON.stringify(users));
+            }
+        }
+        
+        function renderQuickLogin() {
+            const users = JSON.parse(localStorage.getItem(APP_PREFIX+'savedUsers')) || [];
+            const container = document.getElementById('quick-login-area');
+            container.innerHTML = users.map(u => `
+                <div class="user-tag" onclick="quickLogin('${u.name}', '${u.avatar}')">
+                    <img src="images/${u.avatar}" style="width:20px;height:20px;border-radius:50%;">${u.name}
+                    <span class="delete-user" onclick="event.stopPropagation();deleteUser('${u.name}')">×</span>
+                </div>
+            `).join('');
+        }
+
+        function quickLogin(name, av) {
+            document.getElementById('username').value = name;
+            currentAvatar = av;
+            loginAndStart();
+        }
+
+        function deleteUser(name) {
+            if(!confirm(`刪除 ${name} 的所有資料？`)) return;
+            const prefix = APP_PREFIX + name;
+            Object.keys(localStorage).forEach(key => {
+                if(key.startsWith(prefix)) localStorage.removeItem(key);
+            });
+            let users = JSON.parse(localStorage.getItem(APP_PREFIX+'savedUsers')) || [];
+            localStorage.setItem(APP_PREFIX+'savedUsers', JSON.stringify(users.filter(u => u.name !== name)));
+            renderQuickLogin();
+        }
+
+        function goToDashboard() {
+            const navInfo = document.getElementById('quiz-nav-info');
+            if(navInfo) navInfo.style.display = 'none';
+
+            const dashBtns = document.getElementById('dashboard-nav-btns');
+            if(dashBtns) dashBtns.style.display = 'flex';
+
+            hideAllScreens();
+            document.getElementById('level-screen').style.display = 'block';
+            document.getElementById('display-name').innerText = userName;
+            document.getElementById('user-avatar-display').src = "images/" + currentAvatar;
+            
+            renderLevelGrid();
+        }
+
+        function hideAllScreens() {
+            document.querySelectorAll('.container-box').forEach(el => el.style.display = 'none');
+            document.getElementById('score-box').style.display = 'none';
+        }
+
+        function showToast(message) {
+            const x = document.getElementById("toast");
+            x.innerText = message;
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+
+        // --- 儀表板與關卡選擇 ---
+        function renderLevelGrid() {
+            const grid = document.getElementById('level-grid');
+            if(!grid) return console.error("Level grid element not found!");
+            
+            grid.innerHTML = "";
+            let progress;
+            try {
+                progress = JSON.parse(localStorage.getItem(getUserKey('quizProgress'))) || { maxLevel: 1, scores: {} };
+            } catch(e) {
+                progress = { maxLevel: 1, scores: {} };
+            }
+            
+            if(!progress.scores) progress.scores = {};
+            if(!progress.maxLevel) progress.maxLevel = 1;
+
+            let completedLevels = Object.keys(progress.scores).length;
+            let percent = Math.round((completedLevels / LEVEL_CONFIG.length) * 100);
+            document.getElementById('overall-progress').innerText = `總進度：${percent}%`;
+
+            LEVEL_CONFIG.forEach((_, idx) => {
+                const level = idx + 1;
+                const btn = document.createElement('button');
+                btn.className = 'level-grid-btn';
+                
+                if (level <= progress.maxLevel) {
+                    const score = progress.scores[level];
+                    let icon = '📝'; 
+                    if (score !== undefined) {
+                        if (score >= 90) icon = '🥇'; 
+                        else if (score >= 70) icon = '🥈';
+                        else icon = '🥉';
+                    }
+                    
+                    const savedKey = getUserKey('progress_level_' + level);
+                    const hasSaved = localStorage.getItem(savedKey);
+                    const resumeText = hasSaved ? '<div class="resume-text">(未完待續)</div>' : '';
+
+                    btn.innerHTML = `<div class="lvl-icon">${icon}</div><div class="lvl-label">關卡 ${level}</div>${score !== undefined ? `<div class="lvl-score">${score}分</div>` : ''}${resumeText}`;
+                    btn.onclick = () => startQuiz(level);
+                } else {
+                    btn.disabled = true;
+                    btn.innerHTML = `<div class="lvl-icon" style="filter:grayscale(1);">🔒</div><div class="lvl-label">關卡 ${level}</div>`;
+                }
+                grid.appendChild(btn);
+            });
+        }
+
+        // --- 測驗邏輯 (New Error Hunt Logic) ---
+        function startQuiz(level) {
+            let startIdx = 0;
+            for(let i=0; i<level-1; i++) startIdx += LEVEL_CONFIG[i];
+            let endIdx = startIdx + LEVEL_CONFIG[level-1];
+            
+            currentQuizData = allQuestions.slice(startIdx, endIdx);
+            
+            const saveKey = getUserKey('progress_level_' + level);
+            const savedState = localStorage.getItem(saveKey);
+
+            if (savedState) {
+                quizState = JSON.parse(savedState);
+                quizState.mode = 'level';
+                // Recalculate total errors just in case
+                let total = 0;
+                currentQuizData.forEach(q => total += q.corrections.length);
+                quizState.totalErrorsInLevel = total;
+            } else {
+                quizState = {
+                    mode: 'level',
+                    level: level,
+                    score: 0,
+                    totalErrorsInLevel: 0,
+                    currentQuestionIndex: 0,
+                    fixedErrorsCount: 0,
+                    errorsFixedState: [] // indices of fixed chars relative to the sentence string
+                };
+                currentQuizData.forEach(q => quizState.totalErrorsInLevel += q.corrections.length);
+            }
+            
+            loadQuizUI();
+        }
+
+        function startReviewQuiz(mode, qIds) {
+            if (!qIds || qIds.length === 0) return alert("目前沒有題目！");
+            
+            currentQuizData = allQuestions.filter(q => qIds.includes(q.id));
+            
+            quizState = {
+                mode: mode,
+                level: 0,
+                score: 0,
+                totalErrorsInLevel: 0,
+                currentQuestionIndex: 0,
+                fixedErrorsCount: 0,
+                errorsFixedState: [],
+                qIds: qIds
+            };
+            
+            currentQuizData.forEach(q => quizState.totalErrorsInLevel += q.corrections.length);
+            loadQuizUI();
+        }
+
+        function saveQuizProgress() {
+            if(quizState.mode === 'level') {
+                const saveKey = getUserKey('progress_level_' + quizState.level);
+                localStorage.setItem(saveKey, JSON.stringify(quizState));
+            }
+        }
+
+        function loadQuizUI() {
+            hideAllScreens();
+            
+            const dashBtns = document.getElementById('dashboard-nav-btns');
+            if(dashBtns) dashBtns.style.display = 'none';
+
+            document.getElementById('quiz-content').style.display = 'block';
+            let title = "";
+            if (quizState.mode === 'level') title = `📝 關卡 ${quizState.level}`;
+            else if (quizState.mode === 'favorites') title = `⭐ 我的最愛`;
+            else if (quizState.mode === 'mistakes') title = `📕 錯題複習`;
+            
+            document.getElementById('level-title').innerText = title;
+            document.getElementById('nav-level-title').innerText = title;
+
+            document.getElementById('quiz-nav-info').style.display = 'flex';
+            document.getElementById('nav-total-q').innerText = currentQuizData.length;
+
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const qData = currentQuizData[quizState.currentQuestionIndex];
+            if(!qData) return finishQuiz();
+            
+            // UI Reset
+            document.getElementById('next-btn').style.display = 'none';
+            document.getElementById('options-area').innerHTML = '<div class="options-placeholder">👈 請先在左側找出錯別字</div>';
+            document.getElementById('nav-current-q').innerText = quizState.currentQuestionIndex + 1;
+            
+            const favIcon = document.getElementById('fav-icon');
+            updateFavIcon(qData.id);
+            favIcon.onclick = () => toggleFavorite(qData.id);
+
+            // Render Sentence
+            renderSentence(qData);
+        }
+
+        function renderSentence(qData) {
+            const container = document.getElementById('sentence-display');
+            container.innerHTML = "";
+            
+            // Convert sentence string into interactive spans
+            const sentence = qData.content;
+            
+            // We need to rebuild the sentence char by char.
+            // If a char index was fixed in saved state, render correct char.
+            // Else render original char.
+            
+            // To handle surrogate pairs or complex chars correctly, simple split might not be enough, 
+            // but for standard Traditional Chinese, split('') usually works fine.
+            const chars = sentence.split('');
+            
+            chars.forEach((char, idx) => {
+                const span = document.createElement('span');
+                span.className = 'interactive-char';
+                span.id = `char-${idx}`;
+                
+                // Check if this index corresponds to an error
+                const isError = qData.corrections.find(c => c.index === idx);
+                const isFixed = quizState.errorsFixedState.includes(idx);
+
+                if (isFixed && isError) {
+                    span.innerText = isError.correct;
+                    span.classList.add('fixed');
+                } else {
+                    span.innerText = char;
+                    if(isError) {
+                        // Secretly mark it? No, keep it clean. Logic handles it.
+                    }
+                }
+
+                span.onclick = () => handleCharClick(idx, char, isError, isFixed);
+                container.appendChild(span);
+            });
+            
+            // Check completion (in case restored state is fully done)
+            checkQuestionCompletion();
+        }
+
+        function handleCharClick(idx, char, errorObj, isFixed) {
+            if (isFixed) return; // Already fixed
+            
+            // Remove active class from all others
+            document.querySelectorAll('.interactive-char').forEach(el => el.classList.remove('active'));
+            document.getElementById(`char-${idx}`).classList.add('active');
+
+            const optionsArea = document.getElementById('options-area');
+            
+            if (!errorObj) {
+                // Clicked a correct character
+                showToast("這個字沒有錯喔！👍");
+                optionsArea.innerHTML = '<div class="options-placeholder">👈 這個字是對的，請再找找！</div>';
+                return;
+            }
+
+            // Clicked an error -> Show options
+            renderOptions(idx, errorObj);
+        }
+
+        function renderOptions(charIdx, errorObj) {
+            const container = document.getElementById('options-area');
+            container.innerHTML = "";
+            
+            const title = document.createElement('div');
+            title.innerHTML = `請選擇 <strong>「${errorObj.wrong}」</strong> 的正確寫法：`;
+            title.style.marginBottom = "15px";
+            title.style.fontSize = "1.2em";
+            container.appendChild(title);
+
+            const btnContainer = document.createElement('div');
+            btnContainer.className = 'options-container';
+
+            // Shuffle options logic (if not shuffled in JSON, shuffle here or just trust JSON)
+            // The JSON generator should provide shuffled options. 
+            // Assuming options are [Correct, Distractor1, Distractor2, Distractor3] mixed.
+            
+            errorObj.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerText = opt;
+                btn.onclick = () => handleOptionSelect(charIdx, errorObj, opt, btn);
+                btnContainer.appendChild(btn);
+            });
+
+            container.appendChild(btnContainer);
+        }
+
+        function handleOptionSelect(charIdx, errorObj, selectedOpt, btn) {
+            const allBtns = document.querySelectorAll('.option-btn');
+            allBtns.forEach(b => b.disabled = true);
+
+            if (selectedOpt === errorObj.correct) {
+                // Correct
+                btn.classList.add('correct');
+                audioCorrect.play().catch(()=>{});
+                confetti({ particleCount: 30, origin: { y: 0.8 }, spread: 50 });
+                
+                // Update State
+                quizState.score++;
+                quizState.fixedErrorsCount++;
+                quizState.errorsFixedState.push(charIdx);
+                saveQuizProgress();
+
+                // Update UI (Sentence)
+                const charSpan = document.getElementById(`char-${charIdx}`);
+                charSpan.innerText = selectedOpt; // Change to correct char
+                charSpan.classList.remove('active');
+                charSpan.classList.add('fixed'); // Turn red/fixed style
+
+                // Check if all errors in this sentence are fixed
+                checkQuestionCompletion();
+
+            } else {
+                // Wrong
+                btn.classList.add('wrong');
+                audioFail.play().catch(()=>{});
+                
+                // Add to mistakes
+                const qData = currentQuizData[quizState.currentQuestionIndex];
+                addToMistakes(qData.id);
+                
+                // Highlight correct option
+                allBtns.forEach(b => {
+                    if (b.innerText === errorObj.correct) b.classList.add('correct');
+                });
+            }
+        }
+
+        function checkQuestionCompletion() {
+            const qData = currentQuizData[quizState.currentQuestionIndex];
+            const totalErrors = qData.corrections.length;
+            
+            // Count how many fixed in current state
+            // Logic: quizState.errorsFixedState contains indices for current question only?
+            // Actually, we reset `errorsFixedState` on `nextQuestion`.
+            
+            if (quizState.errorsFixedState.length >= totalErrors) {
+                document.getElementById('next-btn').style.display = 'block';
+                document.getElementById('options-area').innerHTML = '<div class="options-placeholder" style="color:var(--correct-color)">🎉 太棒了！本句已修正完畢！</div>';
+            }
+        }
+
+        function nextQuestion() {
+            quizState.currentQuestionIndex++;
+            quizState.fixedErrorsCount = 0;
+            quizState.errorsFixedState = []; 
+            
+            saveQuizProgress();
+            loadQuestion();
+            
+            document.querySelector('.container-box').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function finishQuiz() {
+            if(quizState.mode === 'level') {
+                localStorage.removeItem(getUserKey('progress_level_' + quizState.level));
+            }
+
+            document.getElementById('quiz-content').style.display = 'none';
+            document.getElementById('quiz-nav-info').style.display = 'none';
+            document.getElementById('score-box').style.display = 'block';
+            
+            // Calculate score based on total found errors
+            const finalScore = Math.round((quizState.score / quizState.totalErrorsInLevel) * 100);
+            document.getElementById('final-score').innerText = finalScore;
+            document.getElementById('final-name').innerText = userName;
+            
+            if(quizState.mode === 'level') {
+                let progress = JSON.parse(localStorage.getItem(getUserKey('quizProgress'))) || { maxLevel: 1, scores: {} };
+                
+                let oldScore = progress.scores[quizState.level] || 0;
+                if(finalScore > oldScore) progress.scores[quizState.level] = finalScore;
+                else if (!progress.scores[quizState.level]) progress.scores[quizState.level] = finalScore;
+                
+                let unlocked = false;
+                if(quizState.level === progress.maxLevel && quizState.level < LEVEL_CONFIG.length) {
+                    progress.maxLevel++;
+                    unlocked = true;
+                }
+                localStorage.setItem(getUserKey('quizProgress'), JSON.stringify(progress));
+                document.getElementById('unlock-msg').style.display = unlocked ? 'block' : 'none';
+            } else {
+                document.getElementById('unlock-msg').style.display = 'none';
+            }
+            
+            let cmt = "再接再厲！";
+            if(finalScore == 100) cmt = "火眼金睛，錯字無所遁形！";
+            else if(finalScore >= 80) cmt = "校對高手，令人佩服！";
+            else if(finalScore >= 60) cmt = "細心觀察，繼續保持！";
+            document.getElementById('score-comment').innerText = cmt;
+
+            saveHistory(finalScore, quizState.mode === 'level' ? `關卡 ${quizState.level}` : (quizState.mode === 'favorites' ? '我的最愛' : '錯題複習'));
+        }
+
+        // --- Utils (Favorites, Mistakes, History, AI) ---
+        // (Similar logic to previous version, adjusted for Sentence ID)
+        
+        function toggleFavorite(qId) {
+            let favs = JSON.parse(localStorage.getItem(getUserKey('favorites'))) || [];
+            const index = favs.indexOf(qId);
+            if (index > -1) favs.splice(index, 1);
+            else favs.push(qId);
+            localStorage.setItem(getUserKey('favorites'), JSON.stringify(favs));
+            updateFavIcon(qId);
+        }
+
+        function updateFavIcon(qId) {
+            let favs = JSON.parse(localStorage.getItem(getUserKey('favorites'))) || [];
+            const icon = document.getElementById('fav-icon');
+            if (favs.includes(qId)) { icon.innerHTML = '♥'; icon.classList.add('active'); } 
+            else { icon.innerHTML = '♡'; icon.classList.remove('active'); }
+        }
+
+        function addToMistakes(qId) {
+            let mistakes = JSON.parse(localStorage.getItem(getUserKey('mistakes'))) || [];
+            if (!mistakes.includes(qId)) {
+                mistakes.push(qId);
+                localStorage.setItem(getUserKey('mistakes'), JSON.stringify(mistakes));
+            }
+        }
+
+        function showFavorites() {
+            hideAllScreens();
+            document.getElementById('favorites-screen').style.display = 'block';
+            const list = document.getElementById('favorites-list');
+            list.innerHTML = "";
+            let favs = JSON.parse(localStorage.getItem(getUserKey('favorites'))) || [];
+            if (favs.length === 0) {
+                list.innerHTML = "<div class='list-empty-msg'>目前沒有收藏任何句子喔！</div>";
+                return;
+            }
+            const favQuestions = allQuestions.filter(q => favs.includes(q.id));
+            favQuestions.forEach(q => renderListItem(q, list, 'favorites'));
+            if (favQuestions.length > 1) {
+                const btnAll = document.createElement('button');
+                btnAll.className = "btn";
+                btnAll.style.marginTop = "20px";
+                btnAll.style.width = "100%";
+                btnAll.innerText = "🚀 練習全部收藏";
+                btnAll.onclick = () => startReviewQuiz('favorites', favs);
+                list.appendChild(btnAll);
+            }
+        }
+
+        function showMistakes() {
+            hideAllScreens();
+            document.getElementById('mistakes-screen').style.display = 'block';
+            const list = document.getElementById('mistakes-list');
+            list.innerHTML = "";
+            let mistakes = JSON.parse(localStorage.getItem(getUserKey('mistakes'))) || [];
+            if (mistakes.length === 0) {
+                list.innerHTML = "<div class='list-empty-msg'>太棒了！目前沒有錯題！</div>";
+                return;
+            }
+            const mistakeQuestions = allQuestions.filter(q => mistakes.includes(q.id));
+            mistakeQuestions.forEach(q => renderListItem(q, list, 'mistakes'));
+            if (mistakeQuestions.length > 1) {
+                const btnAll = document.createElement('button');
+                btnAll.className = "btn btn-red";
+                btnAll.style.marginTop = "20px";
+                btnAll.style.width = "100%";
+                btnAll.innerText = "🚀 複習全部錯題";
+                btnAll.onclick = () => startReviewQuiz('mistakes', mistakes);
+                list.appendChild(btnAll);
+            }
+        }
+
+        function renderListItem(q, container, type) {
+            const item = document.createElement('div');
+            item.className = `list-item-card ${type === 'favorites' ? 'fav-item' : 'mistake-item'}`;
+            // Show snippet of content
+            const snippet = q.content.length > 20 ? q.content.substring(0, 20) + '...' : q.content;
+            item.innerHTML = `<div class="list-item-title">${snippet}</div><div class="list-item-info">錯字數: ${q.corrections.length}</div>`;
+            item.onclick = () => startReviewQuiz(type, [q.id]);
+            container.appendChild(item);
+        }
+
+        function saveHistory(score, modeTitle) {
+            let history = JSON.parse(localStorage.getItem(getUserKey('quizHistory'))) || [];
+            history.push({ date: new Date().toLocaleString(), score: score, mode: modeTitle });
+            localStorage.setItem(getUserKey('quizHistory'), JSON.stringify(history));
+        }
+        
+        function showHistory() {
+            hideAllScreens();
+            document.getElementById('history-screen').style.display = 'block';
+            const list = document.getElementById('history-list');
+            let history = JSON.parse(localStorage.getItem(getUserKey('quizHistory'))) || [];
+            list.innerHTML = history.reverse().map(h => `
+                <li style="background:#fff; padding:15px; border-bottom:1px solid #eee; margin-bottom:10px; border-radius:5px;">
+                    <strong>${h.mode}</strong> - <span style="color:${h.score>=60?'green':'red'}">${h.score}分</span>
+                    <br><small>${h.date}</small>
+                </li>
+            `).join('') || '<p style="text-align:center">無紀錄</p>';
+        }
+
+        function logout() { location.reload(); }
+        function exitQuiz() { goToDashboard(); }
+
+        // --- AI Chat ---
+        function toggleChatWindow() {
+            const win = document.getElementById('ai-chat-window');
+            win.style.display = win.style.display === 'flex' ? 'none' : 'flex';
+        }
+        function handleAiKeypress(e) { if (e.key === 'Enter') sendAiMessage(); }
+        function resetAiKey() {
+            if(confirm("確定要清除目前儲存的 API Key 嗎？")) {
+                localStorage.removeItem(APP_PREFIX + 'gemini_api_key');
+                alert("API Key 已清除！");
+            }
+        }
+        async function sendAiMessage() {
+            const input = document.getElementById('ai-input');
+            const msgArea = document.getElementById('ai-messages');
+            const userText = input.value.trim();
+            if (!userText) return;
+            let apiKey = localStorage.getItem(APP_PREFIX + 'gemini_api_key');
+            if (!apiKey) {
+                const inputKey = prompt("請輸入您的 Google Gemini API Key：");
+                if (!inputKey || inputKey.trim() === "") { alert("需要 API Key 才能使用喔！"); return; }
+                apiKey = inputKey.trim();
+                localStorage.setItem(APP_PREFIX + 'gemini_api_key', apiKey);
+            }
+            const userMsg = document.createElement('div');
+            userMsg.className = 'ai-msg user';
+            userMsg.innerText = userText;
+            msgArea.appendChild(userMsg);
+            input.value = '';
+            msgArea.scrollTop = msgArea.scrollHeight;
+            const loadingMsg = document.createElement('div');
+            loadingMsg.className = 'ai-msg bot';
+            loadingMsg.innerText = '輸入中...';
+            loadingMsg.id = 'ai-loading';
+            msgArea.appendChild(loadingMsg);
+            msgArea.scrollTop = msgArea.scrollHeight;
+            try {
+                const response = await fetch(GEMINI_API_URL + apiKey, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: userText }] }],
+                        systemInstruction: { parts: [{ text: "你是一個國文改錯字專家。針對使用者的問題，請解釋該字的正確寫法與錯誤原因，回答簡明扼要。" }] }
+                    })
+                });
+                const data = await response.json();
+                document.getElementById('ai-loading').remove();
+                if (data.error) throw new Error(data.error.message);
+                const botText = data.candidates?.[0]?.content?.parts?.[0]?.text || "抱歉，我現在無法回答。";
+                const botMsg = document.createElement('div');
+                botMsg.className = 'ai-msg bot';
+                botMsg.innerText = botText;
+                msgArea.appendChild(botMsg);
+            } catch (error) {
+                console.error(error);
+                if(document.getElementById('ai-loading')) document.getElementById('ai-loading').remove();
+                const errorMsg = document.createElement('div');
+                errorMsg.className = 'ai-msg bot';
+                errorMsg.style.color = 'red';
+                errorMsg.innerText = `連線錯誤: ${error.message}`;
+                msgArea.appendChild(errorMsg);
+                if (error.message.includes('400') || error.message.includes('key')) {
+                    if(confirm("連線失敗，可能是 API Key 無效。是否清除？")) localStorage.removeItem(APP_PREFIX + 'gemini_api_key');
+                }
+            }
+            msgArea.scrollTop = msgArea.scrollHeight;
+        }
+
+        // --- YouTube ---
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('yt-player', {
+                height: '100%', width: '100%',
+                videoId: YOUTUBE_PLAYLIST[currentVideoIdx],
+                playerVars: { 'playsinline': 1, 'controls': 0, 'disablekb': 1, 'fs': 0, 'rel': 0 },
+                events: { 'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange }
+            });
+        }
+        function onPlayerReady() { isPlayerReady = true; player.setVolume(30); }
+        function onPlayerStateChange(e) { 
+            isPlaying = (e.data == YT.PlayerState.PLAYING);
+            document.getElementById('main-play-btn').innerText = isPlaying ? '⏸' : '▶';
+            if(e.data == YT.PlayerState.ENDED) playRandomTrack();
+        }
+        function togglePlay() { if(isPlayerReady) isPlaying ? player.pauseVideo() : player.playVideo(); }
+        function prevTrack() { if(isPlayerReady) { currentVideoIdx = (currentVideoIdx - 1 + YOUTUBE_PLAYLIST.length) % YOUTUBE_PLAYLIST.length; player.loadVideoById(YOUTUBE_PLAYLIST[currentVideoIdx]); } }
+        function nextTrack() { if(isPlayerReady) { currentVideoIdx = (currentVideoIdx + 1) % YOUTUBE_PLAYLIST.length; player.loadVideoById(YOUTUBE_PLAYLIST[currentVideoIdx]); } } 
+        function playRandomTrack() {
+             if(isPlayerReady) {
+                let newIdx;
+                do { newIdx = Math.floor(Math.random() * YOUTUBE_PLAYLIST.length); } while (newIdx === currentVideoIdx && YOUTUBE_PLAYLIST.length > 1);
+                currentVideoIdx = newIdx;
+                player.loadVideoById(YOUTUBE_PLAYLIST[currentVideoIdx]);
+            }
+        }
+        function setVolume(v) { if(isPlayerReady) player.setVolume(v); }
+        function toggleVideoDisplay() {
+            const wrap = document.getElementById('yt-wrapper');
+            const btn = document.getElementById('toggle-video-btn');
+            if(window.innerWidth <= 768) wrap.classList.toggle('mobile-visible');
+            else wrap.classList.toggle('video-hidden');
+            const hidden = wrap.classList.contains('video-hidden') && !wrap.classList.contains('mobile-visible');
+            btn.classList.toggle('active', !hidden);
+        }
+        function changeMode() {} 
+
     </script>
 </body>
 </html>
