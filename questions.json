@@ -7,13 +7,13 @@
         "index": 0,
         "wrong": "煞",
         "correct": "霎",
-        "options": ["霎", "煞", "剎", "殺"]
+        "options": ["煞", "剎", "霎", "殺"]
       },
       {
-        "index": 29,
+        "index": 28,
         "wrong": "五",
         "correct": "舞",
-        "options": ["舞", "五", "武", "午"]
+        "options": ["五", "舞", "午", "武"]
       }
     ]
   },
@@ -25,19 +25,19 @@
         "index": 0,
         "wrong": "既",
         "correct": "即",
-        "options": ["即", "既", "記", "季"]
+        "options": ["既", "季", "即", "記"]
       },
       {
-        "index": 7,
+        "index": 6,
         "wrong": "撩",
         "correct": "潦",
-        "options": ["潦", "撩", "遼", "繚"]
+        "options": ["撩", "遼", "潦", "繚"]
       },
       {
-        "index": 15,
+        "index": 17,
         "wrong": "摻",
         "correct": "滲",
-        "options": ["滲", "摻", "參", "慘"]
+        "options": ["參", "慘", "摻", "滲"]
       }
     ]
   },
@@ -46,16 +46,16 @@
     "content": "這只是暴風雨前的敘幕和前湊，不可輕忽。",
     "corrections": [
       {
-        "index": 9,
+        "index": 8,
         "wrong": "敘",
         "correct": "序",
-        "options": ["序", "敘", "緒", "續"]
+        "options": ["敘", "緒", "序", "續"]
       },
       {
         "index": 12,
         "wrong": "湊",
         "correct": "奏",
-        "options": ["奏", "湊", "揍", "輳"]
+        "options": ["湊", "揍", "輳", "奏"]
       }
     ]
   },
@@ -64,16 +64,16 @@
     "content": "經過老師的詢問後，她的眼框又在度充滿了淚珠。",
     "corrections": [
       {
-        "index": 11,
+        "index": 12,
         "wrong": "框",
         "correct": "眶",
-        "options": ["眶", "框", "筐", "匡"]
+        "options": ["筐", "眶", "框", "匡"]
       },
       {
-        "index": 13,
+        "index": 14,
         "wrong": "在",
         "correct": "再",
-        "options": ["再", "在", "載", "債"]
+        "options": ["在", "載", "再", "債"]
       }
     ]
   },
@@ -82,16 +82,16 @@
     "content": "經過親人的勸說，勇趕的小強敢緊出來認錯。",
     "corrections": [
       {
-        "index": 8,
+        "index": 9,
         "wrong": "趕",
         "correct": "敢",
-        "options": ["敢", "趕", "桿", "感"]
+        "options": ["趕", "桿", "感", "敢"]
       },
       {
-        "index": 12,
+        "index": 13,
         "wrong": "敢",
         "correct": "趕",
-        "options": ["趕", "敢", "乾", "尷"]
+        "options": ["敢", "乾", "趕", "尷"]
       }
     ]
   }
