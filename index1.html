@@ -224,9 +224,9 @@
             justify-content: center;
         }
 
-        /* 句子樣式 - 字體加大 */
+        /* 句子樣式 */
         .sentence-display {
-            font-size: 2.8em; /* 改大: 2.2em -> 2.8em */
+            font-size: 2.2em; /* 字體加大 */
             line-height: 2;
             color: #333;
             letter-spacing: 0.1em;
@@ -268,11 +268,11 @@
             100% { transform: scale(1); opacity: 1; }
         }
 
-        /* 右側選項提示 - 字體加大 */
+        /* 右側選項提示 */
         .options-placeholder {
             text-align: center;
             color: #777;
-            font-size: 1.5em; /* 改大: 1.2em -> 1.5em */
+            font-size: 1.2em;
         }
 
         .options-container {
@@ -282,7 +282,6 @@
             animation: fadeIn 0.3s;
         }
 
-        /* 右側選項按鈕 - 字體加大 */
         .option-btn { 
             width: 100%; 
             padding: 20px; 
@@ -290,7 +289,7 @@
             border: 3px solid #b2dfdb; 
             border-radius: 15px; 
             cursor: pointer; 
-            font-size: 2.4em; /* 改大: 1.8em -> 2.4em */
+            font-size: 1.8em; 
             text-align: center; 
             transition: 0.2s; 
             color: #004d40;
@@ -536,7 +535,7 @@
             <div class="question-box">
                 <div class="article-section">
                     <div class="article-title-bar">
-                        <div style="margin-right: auto; font-weight: bold; font-size: 1.5em; color: #333;">請點擊句子中的錯別字：</div>
+                        <div style="margin-right: auto; font-weight: bold; font-size: 1.2em;">請點擊句子中的錯別字：</div>
                         <div id="fav-icon" class="fav-heart" title="加入最愛">♡</div>
                     </div>
                     <div id="sentence-display" class="sentence-display"></div>
@@ -953,7 +952,7 @@
             const title = document.createElement('div');
             title.innerHTML = `請選擇 <strong>「${errorObj.wrong}」</strong> 的正確寫法：`;
             title.style.marginBottom = "15px";
-            title.style.fontSize = "1.6em"; // 字體加大: 1.2em -> 1.6em
+            title.style.fontSize = "1.2em";
             container.appendChild(title);
 
             const btnContainer = document.createElement('div');
