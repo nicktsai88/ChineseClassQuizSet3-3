@@ -7,13 +7,13 @@
         "index": 0,
         "wrong": "煞",
         "correct": "霎",
-        "options": ["煞", "剎", "霎", "殺"]
+        "options": ["剎", "霎", "煞", "殺"]
       },
       {
         "index": 28,
         "wrong": "五",
         "correct": "舞",
-        "options": ["五", "舞", "午", "武"]
+        "options": ["午", "五", "舞", "武"]
       }
     ]
   },
@@ -25,13 +25,13 @@
         "index": 0,
         "wrong": "既",
         "correct": "即",
-        "options": ["既", "季", "即", "記"]
+        "options": ["季", "即", "既", "記"]
       },
       {
         "index": 6,
         "wrong": "撩",
         "correct": "潦",
-        "options": ["撩", "遼", "潦", "繚"]
+        "options": ["遼", "繚", "撩", "潦"]
       },
       {
         "index": 17,
@@ -49,13 +49,13 @@
         "index": 8,
         "wrong": "敘",
         "correct": "序",
-        "options": ["敘", "緒", "序", "續"]
+        "options": ["敘", "序", "緒", "續"]
       },
       {
         "index": 12,
         "wrong": "湊",
         "correct": "奏",
-        "options": ["湊", "揍", "輳", "奏"]
+        "options": ["奏", "輳", "湊", "揍"]
       }
     ]
   },
@@ -67,13 +67,13 @@
         "index": 12,
         "wrong": "框",
         "correct": "眶",
-        "options": ["筐", "眶", "框", "匡"]
+        "options": ["筐", "框", "匡", "眶"]
       },
       {
         "index": 14,
         "wrong": "在",
         "correct": "再",
-        "options": ["在", "載", "再", "債"]
+        "options": ["債", "再", "載", "在"]
       }
     ]
   },
@@ -85,13 +85,6883 @@
         "index": 9,
         "wrong": "趕",
         "correct": "敢",
-        "options": ["趕", "桿", "感", "敢"]
+        "options": ["桿", "敢", "感", "趕"]
       },
       {
         "index": 13,
         "wrong": "敢",
         "correct": "趕",
-        "options": ["敢", "乾", "趕", "尷"]
+        "options": ["尷", "敢", "乾", "趕"]
+      }
+    ]
+  },
+  {
+    "id": "q6",
+    "content": "農人頂著破舊斗利，披著縮衣，在田梗之間與風雨博鬥，只盼雨過天清後能迎來豐收。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "利",
+        "correct": "笠",
+        "options": ["粒", "笠", "立", "利"]
+      },
+      {
+        "index": 11,
+        "wrong": "縮",
+        "correct": "蓑",
+        "options": ["縮", "梭", "蓑", "唆"]
+      },
+      {
+        "index": 16,
+        "wrong": "梗",
+        "correct": "埂",
+        "options": ["庚", "粳", "梗", "埂"]
+      },
+      {
+        "index": 22,
+        "wrong": "博",
+        "correct": "搏",
+        "options": ["博", "搏", "膊", "薄"]
+      },
+      {
+        "index": 30,
+        "wrong": "清",
+        "correct": "青",
+        "options": ["輕", "青", "清", "晴"]
+      }
+    ]
+  },
+  {
+    "id": "q7",
+    "content": "作者以提剛切領之筆描彙雨勢變化，整篇文章高潮跌起，充滿戲俱張力。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "剛",
+        "correct": "綱",
+        "options": ["剛", "綱", "鋼", "岡"]
+      },
+      {
+        "index": 5,
+        "wrong": "切",
+        "correct": "挈",
+        "options": ["切", "契", "挈", "砌"]
+      },
+      {
+        "index": 10,
+        "wrong": "彙",
+        "correct": "繪",
+        "options": ["會", "繪", "彙", "惠"]
+      },
+      {
+        "index": 21,
+        "wrong": "跌",
+        "correct": "迭",
+        "options": ["跌", "迭", "疊", "佚"]
+      },
+      {
+        "index": 29,
+        "wrong": "俱",
+        "correct": "劇",
+        "options": ["據", "劇", "聚", "俱"]
+      }
+    ]
+  },
+  {
+    "id": "q8",
+    "content": "聯日的大雨後，庭院裡水珠閃碩，孩子們奔跑禧戲，笑聲流轉，揚溢著難得的詳和與歡愉。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "聯",
+        "correct": "連",
+        "options": ["聯", "廉", "連", "憐"]
+      },
+      {
+        "index": 12,
+        "wrong": "碩",
+        "correct": "爍",
+        "options": ["爍", "碩", "朔", "鑠"]
+      },
+      {
+        "index": 19,
+        "wrong": "禧",
+        "correct": "嬉",
+        "options": ["禧", "嘻", "嬉", "喜"]
+      },
+      {
+        "index": 27,
+        "wrong": "揚",
+        "correct": "洋",
+        "options": ["陽", "洋", "揚", "羊"]
+      },
+      {
+        "index": 33,
+        "wrong": "詳",
+        "correct": "祥",
+        "options": ["詳", "翔", "祥", "降"]
+      }
+    ]
+  },
+  {
+    "id": "q9",
+    "content": "經歷一場滂陀大雨，萬物在雨後蘇省，天地一片清新，猶如奏起田園交想曲。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "陀",
+        "correct": "沱",
+        "options": ["陀", "駝", "沱", "砣"]
+      },
+      {
+        "index": 15,
+        "wrong": "省",
+        "correct": "醒",
+        "options": ["省", "醒", "惺", "腥"]
+      },
+      {
+        "index": 31,
+        "wrong": "想",
+        "correct": "響",
+        "options": ["享", "嚮", "響", "想"]
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "content": "看那老鷹張牙舞爪地掘住地面那隻孤泠泠的小雞。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "掘",
+        "correct": "攫",
+        "options": ["掘", "絕", "攫", "倔"]
+      },
+      {
+        "index": 16,
+        "wrong": "泠",
+        "correct": "伶",
+        "options": ["冷", "鈴", "泠", "伶"]
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "content": "狂風暴雨的四虐，使人葡匐不起，就連根深締固的老榕樹也被吹倒；如今雨過天青，太陽又探出了雲端，萬物也遂漸酥醒。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "四",
+        "correct": "肆",
+        "options": ["肆", "四", "寺", "似"]
+      },
+      {
+        "index": 10,
+        "wrong": "葡",
+        "correct": "匍",
+        "options": ["葡", "圃", "匍", "蒲"]
+      },
+      {
+        "index": 20,
+        "wrong": "締",
+        "correct": "蒂",
+        "options": ["帝", "締", "蒂", "啼"]
+      },
+      {
+        "index": 50,
+        "wrong": "遂",
+        "correct": "逐",
+        "options": ["逐", "遂", "隧", "家"]
+      },
+      {
+        "index": 52,
+        "wrong": "酥",
+        "correct": "蘇",
+        "options": ["酥", "甦", "蘇", "蔬"]
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "content": "石灰直的土嚷有良好的甚水性，經雨水澆林，只需幾分鐘就消失待盡，呈現出乾爽的路面。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "直",
+        "correct": "質",
+        "options": ["質", "直", "植", "值"]
+      },
+      {
+        "index": 5,
+        "wrong": "嚷",
+        "correct": "壤",
+        "options": ["穰", "嚷", "讓", "壤"]
+      },
+      {
+        "index": 10,
+        "wrong": "甚",
+        "correct": "滲",
+        "options": ["腎", "慎", "甚", "滲"]
+      },
+      {
+        "index": 18,
+        "wrong": "林",
+        "correct": "淋",
+        "options": ["淋", "林", "琳", "霖"]
+      },
+      {
+        "index": 29,
+        "wrong": "待",
+        "correct": "殆",
+        "options": ["待", "代", "怠", "殆"]
+      }
+    ]
+  },
+  {
+    "id": "q13",
+    "content": "這場雨的雨珠最小還有姆指大，一下就數百公裡的雨量。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "姆",
+        "correct": "拇",
+        "options": ["母", "姆", "拇", "畝"]
+      },
+      {
+        "index": 20,
+        "wrong": "裡",
+        "correct": "釐",
+        "options": ["釐", "里", "理", "裡"]
+      }
+    ]
+  },
+  {
+    "id": "q14",
+    "content": "雪崩之時，大家都被震攝得氣脫委鈍，落慌而逃。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "攝",
+        "correct": "懾",
+        "options": ["懾", "設", "社", "攝"]
+      },
+      {
+        "index": 15,
+        "wrong": "鈍",
+        "correct": "頓",
+        "options": ["盾", "鈍", "頓", "敦"]
+      },
+      {
+        "index": 18,
+        "wrong": "慌",
+        "correct": "荒",
+        "options": ["慌", "荒", "皇", "肓"]
+      }
+    ]
+  },
+  {
+    "id": "q15",
+    "content": "國際情勢軌鷸多變，經常會帶來很大的振憾。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "軌",
+        "correct": "詭",
+        "options": ["軌", "鬼", "詭", "櫃"]
+      },
+      {
+        "index": 5,
+        "wrong": "鷸",
+        "correct": "譎",
+        "options": ["決", "鷸", "譎", "掘"]
+      },
+      {
+        "index": 16,
+        "wrong": "振",
+        "correct": "震",
+        "options": ["震", "朕", "陣", "振"]
+      },
+      {
+        "index": 17,
+        "wrong": "憾",
+        "correct": "撼",
+        "options": ["憾", "撼", "焊", "翰"]
+      }
+    ]
+  },
+  {
+    "id": "q16",
+    "content": "風災過後，人們總是隴照在恐佈的氣氛之中。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "隴",
+        "correct": "籠",
+        "options": ["壟", "籠", "隴", "龍"]
+      },
+      {
+        "index": 10,
+        "wrong": "照",
+        "correct": "罩",
+        "options": ["罩", "照", "造", "召"]
+      },
+      {
+        "index": 13,
+        "wrong": "佈",
+        "correct": "怖",
+        "options": ["布", "怖", "步", "佈"]
+      }
+    ]
+  },
+  {
+    "id": "q17",
+    "content": "這場雨好像水罷泄洪似的，頃盆而出。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "罷",
+        "correct": "壩",
+        "options": ["壩", "霸", "罷", "怕"]
+      },
+      {
+        "index": 7,
+        "wrong": "泄",
+        "correct": "洩",
+        "options": ["泄", "謝", "洩", "屑"]
+      },
+      {
+        "index": 12,
+        "wrong": "頃",
+        "correct": "傾",
+        "options": ["傾", "頃", "輕", "清"]
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "content": "摔倒了，要自己爬起來；如果總是僕弗不起，很難獲得成功。",
+    "corrections": [
+      {
+        "index": 15,
+        "wrong": "僕",
+        "correct": "匍",
+        "options": ["僕", "蒲", "匍", "葡"]
+      },
+      {
+        "index": 16,
+        "wrong": "弗",
+        "correct": "匐",
+        "options": ["弗", "佛", "匐", "幅"]
+      }
+    ]
+  },
+  {
+    "id": "q19",
+    "content": "在狂風暴雨攏罩之下，孤苦怜仃的小孩，淹面哭泣，他要把心中的恐具，全部發泄出來。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "攏",
+        "correct": "籠",
+        "options": ["籠", "壟", "攏", "龍"]
+      },
+      {
+        "index": 13,
+        "wrong": "怜",
+        "correct": "伶",
+        "options": ["鈴", "伶", "怜", "零"]
+      },
+      {
+        "index": 19,
+        "wrong": "淹",
+        "correct": "掩",
+        "options": ["淹", "演", "掩", "衍"]
+      },
+      {
+        "index": 33,
+        "wrong": "具",
+        "correct": "懼",
+        "options": ["具", "懼", "聚", "劇"]
+      },
+      {
+        "index": 38,
+        "wrong": "泄",
+        "correct": "洩",
+        "options": ["泄", "卸", "洩", "懈"]
+      }
+    ]
+  },
+  {
+    "id": "q20",
+    "content": "西北雨正如一初高潮起伏的大自然戲劇響晏。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "初",
+        "correct": "齣",
+        "options": ["出", "齣", "初", "除"]
+      },
+      {
+        "index": 18,
+        "wrong": "響",
+        "correct": "饗",
+        "options": ["餉", "享", "饗", "響"]
+      },
+      {
+        "index": 19,
+        "wrong": "晏",
+        "correct": "宴",
+        "options": ["晏", "宴", "驗", "艷"]
+      }
+    ]
+  },
+  {
+    "id": "q21",
+    "content": "綜使變體鱗傷，他的動作依然不拈泥帶水。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "綜",
+        "correct": "縱",
+        "options": ["縱", "踪", "綜", "宗"]
+      },
+      {
+        "index": 2,
+        "wrong": "變",
+        "correct": "遍",
+        "options": ["變", "遍", "編", "扁"]
+      },
+      {
+        "index": 15,
+        "wrong": "拈",
+        "correct": "沾",
+        "options": ["沾", "佔", "拈", "粘"]
+      }
+    ]
+  },
+  {
+    "id": "q22",
+    "content": "一陣西北雨，把毫無遮避的行人琳成落湯雞，大家都瘋誑似地找地方躲敝。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "避",
+        "correct": "蔽",
+        "options": ["避", "閉", "蔽", "畢"]
+      },
+      {
+        "index": 14,
+        "wrong": "琳",
+        "correct": "淋",
+        "options": ["林", "琳", "霖", "淋"]
+      },
+      {
+        "index": 24,
+        "wrong": "誑",
+        "correct": "狂",
+        "options": ["曠", "誑", "況", "狂"]
+      },
+      {
+        "index": 32,
+        "wrong": "敝",
+        "correct": "避",
+        "options": ["避", "必", "閉", "敝"]
+      }
+    ]
+  },
+  {
+    "id": "q23",
+    "content": "晴空萬里，突來一聲劈歷，煞時，引起一陣騷動。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "劈",
+        "correct": "霹",
+        "options": ["劈", "霹", "批", "僻"]
+      },
+      {
+        "index": 10,
+        "wrong": "歷",
+        "correct": "靂",
+        "options": ["厲", "歷", "靂", "立"]
+      },
+      {
+        "index": 12,
+        "wrong": "煞",
+        "correct": "霎",
+        "options": ["剎", "霎", "煞", "殺"]
+      }
+    ]
+  },
+  {
+    "id": "q24",
+    "content": "遇到這樣氣事萬均的西北雨，誰也不能程英雄。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "事",
+        "correct": "勢",
+        "options": ["事", "式", "世", "勢"]
+      },
+      {
+        "index": 7,
+        "wrong": "均",
+        "correct": "鈞",
+        "options": ["均", "軍", "君", "鈞"]
+      },
+      {
+        "index": 17,
+        "wrong": "程",
+        "correct": "逞",
+        "options": ["騁", "程", "逞", "呈"]
+      }
+    ]
+  },
+  {
+    "id": "q25",
+    "content": "貝多芬的牧羊人之歌帶來安庠平和，趁脫大自然的偉大。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "庠",
+        "correct": "詳",
+        "options": ["翔", "庠", "詳", "祥"]
+      },
+      {
+        "index": 16,
+        "wrong": "趁",
+        "correct": "襯",
+        "options": ["趁", "襯", "稱", "稱"]
+      },
+      {
+        "index": 17,
+        "wrong": "脫",
+        "correct": "托",
+        "options": ["脫", "託", "托", "拖"]
+      }
+    ]
+  },
+  {
+    "id": "q26",
+    "content": "這篇文章敘寫人間男女只尺天崖的悲情。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "只",
+        "correct": "咫",
+        "options": ["指", "址", "只", "咫"]
+      },
+      {
+        "index": 13,
+        "wrong": "崖",
+        "correct": "涯",
+        "options": ["涯", "崖", "牙", "芽"]
+      }
+    ]
+  },
+  {
+    "id": "q27",
+    "content": "看到客人到來，店員便笑迎迎地出來迎接，增添了幾煦親切感。",
+    "corrections": [
+      {
+        "index": 11,
+        "wrong": "迎",
+        "correct": "盈",
+        "options": ["瑩", "盈", "贏", "迎"]
+      },
+      {
+        "index": 12,
+        "wrong": "迎",
+        "correct": "盈",
+        "options": ["瑩", "迎", "盈", "贏"]
+      },
+      {
+        "index": 25,
+        "wrong": "煦",
+        "correct": "許",
+        "options": ["栩", "煦", "許", "需"]
+      }
+    ]
+  },
+  {
+    "id": "q28",
+    "content": "關於這家公司彷冒商標事件，眾說紛芸，沒有一個定論。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "彷",
+        "correct": "仿",
+        "options": ["彷", "訪", "紡", "仿"]
+      },
+      {
+        "index": 16,
+        "wrong": "芸",
+        "correct": "紜",
+        "options": ["云", "雲", "芸", "紜"]
+      }
+    ]
+  },
+  {
+    "id": "q29",
+    "content": "他每天要千里佻佻趕到臺中上班，讓母親遷腸掛肚，擔心不矣。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "佻",
+        "correct": "迢",
+        "options": ["調", "迢", "條", "佻"]
+      },
+      {
+        "index": 7,
+        "wrong": "佻",
+        "correct": "迢",
+        "options": ["迢", "佻", "條", "挑"]
+      },
+      {
+        "index": 18,
+        "wrong": "遷",
+        "correct": "牽",
+        "options": ["遷", "謙", "牽", "簽"]
+      },
+      {
+        "index": 25,
+        "wrong": "矣",
+        "correct": "已",
+        "options": ["已", "乙", "以", "矣"]
+      }
+    ]
+  },
+  {
+    "id": "q30",
+    "content": "必業典禮上，我們細數一路走來的努力、錯折與歡樂，我忍不住熱淚營眶。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "必",
+        "correct": "畢",
+        "options": ["閉", "幣", "必", "畢"]
+      },
+      {
+        "index": 15,
+        "wrong": "錯",
+        "correct": "挫",
+        "options": ["錯", "挫", "措", "厝"]
+      },
+      {
+        "index": 27,
+        "wrong": "營",
+        "correct": "盈",
+        "options": ["贏", "盈", "瑩", "營"]
+      }
+    ]
+  },
+  {
+    "id": "q31",
+    "content": "難得到國外旅遊，沒有盡情敢受當地人文風土、造訪名盛古積，啟不是令人遺撼。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "敢",
+        "correct": "感",
+        "options": ["趕", "感", "桿", "敢"]
+      },
+      {
+        "index": 24,
+        "wrong": "盛",
+        "correct": "勝",
+        "options": ["盛", "勝", "聖", "剩"]
+      },
+      {
+        "index": 26,
+        "wrong": "積",
+        "correct": "蹟",
+        "options": ["蹟", "積", "績", "跡"]
+      },
+      {
+        "index": 28,
+        "wrong": "啟",
+        "correct": "豈",
+        "options": ["起", "乞", "豈", "啟"]
+      },
+      {
+        "index": 34,
+        "wrong": "撼",
+        "correct": "憾",
+        "options": ["憾", "撼", "焊", "翰"]
+      }
+    ]
+  },
+  {
+    "id": "q32",
+    "content": "靜密的夜裡，息來陣陣的鳥蹄聲，讓許多讀自在外打拚的遊子，心中湧起對家鄉的倦戀。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "密",
+        "correct": "謐",
+        "options": ["密", "泌", "謐", "秘"]
+      },
+      {
+        "index": 5,
+        "wrong": "息",
+        "correct": "襲",
+        "options": ["習", "息", "襲", "吸"]
+      },
+      {
+        "index": 11,
+        "wrong": "蹄",
+        "correct": "啼",
+        "options": ["提", "蹄", "啼", "題"]
+      },
+      {
+        "index": 18,
+        "wrong": "讀",
+        "correct": "獨",
+        "options": ["獨", "毒", "讀", "篤"]
+      },
+      {
+        "index": 34,
+        "wrong": "倦",
+        "correct": "眷",
+        "options": ["券", "眷", "倦", "圈"]
+      }
+    ]
+  },
+  {
+    "id": "q33",
+    "content": "看著恆跨夜空的星河，敢覺自己也被拉入了古老的想相之中。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "恆",
+        "correct": "橫",
+        "options": ["恆", "衡", "橫", "痕"]
+      },
+      {
+        "index": 10,
+        "wrong": "敢",
+        "correct": "感",
+        "options": ["趕", "敢", "感", "桿"]
+      },
+      {
+        "index": 23,
+        "wrong": "相",
+        "correct": "像",
+        "options": ["向", "相", "象", "像"]
+      }
+    ]
+  },
+  {
+    "id": "q34",
+    "content": "他的魯茫總讓狀況變得更惡烈，這次事關眾大，真的得提醒他收練脾氣，別再一時衝動。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "茫",
+        "correct": "莽",
+        "options": ["忙", "茫", "莽", "盲"]
+      },
+      {
+        "index": 12,
+        "wrong": "烈",
+        "correct": "劣",
+        "options": ["獵", "劣", "列", "烈"]
+      },
+      {
+        "index": 18,
+        "wrong": "眾",
+        "correct": "重",
+        "options": ["眾", "重", "種", "中"]
+      },
+      {
+        "index": 28,
+        "wrong": "練",
+        "correct": "斂",
+        "options": ["練", "煉", "鏈", "斂"]
+      }
+    ]
+  },
+  {
+    "id": "q35",
+    "content": "許多時光，總清巧地從指縫中流世，若恣意嗟跎，不真惜美好的時光，等到年華老去，白髮滄滄之後，才知後悔搓嘆，這些無謂的補救都將無記於事了。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "清",
+        "correct": "輕",
+        "options": ["清", "輕", "青", "傾"]
+      },
+      {
+        "index": 14,
+        "wrong": "世",
+        "correct": "逝",
+        "options": ["世", "逝", "誓", "視"]
+      },
+      {
+        "index": 19,
+        "wrong": "嗟",
+        "correct": "蹉",
+        "options": ["嗟", "搓", "蹉", "差"]
+      },
+      {
+        "index": 23,
+        "wrong": "真",
+        "correct": "珍",
+        "options": ["偵", "真", "珍", "甄"]
+      },
+      {
+        "index": 39,
+        "wrong": "滄",
+        "correct": "蒼",
+        "options": ["蒼", "倉", "滄", "槍"]
+      },
+      {
+        "index": 40,
+        "wrong": "滄",
+        "correct": "蒼",
+        "options": ["蒼", "倉", "滄", "艙"]
+      },
+      {
+        "index": 48,
+        "wrong": "搓",
+        "correct": "嗟",
+        "options": ["蹉", "嗟", "差", "搓"]
+      },
+      {
+        "index": 61,
+        "wrong": "記",
+        "correct": "濟",
+        "options": ["濟", "既", "際", "記"]
+      }
+    ]
+  },
+  {
+    "id": "q36",
+    "content": "這次的棄凶行動，因為消息走露，所以警方的行動變得突勞無功。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "棄",
+        "correct": "緝",
+        "options": ["棄", "妻", "緝", "氣"]
+      },
+      {
+        "index": 12,
+        "wrong": "露",
+        "correct": "漏",
+        "options": ["漏", "露", "路", "陸"]
+      },
+      {
+        "index": 23,
+        "wrong": "突",
+        "correct": "徒",
+        "options": ["突", "徒", "圖", "途"]
+      }
+    ]
+  },
+  {
+    "id": "q37",
+    "content": "慈烏尚知反捕，羔羊且會跪乳，貴為萬物之齡的人類，若不懂得抱答親恩，恪盡孝道，起不連禽獸都不如？",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "捕",
+        "correct": "哺",
+        "options": ["補", "甫", "哺", "捕"]
+      },
+      {
+        "index": 19,
+        "wrong": "齡",
+        "correct": "靈",
+        "options": ["齡", "凌", "鈴", "靈"]
+      },
+      {
+        "index": 28,
+        "wrong": "抱",
+        "correct": "報",
+        "options": ["抱", "暴", "報", "爆"]
+      },
+      {
+        "index": 38,
+        "wrong": "起",
+        "correct": "豈",
+        "options": ["企", "起", "豈", "啟"]
+      }
+    ]
+  },
+  {
+    "id": "q38",
+    "content": "陳老師神態威嚴，只要臉色一變，那些調皮的同學都會正巾危坐，不敢再造刺。",
+    "corrections": [
+      {
+        "index": 23,
+        "wrong": "巾",
+        "correct": "襟",
+        "options": ["禁", "襟", "金", "巾"]
+      },
+      {
+        "index": 31,
+        "wrong": "刺",
+        "correct": "次",
+        "options": ["刺", "次", "賜", "伺"]
+      }
+    ]
+  },
+  {
+    "id": "q39",
+    "content": "你才答應對方，現在馬上又反誨，如此出耳反耳，如何在商場上立足？",
+    "corrections": [
+      {
+        "index": 13,
+        "wrong": "誨",
+        "correct": "悔",
+        "options": ["毀", "悔", "誨", "晦"]
+      },
+      {
+        "index": 18,
+        "wrong": "耳",
+        "correct": "爾",
+        "options": ["耳", "兒", "爾", "邇"]
+      },
+      {
+        "index": 20,
+        "wrong": "耳",
+        "correct": "爾",
+        "options": ["爾", "耳", "邇", "餌"]
+      }
+    ]
+  },
+  {
+    "id": "q40",
+    "content": "小偷光顧後，整間房屋雜亂無張，伶亂不堪。",
+    "corrections": [
+      {
+        "index": 13,
+        "wrong": "張",
+        "correct": "章",
+        "options": ["張", "彰", "章", "樟"]
+      },
+      {
+        "index": 15,
+        "wrong": "伶",
+        "correct": "零",
+        "options": ["伶", "齡", "鈴", "零"]
+      }
+    ]
+  },
+  {
+    "id": "q41",
+    "content": "小吳講的話，柵聽之下似乎投投是道，事實上卻是一派歪理，讓人不禁有提笑皆非之感。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "柵",
+        "correct": "乍",
+        "options": ["詐", "乍", "炸", "柵"]
+      },
+      {
+        "index": 12,
+        "wrong": "投",
+        "correct": "頭",
+        "options": ["頭", "透", "投", "偷"]
+      },
+      {
+        "index": 29,
+        "wrong": "提",
+        "correct": "啼",
+        "options": ["提", "蹄", "啼", "題"]
+      }
+    ]
+  },
+  {
+    "id": "q42",
+    "content": "那舞女在茭潔的月光下，舞動她的殲殲宿手，格外惹人憐愛。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "茭",
+        "correct": "皎",
+        "options": ["郊", "絞", "茭", "皎"]
+      },
+      {
+        "index": 13,
+        "wrong": "殲",
+        "correct": "纖",
+        "options": ["殲", "纖", "籤", "懺"]
+      },
+      {
+        "index": 15,
+        "wrong": "宿",
+        "correct": "素",
+        "options": ["速", "宿", "素", "肅"]
+      }
+    ]
+  },
+  {
+    "id": "q43",
+    "content": "專制政府肆意操綜法律，殺一警百，結果人民習慣禁若寒蟬的氛圍，思想被禁固、權利被剝奪。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "綜",
+        "correct": "縱",
+        "options": ["宗", "縱", "粽", "綜"]
+      },
+      {
+        "index": 13,
+        "wrong": "警",
+        "correct": "儆",
+        "options": ["警", "儆", "敬", "景"]
+      },
+      {
+        "index": 20,
+        "wrong": "禁",
+        "correct": "噤",
+        "options": ["禁", "噤", "襟", "金"]
+      },
+      {
+        "index": 30,
+        "wrong": "禁",
+        "correct": "錮",
+        "options": ["錮", "固", "顧", "禁"]
+      }
+    ]
+  },
+  {
+    "id": "q44",
+    "content": "「與其臨鳶羨魚，不如退而結綱。」心動不如馬上行動，做事不可顛三倒四，欠缺周祥計畫，否則只有泣剃零如雨了。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "鳶",
+        "correct": "淵",
+        "options": ["淵", "冤", "鳶", "鴛"]
+      },
+      {
+        "index": 11,
+        "wrong": "綱",
+        "correct": "網",
+        "options": ["罔", "網", "綱", "岡"]
+      },
+      {
+        "index": 30,
+        "wrong": "祥",
+        "correct": "詳",
+        "options": ["祥", "詳", "翔", "想"]
+      },
+      {
+        "index": 38,
+        "wrong": "剃",
+        "correct": "涕",
+        "options": ["剃", "涕", "替", "悌"]
+      }
+    ]
+  },
+  {
+    "id": "q45",
+    "content": "籠統含糊和斷張取意，是最笨茁的方法，我絕不採用。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "張",
+        "correct": "章",
+        "options": ["章", "張", "彰", "樟"]
+      },
+      {
+        "index": 8,
+        "wrong": "意",
+        "correct": "義",
+        "options": ["意", "議", "異", "義"]
+      },
+      {
+        "index": 13,
+        "wrong": "茁",
+        "correct": "拙",
+        "options": ["拙", "茁", "卓", "灼"]
+      }
+    ]
+  },
+  {
+    "id": "q46",
+    "content": "吳起母親病殁，他沒回故鄉奔桑，引起曾參不悅，與吳起斷決了師生關係。",
+    "corrections": [
+      {
+        "index": 11,
+        "wrong": "桑",
+        "correct": "喪",
+        "options": ["喪", "桑", "嗓", "傷"]
+      },
+      {
+        "index": 22,
+        "wrong": "決",
+        "correct": "絕",
+        "options": ["決", "絕", "覺", "掘"]
+      }
+    ]
+  },
+  {
+    "id": "q47",
+    "content": "一般人雖知貓頭鷹是咒伏夜出的動物，卻不知造成這樣現向的原因是什麼。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "咒",
+        "correct": "晝",
+        "options": ["晝", "咒", "皺", "宙"]
+      },
+      {
+        "index": 22,
+        "wrong": "向",
+        "correct": "象",
+        "options": ["向", "相", "象", "像"]
+      }
+    ]
+  },
+  {
+    "id": "q48",
+    "content": "這首詩充滿了遂臣泣婦，朋友擴別的苦悶與哀愁。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "遂",
+        "correct": "逐",
+        "options": ["遂", "逐", "啄", "隧"]
+      },
+      {
+        "index": 8,
+        "wrong": "泣",
+        "correct": "棄",
+        "options": ["泣", "棄", "器", "氣"]
+      },
+      {
+        "index": 13,
+        "wrong": "擴",
+        "correct": "闊",
+        "options": ["闊", "擴", "廓", "括"]
+      }
+    ]
+  },
+  {
+    "id": "q49",
+    "content": "她每天在機柱旁，寫下工作手紮，令人非常配服。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "柱",
+        "correct": "杼",
+        "options": ["柱", "杼", "抒", "佇"]
+      },
+      {
+        "index": 12,
+        "wrong": "紮",
+        "correct": "札",
+        "options": ["札", "紮", "扎", "軋"]
+      },
+      {
+        "index": 18,
+        "wrong": "配",
+        "correct": "佩",
+        "options": ["配", "佩", "珮", "倍"]
+      }
+    ]
+  },
+  {
+    "id": "q50",
+    "content": "人世的滄桑和半生的漂凌不安，彷彿月的贏虧，給人深刻的感悟。",
+    "corrections": [
+      {
+        "index": 8,
+        "wrong": "漂",
+        "correct": "飄",
+        "options": ["漂", "飄", "瓢", "標"]
+      },
+      {
+        "index": 9,
+        "wrong": "凌",
+        "correct": "零",
+        "options": ["靈", "零", "凌", "鈴"]
+      },
+      {
+        "index": 16,
+        "wrong": "贏",
+        "correct": "盈",
+        "options": ["盈", "贏", "瑩", "營"]
+      }
+    ]
+  },
+  {
+    "id": "q51",
+    "content": "都快比賽了，小米還悠災悠災地恍來恍去，一點也不努力練習。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "災",
+        "correct": "哉",
+        "options": ["栽", "災", "哉", "載"]
+      },
+      {
+        "index": 13,
+        "wrong": "恍",
+        "correct": "晃",
+        "options": ["晃", "恍", "幌", "謊"]
+      }
+    ]
+  },
+  {
+    "id": "q52",
+    "content": "新買的房間芳香劑讓她感覺自己像是被禁泡在一郭甜暱的化學製花蜜中。",
+    "corrections": [
+      {
+        "index": 15,
+        "wrong": "禁",
+        "correct": "浸",
+        "options": ["浸", "禁", "盡", "勁"]
+      },
+      {
+        "index": 19,
+        "wrong": "郭",
+        "correct": "鍋",
+        "options": ["郭", "鍋", "渦", "過"]
+      },
+      {
+        "index": 21,
+        "wrong": "暱",
+        "correct": "膩",
+        "options": ["膩", "暱", "泥", "匿"]
+      }
+    ]
+  },
+  {
+    "id": "q53",
+    "content": "微風輕服的午後，遠處傳來幽揚的笛聲，時而高抗、時而低迴，彷彿要把整個山林患醒。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "服",
+        "correct": "拂",
+        "options": ["服", "拂", "佛", "幅"]
+      },
+      {
+        "index": 12,
+        "wrong": "幽",
+        "correct": "悠",
+        "options": ["幽", "悠", "優", "憂"]
+      },
+      {
+        "index": 20,
+        "wrong": "抗",
+        "correct": "亢",
+        "options": ["亢", "抗", "坑", "康"]
+      },
+      {
+        "index": 33,
+        "wrong": "患",
+        "correct": "喚",
+        "options": ["換", "喚", "患", "幻"]
+      }
+    ]
+  },
+  {
+    "id": "q54",
+    "content": "他在老屋外來回跺步，腦中營繞著母親當時的話語，那聲聲叮嚀如今竟比耳邊的風聲還清悉。",
+    "corrections": [
+      {
+        "index": 8,
+        "wrong": "跺",
+        "correct": "踱",
+        "options": ["度", "踱", "跺", "渡"]
+      },
+      {
+        "index": 13,
+        "wrong": "營",
+        "correct": "縈",
+        "options": ["瑩", "縈", "營", "螢"]
+      },
+      {
+        "index": 34,
+        "wrong": "悉",
+        "correct": "晰",
+        "options": ["晰", "悉", "惜", "昔"]
+      }
+    ]
+  },
+  {
+    "id": "q55",
+    "content": "連續幾天的降雨後，強角已爬滿青台，玫味也悄悄浮出，他皺著眉，拿起抹布一點一點地擦舐著磁磚的俸隙。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "強",
+        "correct": "牆",
+        "options": ["牆", "強", "薔", "檣"]
+      },
+      {
+        "index": 14,
+        "wrong": "台",
+        "correct": "苔",
+        "options": ["台", "苔", "抬", "胎"]
+      },
+      {
+        "index": 16,
+        "wrong": "玫",
+        "correct": "霉",
+        "options": ["霉", "玫", "梅", "煤"]
+      },
+      {
+        "index": 32,
+        "wrong": "舐",
+        "correct": "拭",
+        "options": ["試", "拭", "舐", "式"]
+      },
+      {
+        "index": 36,
+        "wrong": "俸",
+        "correct": "縫",
+        "options": ["逢", "縫", "俸", "奉"]
+      }
+    ]
+  },
+  {
+    "id": "q56",
+    "content": "午後的陽光灑進屋裡，她坐在矮鄧上，清聽著窗外的鳥鳴，這難得的閒霞時光，讓人感到一種說不出的平淨。",
+    "corrections": [
+      {
+        "index": 14,
+        "wrong": "鄧",
+        "correct": "凳",
+        "options": ["登", "凳", "鄧", "瞪"]
+      },
+      {
+        "index": 17,
+        "wrong": "清",
+        "correct": "傾",
+        "options": ["清", "傾", "輕", "頃"]
+      },
+      {
+        "index": 31,
+        "wrong": "霞",
+        "correct": "暇",
+        "options": ["暇", "霞", "瑕", "假"]
+      },
+      {
+        "index": 46,
+        "wrong": "淨",
+        "correct": "靜",
+        "options": ["淨", "靜", "竟", "競"]
+      }
+    ]
+  },
+  {
+    "id": "q57",
+    "content": "大家坐在長板登上一邊看魂牽夢螢的哈利波特影片，一邊吃香翠的炒豆子。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "登",
+        "correct": "凳",
+        "options": ["登", "凳", "瞪", "證"]
+      },
+      {
+        "index": 13,
+        "wrong": "螢",
+        "correct": "縈",
+        "options": ["營", "縈", "螢", "瑩"]
+      },
+      {
+        "index": 25,
+        "wrong": "翠",
+        "correct": "脆",
+        "options": ["粹", "脆", "翠", "萃"]
+      }
+    ]
+  },
+  {
+    "id": "q58",
+    "content": "他的長像：額頭方正、眉毛細長，眼睛迷成一條線，和慈眉善目的莆薩一樣。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "像",
+        "correct": "相",
+        "options": ["相", "向", "像", "象"]
+      },
+      {
+        "index": 16,
+        "wrong": "迷",
+        "correct": "瞇",
+        "options": ["謎", "瞇", "迷", "咪"]
+      },
+      {
+        "index": 27,
+        "wrong": "莆",
+        "correct": "菩",
+        "options": ["普", "菩", "莆", "蒲"]
+      }
+    ]
+  },
+  {
+    "id": "q59",
+    "content": "每遇雨天，怵景生情，只得籍著放鶴亭的幽揚笛聲，將思親之情溶入細雨中。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "怵",
+        "correct": "觸",
+        "options": ["觸", "怵", "處", "黜"]
+      },
+      {
+        "index": 12,
+        "wrong": "籍",
+        "correct": "藉",
+        "options": ["藉", "籍", "借", "寂"]
+      },
+      {
+        "index": 18,
+        "wrong": "幽",
+        "correct": "悠",
+        "options": ["悠", "幽", "攸", "憂"]
+      },
+      {
+        "index": 28,
+        "wrong": "溶",
+        "correct": "融",
+        "options": ["融", "溶", "容", "榮"]
+      }
+    ]
+  },
+  {
+    "id": "q60",
+    "content": "下雨天蹲在谷倉後面，和常工們有吃有玩，把淅淅歷歷的雨聲，當成配樂。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "谷",
+        "correct": "穀",
+        "options": ["谷", "穀", "鼓", "骨"]
+      },
+      {
+        "index": 11,
+        "wrong": "常",
+        "correct": "長",
+        "options": ["常", "長", "廠", "場"]
+      },
+      {
+        "index": 21,
+        "wrong": "歷",
+        "correct": "瀝",
+        "options": ["厲", "瀝", "歷", "力"]
+      }
+    ]
+  },
+  {
+    "id": "q61",
+    "content": "我依稀記得那是個煙雨蒙蒙的夜晚，媽媽穿著鏽花的圍裙站在廚房裡，用特製的茶弧為大家烹煮茶品，另一邊還親手撥著好吃的甜栗子，在這樣寒冷的夜裡，燒著媒喝著茶團聚在一起，是我記憶中最溫暖的味道。",
+    "corrections": [
+      {
+        "index": 11,
+        "wrong": "蒙",
+        "correct": "濛",
+        "options": ["蒙", "濛", "朦", "矇"]
+      },
+      {
+        "index": 20,
+        "wrong": "鏽",
+        "correct": "繡",
+        "options": ["鏽", "繡", "秀", "袖"]
+      },
+      {
+        "index": 33,
+        "wrong": "弧",
+        "correct": "壺",
+        "options": ["弧", "壺", "糊", "湖"]
+      },
+      {
+        "index": 47,
+        "wrong": "撥",
+        "correct": "剝",
+        "options": ["波", "剝", "撥", "缽"]
+      },
+      {
+        "index": 64,
+        "wrong": "媒",
+        "correct": "煤",
+        "options": ["霉", "煤", "媒", "莓"]
+      }
+    ]
+  },
+  {
+    "id": "q62",
+    "content": "躲在被窩裡聽母親講故事，拌著瓦背上嘩嘩的雨聲；在谷子裡揀鞠也不願天晴的天真瀾漫的童年鄉居生活。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "拌",
+        "correct": "伴",
+        "options": ["伴", "拌", "辦", "半"]
+      },
+      {
+        "index": 24,
+        "wrong": "谷",
+        "correct": "穀",
+        "options": ["骨", "穀", "谷", "鼓"]
+      },
+      {
+        "index": 28,
+        "wrong": "鞠",
+        "correct": "麴",
+        "options": ["鞠", "麴", "曲", "屈"]
+      },
+      {
+        "index": 37,
+        "wrong": "瀾",
+        "correct": "爛",
+        "options": ["瀾", "爛", "蘭", "攔"]
+      }
+    ]
+  },
+  {
+    "id": "q63",
+    "content": "欣開簾子一看，外頭陽光普照，偶有一些未乾的雨珠在葉上，晶螢惕透，真想把它串成練子，遶在手婉上。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "欣",
+        "correct": "掀",
+        "options": ["掀", "欣", "新", "歆"]
+      },
+      {
+        "index": 25,
+        "wrong": "螢",
+        "correct": "瑩",
+        "options": ["營", "瑩", "螢", "縈"]
+      },
+      {
+        "index": 26,
+        "wrong": "惕",
+        "correct": "剔",
+        "options": ["惕", "剔", "踢", "替"]
+      },
+      {
+        "index": 34,
+        "wrong": "練",
+        "correct": "鍊",
+        "options": ["練", "鍊", "戀", "煉"]
+      },
+      {
+        "index": 37,
+        "wrong": "遶",
+        "correct": "繞",
+        "options": ["饒", "繞", "遶", "擾"]
+      },
+      {
+        "index": 40,
+        "wrong": "婉",
+        "correct": "腕",
+        "options": ["宛", "腕", "婉", "碗"]
+      }
+    ]
+  },
+  {
+    "id": "q64",
+    "content": "因為乾早連年，所有的梅子都長不好，乾瑟甚至無味，所以暫時喝不到釀得甘淳濃郁的梅子酒，那酒眷永的滋味，不知道要等待多久的時光才能再次遇見。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "早",
+        "correct": "旱",
+        "options": ["早", "旱", "捍", "悍"]
+      },
+      {
+        "index": 17,
+        "wrong": "瑟",
+        "correct": "澀",
+        "options": ["色", "澀", "瑟", "嗇"]
+      },
+      {
+        "index": 31,
+        "wrong": "淳",
+        "correct": "醇",
+        "options": ["存", "醇", "淳", "純"]
+      },
+      {
+        "index": 41,
+        "wrong": "眷",
+        "correct": "雋",
+        "options": ["眷", "雋", "卷", "倦"]
+      }
+    ]
+  },
+  {
+    "id": "q65",
+    "content": "「人要厚到，厚到可以積福！」琦君說她一倍子也忘不了母親的溫柔蹲厚。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "到",
+        "correct": "道",
+        "options": ["到", "道", "盜", "倒"]
+      },
+      {
+        "index": 17,
+        "wrong": "倍",
+        "correct": "輩",
+        "options": ["背", "輩", "倍", "備"]
+      },
+      {
+        "index": 29,
+        "wrong": "蹲",
+        "correct": "敦",
+        "options": ["蹲", "敦", "燉", "墩"]
+      }
+    ]
+  },
+  {
+    "id": "q66",
+    "content": "在漂著白繡球花辮的水溝放小船，在瀾泥裡睬水玩，都是童年時雨天常玩的遊戲。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "辮",
+        "correct": "瓣",
+        "options": ["辮", "瓣", "辨", "辯"]
+      },
+      {
+        "index": 16,
+        "wrong": "瀾",
+        "correct": "爛",
+        "options": ["藍", "爛", "瀾", "攔"]
+      },
+      {
+        "index": 19,
+        "wrong": "睬",
+        "correct": "踩",
+        "options": ["採", "踩", "睬", "彩"]
+      }
+    ]
+  },
+  {
+    "id": "q67",
+    "content": "大伙兒在下雨天的晚上，聽唱股兒詞的唱一斷「鄭元和學丏」的熱鬧溫欣場景。",
+    "corrections": [
+      {
+        "index": 13,
+        "wrong": "股",
+        "correct": "鼓",
+        "options": ["古", "鼓", "股", "谷"]
+      },
+      {
+        "index": 19,
+        "wrong": "斷",
+        "correct": "段",
+        "options": ["鍛", "段", "斷", "緞"]
+      },
+      {
+        "index": 26,
+        "wrong": "丏",
+        "correct": "丐",
+        "options": ["鈣", "丐", "丏", "概"]
+      },
+      {
+        "index": 32,
+        "wrong": "欣",
+        "correct": "馨",
+        "options": ["心", "馨", "欣", "薪"]
+      }
+    ]
+  },
+  {
+    "id": "q68",
+    "content": "聽她驕聲嗲氣的令人渾身不對盡，只好靜俏俏地趁機溜走。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "驕",
+        "correct": "嬌",
+        "options": ["驕", "嬌", "焦", "交"]
+      },
+      {
+        "index": 11,
+        "wrong": "盡",
+        "correct": "勁",
+        "options": ["徑", "勁", "盡", "進"]
+      },
+      {
+        "index": 16,
+        "wrong": "俏",
+        "correct": "悄",
+        "options": ["敲", "悄", "俏", "峭"]
+      }
+    ]
+  },
+  {
+    "id": "q69",
+    "content": "乳白色的小遊艇揚起了白色三角形小帆，順著微風，向寶石籃顏色的海面駛去。天氣明郎而溫柔，海浪輕輕地拍著船頭和船弦。",
+    "corrections": [
+      {
+        "index": 23,
+        "wrong": "籃",
+        "correct": "藍",
+        "options": ["籃", "藍", "蘭", "攔"]
+      },
+      {
+        "index": 34,
+        "wrong": "郎",
+        "correct": "朗",
+        "options": ["郎", "朗", "浪", "廊"]
+      },
+      {
+        "index": 47,
+        "wrong": "弦",
+        "correct": "舷",
+        "options": ["弦", "舷", "賢", "銜"]
+      }
+    ]
+  },
+  {
+    "id": "q70",
+    "content": "皮凋的馬薛是今年最流行的鞋款，他竟愚味的以為那是雨鞋。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "凋",
+        "correct": "雕",
+        "options": ["凋", "雕", "貂", "叼"]
+      },
+      {
+        "index": 4,
+        "wrong": "薛",
+        "correct": "靴",
+        "options": ["削", "靴", "薛", "學"]
+      },
+      {
+        "index": 18,
+        "wrong": "味",
+        "correct": "昧",
+        "options": ["妹", "昧", "味", "媚"]
+      }
+    ]
+  },
+  {
+    "id": "q71",
+    "content": "一連下了好幾天的莓雨，悶在家裡都快發媒，趁今天陽光漏臉，趕快去哂哂太陽。",
+    "corrections": [
+      {
+        "index": 8,
+        "wrong": "莓",
+        "correct": "梅",
+        "options": ["煤", "梅", "莓", "枚"]
+      },
+      {
+        "index": 16,
+        "wrong": "媒",
+        "correct": "霉",
+        "options": ["梅", "霉", "媒", "沒"]
+      },
+      {
+        "index": 22,
+        "wrong": "漏",
+        "correct": "露",
+        "options": ["陋", "露", "漏", "路"]
+      },
+      {
+        "index": 28,
+        "wrong": "哂",
+        "correct": "晒",
+        "options": ["篩", "晒", "哂", "灑"]
+      }
+    ]
+  },
+  {
+    "id": "q72",
+    "content": "新綠的樹枝玩皮地張開翅膀，拖著驕豔的花朵。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "玩",
+        "correct": "頑",
+        "options": ["完", "頑", "玩", "宛"]
+      },
+      {
+        "index": 13,
+        "wrong": "拖",
+        "correct": "托",
+        "options": ["託", "托", "拖", "脫"]
+      },
+      {
+        "index": 15,
+        "wrong": "驕",
+        "correct": "嬌",
+        "options": ["蕉", "嬌", "驕", "郊"]
+      }
+    ]
+  },
+  {
+    "id": "q73",
+    "content": "敦在路邊的乞丏手拖著破碗，一見路人就讒著不放。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "敦",
+        "correct": "蹲",
+        "options": ["蹲", "敦", "燉", "墩"]
+      },
+      {
+        "index": 6,
+        "wrong": "丏",
+        "correct": "丐",
+        "options": ["改", "丐", "丏", "鈣"]
+      },
+      {
+        "index": 8,
+        "wrong": "拖",
+        "correct": "托",
+        "options": ["託", "托", "拖", "脫"]
+      },
+      {
+        "index": 17,
+        "wrong": "讒",
+        "correct": "纏",
+        "options": ["禪", "纏", "讒", "產"]
+      }
+    ]
+  },
+  {
+    "id": "q74",
+    "content": "喜微的晨光中，我排徊流連於一○一大樓周邊，住足寧望，只覺它高悚入雲。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "喜",
+        "correct": "熹",
+        "options": ["熹", "喜", "希", "禧"]
+      },
+      {
+        "index": 7,
+        "wrong": "排",
+        "correct": "徘",
+        "options": ["排", "徘", "俳", "牌"]
+      },
+      {
+        "index": 18,
+        "wrong": "住",
+        "correct": "駐",
+        "options": ["注", "駐", "住", "柱"]
+      },
+      {
+        "index": 20,
+        "wrong": "寧",
+        "correct": "凝",
+        "options": ["寧", "凝", "擰", "甯"]
+      },
+      {
+        "index": 26,
+        "wrong": "悚",
+        "correct": "聳",
+        "options": ["聳", "悚", "松", "宋"]
+      }
+    ]
+  },
+  {
+    "id": "q75",
+    "content": "貪圖安佚的人，讀書往往不求慎解。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "佚",
+        "correct": "逸",
+        "options": ["亦", "逸", "佚", "益"]
+      },
+      {
+        "index": 12,
+        "wrong": "慎",
+        "correct": "甚",
+        "options": ["腎", "甚", "慎", "滲"]
+      }
+    ]
+  },
+  {
+    "id": "q76",
+    "content": "佛教徒認為所有網生亟樂世界的眾生都是蓮花的化生。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "網",
+        "correct": "往",
+        "options": ["網", "往", "枉", "旺"]
+      },
+      {
+        "index": 9,
+        "wrong": "亟",
+        "correct": "極",
+        "options": ["急", "極", "亟", "及"]
+      },
+      {
+        "index": 19,
+        "wrong": "生",
+        "correct": "身",
+        "options": ["深", "身", "生", "伸"]
+      }
+    ]
+  },
+  {
+    "id": "q77",
+    "content": "蓮是六月花萌主，六月也稱「何月」。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "萌",
+        "correct": "盟",
+        "options": ["矇", "盟", "萌", "蒙"]
+      },
+      {
+        "index": 13,
+        "wrong": "何",
+        "correct": "荷",
+        "options": ["荷", "何", "河", "賀"]
+      }
+    ]
+  },
+  {
+    "id": "q78",
+    "content": "拘呢穩忍不好，勝氣凌人更不好。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "呢",
+        "correct": "泥",
+        "options": ["尼", "泥", "呢", "妮"]
+      },
+      {
+        "index": 2,
+        "wrong": "穩",
+        "correct": "隱",
+        "options": ["穩", "隱", "癮", "尹"]
+      },
+      {
+        "index": 7,
+        "wrong": "勝",
+        "correct": "盛",
+        "options": ["乘", "盛", "勝", "聖"]
+      }
+    ]
+  },
+  {
+    "id": "q79",
+    "content": "印度有「蓮之女神」，像癥生命的創造。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "像",
+        "correct": "象",
+        "options": ["相", "象", "像", "向"]
+      },
+      {
+        "index": 11,
+        "wrong": "癥",
+        "correct": "徵",
+        "options": ["蒸", "徵", "癥", "爭"]
+      }
+    ]
+  },
+  {
+    "id": "q80",
+    "content": "要靜化社會，首先要培養人們的惻穩之心，然後再淘冶熱於助人的正義感。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "靜",
+        "correct": "淨",
+        "options": ["境", "淨", "靜", "竟"]
+      },
+      {
+        "index": 13,
+        "wrong": "穩",
+        "correct": "隱",
+        "options": ["隱", "穩", "尹", "癮"]
+      },
+      {
+        "index": 20,
+        "wrong": "淘",
+        "correct": "陶",
+        "options": ["陶", "淘", "桃", "逃"]
+      }
+    ]
+  },
+  {
+    "id": "q81",
+    "content": "臨危逃軼，洩瀆了職業的神聖。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "軼",
+        "correct": "逸",
+        "options": ["軼", "益", "逸", "易"]
+      },
+      {
+        "index": 5,
+        "wrong": "洩",
+        "correct": "褻",
+        "options": ["褻", "洩", "屑", "謝"]
+      }
+    ]
+  },
+  {
+    "id": "q82",
+    "content": "池畔的芙渠亭亭而立，氣質速雅，仿若出晨仙子，令人心生敬意，不敢懈玩。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "渠",
+        "correct": "蕖",
+        "options": ["渠", "蕖", "據", "遽"]
+      },
+      {
+        "index": 11,
+        "wrong": "速",
+        "correct": "素",
+        "options": ["速", "宿", "粟", "素"]
+      },
+      {
+        "index": 17,
+        "wrong": "晨",
+        "correct": "塵",
+        "options": ["晨", "沉", "塵", "成"]
+      },
+      {
+        "index": 29,
+        "wrong": "懈",
+        "correct": "褻",
+        "options": ["懈", "褻", "謝", "屑"]
+      }
+    ]
+  },
+  {
+    "id": "q83",
+    "content": "微風拂過湖面，泛起陣陣連漪，彷彿正在洗荻人們心中的塵埃，帶來久違的寧靜與澄撤。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "連",
+        "correct": "漣",
+        "options": ["漣", "連", "蓮", "聯"]
+      },
+      {
+        "index": 17,
+        "wrong": "荻",
+        "correct": "滌",
+        "options": ["滌", "荻", "笛", "敵"]
+      },
+      {
+        "index": 31,
+        "wrong": "撤",
+        "correct": "澈",
+        "options": ["撤", "徹", "轍", "澈"]
+      }
+    ]
+  },
+  {
+    "id": "q84",
+    "content": "他概嘆世人冷漠，不願再岫手旁觀，毅然決然地挺身而出，怦擊那些寞視正義的言行。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "概",
+        "correct": "慨",
+        "options": ["概", "慨", "丐", "鈣"]
+      },
+      {
+        "index": 9,
+        "wrong": "岫",
+        "correct": "袖",
+        "options": ["秀", "柚", "袖", "岫"]
+      },
+      {
+        "index": 23,
+        "wrong": "怦",
+        "correct": "抨",
+        "options": ["砰", "怦", "烹", "抨"]
+      },
+      {
+        "index": 27,
+        "wrong": "寞",
+        "correct": "漠",
+        "options": ["末", "漠", "寞", "莫"]
+      }
+    ]
+  },
+  {
+    "id": "q85",
+    "content": "那株值物在牆角悄然生長，藤曼不斷向上礬爬，在盛夏時節，它綻放出篷勃的生機，為單調的牆面添上一抹清新的綠意與自然的氣息。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "值",
+        "correct": "植",
+        "options": ["值", "直", "植", "殖"]
+      },
+      {
+        "index": 12,
+        "wrong": "曼",
+        "correct": "蔓",
+        "options": ["曼", "慢", "蔓", "漫"]
+      },
+      {
+        "index": 17,
+        "wrong": "礬",
+        "correct": "攀",
+        "options": ["攀", "礬", "凡", "繁"]
+      },
+      {
+        "index": 28,
+        "wrong": "篷",
+        "correct": "蓬",
+        "options": ["篷", "蓬", "朋", "彭"]
+      }
+    ]
+  },
+  {
+    "id": "q86",
+    "content": "他明知對方行徑不當，卻仍選擇同流合巫，最終惹來一身麻煩與赳纏，一切可說是究由自取。",
+    "corrections": [
+      {
+        "index": 14,
+        "wrong": "巫",
+        "correct": "汙",
+        "options": ["屋", "汙", "巫", "嗚"]
+      },
+      {
+        "index": 23,
+        "wrong": "赳",
+        "correct": "糾",
+        "options": ["赳", "糾", "究", "久"]
+      },
+      {
+        "index": 31,
+        "wrong": "究",
+        "correct": "咎",
+        "options": ["救", "究", "舊", "咎"]
+      }
+    ]
+  },
+  {
+    "id": "q87",
+    "content": "各種花彙的精神在作者寄遇情感予以頗析之後，全都富予了生命。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "彙",
+        "correct": "卉",
+        "options": ["繪", "卉", "彙", "會"]
+      },
+      {
+        "index": 10,
+        "wrong": "遇",
+        "correct": "寓",
+        "options": ["遇", "預", "愈", "寓"]
+      },
+      {
+        "index": 15,
+        "wrong": "頗",
+        "correct": "剖",
+        "options": ["頗", "破", "剖", "迫"]
+      },
+      {
+        "index": 23,
+        "wrong": "富",
+        "correct": "賦",
+        "options": ["富", "付", "附", "賦"]
+      }
+    ]
+  },
+  {
+    "id": "q88",
+    "content": "陽明山花季一到，草木慢發，萬物生生不習的氣像，由然而生。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "慢",
+        "correct": "蔓",
+        "options": ["慢", "曼", "蔓", "漫"]
+      },
+      {
+        "index": 16,
+        "wrong": "習",
+        "correct": "息",
+        "options": ["習", "息", "席", "熄"]
+      },
+      {
+        "index": 19,
+        "wrong": "像",
+        "correct": "象",
+        "options": ["象", "像", "相", "向"]
+      },
+      {
+        "index": 21,
+        "wrong": "由",
+        "correct": "油",
+        "options": ["游", "油", "由", "尤"]
+      }
+    ]
+  },
+  {
+    "id": "q89",
+    "content": "淡水河浩渺的煙波，就橫亙在窗外。與對岸的觀音山兩相對映，山水毓秀，盡在眼前，令人心胸大開。能座擁這片青山綠水，難怪詩人能不為型體所疫，而蹤身天地造化之間，悠游在佛經和詩學的國度裡。",
+    "corrections": [
+      {
+        "index": 37,
+        "wrong": "座",
+        "correct": "坐",
+        "options": ["座", "作", "坐", "做"]
+      },
+      {
+        "index": 50,
+        "wrong": "型",
+        "correct": "形",
+        "options": ["刑", "行", "形", "型"]
+      },
+      {
+        "index": 53,
+        "wrong": "疫",
+        "correct": "役",
+        "options": ["役", "亦", "疫", "毅"]
+      },
+      {
+        "index": 56,
+        "wrong": "蹤",
+        "correct": "縱",
+        "options": ["縱", "蹤", "宗", "粽"]
+      }
+    ]
+  },
+  {
+    "id": "q90",
+    "content": "愛蓮說是一篇籍物言志紓懷的上剩之作。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "籍",
+        "correct": "藉",
+        "options": ["藉", "籍", "借", "寂"]
+      },
+      {
+        "index": 10,
+        "wrong": "紓",
+        "correct": "抒",
+        "options": ["書", "舒", "紓", "抒"]
+      },
+      {
+        "index": 14,
+        "wrong": "剩",
+        "correct": "乘",
+        "options": ["勝", "乘", "盛", "剩"]
+      }
+    ]
+  },
+  {
+    "id": "q91",
+    "content": "佛經已蓮代表理想人格，普薩都是座在蓮花坐上。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "已",
+        "correct": "以",
+        "options": ["已", "以", "乙", "矣"]
+      },
+      {
+        "index": 11,
+        "wrong": "普",
+        "correct": "菩",
+        "options": ["普", "蒲", "菩", "圃"]
+      },
+      {
+        "index": 15,
+        "wrong": "座",
+        "correct": "坐",
+        "options": ["坐", "座", "作", "做"]
+      },
+      {
+        "index": 19,
+        "wrong": "坐",
+        "correct": "座",
+        "options": ["座", "坐", "作", "做"]
+      }
+    ]
+  },
+  {
+    "id": "q92",
+    "content": "阿丹三番兩次在課堂上搗蛋，每次看到老師無耐的眼神，他的雙眼就閃躍著「小人得志」的光茫，此後上課時都漫不經心，一心只想整老師，期末時成積一落千丈，可說是究由自取啊！",
+    "corrections": [
+      {
+        "index": 19,
+        "wrong": "耐",
+        "correct": "奈",
+        "options": ["耐", "奈", "那", "哪"]
+      },
+      {
+        "index": 28,
+        "wrong": "躍",
+        "correct": "耀",
+        "options": ["躍", "要", "耀", "藥"]
+      },
+      {
+        "index": 37,
+        "wrong": "茫",
+        "correct": "芒",
+        "options": ["芒", "忙", "茫", "盲"]
+      },
+      {
+        "index": 58,
+        "wrong": "積",
+        "correct": "績",
+        "options": ["績", "積", "基", "幾"]
+      },
+      {
+        "index": 67,
+        "wrong": "究",
+        "correct": "咎",
+        "options": ["就", "舊", "咎", "究"]
+      }
+    ]
+  },
+  {
+    "id": "q93",
+    "content": "楊貴妃如「初水芙蓉」的驕柔清麗虜獲了皇上的心。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "初",
+        "correct": "出",
+        "options": ["出", "初", "除", "處"]
+      },
+      {
+        "index": 11,
+        "wrong": "驕",
+        "correct": "嬌",
+        "options": ["焦", "驕", "嬌", "交"]
+      }
+    ]
+  },
+  {
+    "id": "q94",
+    "content": "周敦頤住家前的草生長茂勝，卻從不休剪。",
+    "corrections": [
+      {
+        "index": 11,
+        "wrong": "勝",
+        "correct": "盛",
+        "options": ["聖", "乘", "盛", "勝"]
+      },
+      {
+        "index": 15,
+        "wrong": "休",
+        "correct": "修",
+        "options": ["休", "羞", "修", "脩"]
+      }
+    ]
+  },
+  {
+    "id": "q95",
+    "content": "春天一到，草木新新向融，各種花奔爭相顫放。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "新",
+        "correct": "欣",
+        "options": ["心", "新", "欣", "薪"]
+      },
+      {
+        "index": 10,
+        "wrong": "融",
+        "correct": "榮",
+        "options": ["容", "融", "絨", "榮"]
+      },
+      {
+        "index": 15,
+        "wrong": "奔",
+        "correct": "卉",
+        "options": ["奔", "卉", "惠", "匯"]
+      },
+      {
+        "index": 18,
+        "wrong": "顫",
+        "correct": "綻",
+        "options": ["占", "綻", "戰", "顫"]
+      }
+    ]
+  },
+  {
+    "id": "q96",
+    "content": "「擢清連而不夭」象徵君子不取眉於事。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "擢",
+        "correct": "濯",
+        "options": ["拙", "卓", "濯", "擢"]
+      },
+      {
+        "index": 3,
+        "wrong": "連",
+        "correct": "漣",
+        "options": ["蓮", "聯", "漣", "連"]
+      },
+      {
+        "index": 6,
+        "wrong": "夭",
+        "correct": "妖",
+        "options": ["妖", "夭", "耀", "要"]
+      },
+      {
+        "index": 13,
+        "wrong": "眉",
+        "correct": "媚",
+        "options": ["眉", "美", "媚", "魅"]
+      },
+      {
+        "index": 15,
+        "wrong": "事",
+        "correct": "世",
+        "options": ["世", "市", "事", "士"]
+      }
+    ]
+  },
+  {
+    "id": "q97",
+    "content": "一個胸懷坦盪的君子，決不礬付權勢，蠅縈狗苟。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "盪",
+        "correct": "蕩",
+        "options": ["蕩", "檔", "盪", "擋"]
+      },
+      {
+        "index": 10,
+        "wrong": "決",
+        "correct": "絕",
+        "options": ["絕", "覺", "決", "爵"]
+      },
+      {
+        "index": 12,
+        "wrong": "礬",
+        "correct": "攀",
+        "options": ["攀", "盼", "盤", "礬"]
+      },
+      {
+        "index": 13,
+        "wrong": "付",
+        "correct": "附",
+        "options": ["付", "附", "副", "富"]
+      },
+      {
+        "index": 18,
+        "wrong": "縈",
+        "correct": "營",
+        "options": ["營", "縈", "瑩", "贏"]
+      }
+    ]
+  },
+  {
+    "id": "q98",
+    "content": "在這順息萬變的時代中，若總是匆忙應對每件事，卻不曾靜下心來反醒與條整自己，便容易陷入無效的忙祿之中，錯失諸多寶貴的時間與機會。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "順",
+        "correct": "瞬",
+        "options": ["順", "舜", "瞬", "訓"]
+      },
+      {
+        "index": 29,
+        "wrong": "醒",
+        "correct": "省",
+        "options": ["醒", "省", "腥", "行"]
+      },
+      {
+        "index": 31,
+        "wrong": "條",
+        "correct": "調",
+        "options": ["條", "調", "挑", "跳"]
+      },
+      {
+        "index": 43,
+        "wrong": "祿",
+        "correct": "碌",
+        "options": ["祿", "路", "鹿", "碌"]
+      }
+    ]
+  },
+  {
+    "id": "q99",
+    "content": "他常以「勝年不重來，一日難再辰」自免，提醒自己貞惜光陰，將每一分努力落實於具體行動之中。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "勝",
+        "correct": "盛",
+        "options": ["盛", "聖", "勝", "剩"]
+      },
+      {
+        "index": 12,
+        "wrong": "辰",
+        "correct": "晨",
+        "options": ["辰", "沉", "晨", "成"]
+      },
+      {
+        "index": 15,
+        "wrong": "免",
+        "correct": "勉",
+        "options": ["免", "勉", "綿", "眠"]
+      },
+      {
+        "index": 21,
+        "wrong": "貞",
+        "correct": "珍",
+        "options": ["珍", "真", "貞", "針"]
+      }
+    ]
+  },
+  {
+    "id": "q100",
+    "content": "析帶一本引人入盛的小說，在濃蔭下席地而坐，享受片刻攸閒。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "析",
+        "correct": "攜",
+        "options": ["攜", "析", "溪", "惜"]
+      },
+      {
+        "index": 7,
+        "wrong": "盛",
+        "correct": "勝",
+        "options": ["勝", "盛", "聖", "剩"]
+      },
+      {
+        "index": 22,
+        "wrong": "攸",
+        "correct": "悠",
+        "options": ["幽", "悠", "攸", "優"]
+      }
+    ]
+  },
+  {
+    "id": "q101",
+    "content": "俗話說得好，寸陰尺碧，韶光易逝，先瞥開外貌會因為時光的流走而逐漸消失光彩，更甚者，內心的空洞也將築日擴大而無從彌補，空留悔恨。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "碧",
+        "correct": "璧",
+        "options": ["必", "碧", "避", "璧"]
+      },
+      {
+        "index": 17,
+        "wrong": "瞥",
+        "correct": "撇",
+        "options": ["瞥", "撇", "批", "彆"]
+      },
+      {
+        "index": 41,
+        "wrong": "築",
+        "correct": "逐",
+        "options": ["築", "逐", "燭", "竹"]
+      }
+    ]
+  },
+  {
+    "id": "q102",
+    "content": "他善於從生活系節中汲取靈感，並巧妙戎入藝術創作，作品匠心獨運，沒有繁覆的技法，卻憑藉這分巧思自眾多藝術品中脫潁而出，廣受讚譽。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "系",
+        "correct": "細",
+        "options": ["系", "戲", "細", "隙"]
+      },
+      {
+        "index": 16,
+        "wrong": "戎",
+        "correct": "融",
+        "options": ["戎", "融", "容", "榮"]
+      },
+      {
+        "index": 28,
+        "wrong": "覆",
+        "correct": "複",
+        "options": ["復", "覆", "副", "複"]
+      },
+      {
+        "index": 44,
+        "wrong": "潁",
+        "correct": "穎",
+        "options": ["穎", "潁", "影", "隱"]
+      }
+    ]
+  },
+  {
+    "id": "q103",
+    "content": "陸先生總是以溫靄的態度對待眾人，談吐匆容不迫，對工作事務的掌渥井然有敘，令人不禁心生親佩。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "靄",
+        "correct": "藹",
+        "options": ["藹", "靄", "愛", "礙"]
+      },
+      {
+        "index": 16,
+        "wrong": "匆",
+        "correct": "從",
+        "options": ["聰", "匆", "從", "蔥"]
+      },
+      {
+        "index": 27,
+        "wrong": "渥",
+        "correct": "握",
+        "options": ["渥", "握", "臥", "沃"]
+      },
+      {
+        "index": 31,
+        "wrong": "敘",
+        "correct": "序",
+        "options": ["敘", "序", "緒", "續"]
+      },
+      {
+        "index": 38,
+        "wrong": "親",
+        "correct": "欽",
+        "options": ["親", "欽", "侵", "琴"]
+      }
+    ]
+  },
+  {
+    "id": "q104",
+    "content": "瞥開流於表面的披評，我們更應關注作品背後的關念與內涵，才能真正理解創作者想要傳達的深意。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "瞥",
+        "correct": "撇",
+        "options": ["撇", "瞥", "鱉", "彆"]
+      },
+      {
+        "index": 7,
+        "wrong": "披",
+        "correct": "批",
+        "options": ["皮", "披", "批", "劈"]
+      },
+      {
+        "index": 19,
+        "wrong": "關",
+        "correct": "觀",
+        "options": ["關", "冠", "觀", "慣"]
+      }
+    ]
+  },
+  {
+    "id": "q105",
+    "content": "在兢爭不斷的工商社會中，人與人之間還是需要誠信來維擊，牽設彼此的利益時，更須溝通協調、化解茅盾。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "兢",
+        "correct": "競",
+        "options": ["競", "兢", "竟", "敬"]
+      },
+      {
+        "index": 19,
+        "wrong": "擊",
+        "correct": "繫",
+        "options": ["繫", "擊", "計", "記"]
+      },
+      {
+        "index": 22,
+        "wrong": "設",
+        "correct": "涉",
+        "options": ["社", "設", "涉", "攝"]
+      },
+      {
+        "index": 37,
+        "wrong": "茅",
+        "correct": "矛",
+        "options": ["矛", "茅", "毛", "貌"]
+      }
+    ]
+  },
+  {
+    "id": "q106",
+    "content": "我仔細看過這棕案件目前的線索，十分鎖碎又沒有調理，如果再繼續追查下去，只怕是任由時間白白流式而徙勞無功。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "棕",
+        "correct": "宗",
+        "options": ["棕", "宗", "蹤", "總"]
+      },
+      {
+        "index": 16,
+        "wrong": "鎖",
+        "correct": "瑣",
+        "options": ["瑣", "鎖", "索", "所"]
+      },
+      {
+        "index": 21,
+        "wrong": "調",
+        "correct": "條",
+        "options": ["條", "調", "跳", "挑"]
+      },
+      {
+        "index": 42,
+        "wrong": "式",
+        "correct": "逝",
+        "options": ["式", "是", "事", "逝"]
+      },
+      {
+        "index": 44,
+        "wrong": "徙",
+        "correct": "徒",
+        "options": ["徒", "徙", "圖", "途"]
+      }
+    ]
+  },
+  {
+    "id": "q107",
+    "content": "趁著假日工作空擋，爸爸將家中牆壁有空細的地方一一填滿，雖然作法稍嫌古版，但是能有效避免害蟲進入家中，也不失為有效的方式。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "擋",
+        "correct": "檔",
+        "options": ["擋", "檔", "盪", "當"]
+      },
+      {
+        "index": 15,
+        "wrong": "細",
+        "correct": "隙",
+        "options": ["系", "細", "隙", "戲"]
+      },
+      {
+        "index": 27,
+        "wrong": "版",
+        "correct": "板",
+        "options": ["板", "版", "辦", "半"]
+      }
+    ]
+  },
+  {
+    "id": "q108",
+    "content": "退變的過程往往是堅苦的，經歷了多少摸索、多少嘗試、多少失敗，就像蝴蝶必定要經過那桶的爭札，才會有對美麗如畫的翅膀。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "退",
+        "correct": "蛻",
+        "options": ["蛻", "退", "推", "腿"]
+      },
+      {
+        "index": 8,
+        "wrong": "堅",
+        "correct": "艱",
+        "options": ["堅", "艱", "監", "尖"]
+      },
+      {
+        "index": 38,
+        "wrong": "桶",
+        "correct": "蛹",
+        "options": ["蛹", "桶", "通", "痛"]
+      },
+      {
+        "index": 40,
+        "wrong": "爭",
+        "correct": "掙",
+        "options": ["掙", "爭", "蒸", "睜"]
+      },
+      {
+        "index": 41,
+        "wrong": "札",
+        "correct": "扎",
+        "options": ["扎", "札", "紮", "閘"]
+      }
+    ]
+  },
+  {
+    "id": "q109",
+    "content": "李教授寫作非常嚴瑾，發表文章時總是字甄句酌，因此他的散文小品字字珠機、發人深醒，堪稱優良的青少年讀物。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "瑾",
+        "correct": "謹",
+        "options": ["僅", "瑾", "謹", "緊"]
+      },
+      {
+        "index": 16,
+        "wrong": "甄",
+        "correct": "斟",
+        "options": ["斟", "甄", "針", "珍"]
+      },
+      {
+        "index": 28,
+        "wrong": "機",
+        "correct": "璣",
+        "options": ["磯", "機", "幾", "璣"]
+      },
+      {
+        "index": 33,
+        "wrong": "醒",
+        "correct": "省",
+        "options": ["省", "醒", "惺", "行"]
+      }
+    ]
+  },
+  {
+    "id": "q110",
+    "content": "青春和容顏不能常住，唯有陪養自己的氣質，才能使你永保年輕。當歲月使你失去臉旁的紅暈，使你的肌膚不再緊實，只有由內而外所散發的氣質，會讓你依舊迷人。",
+    "corrections": [
+      {
+        "index": 8,
+        "wrong": "住",
+        "correct": "駐",
+        "options": ["住", "註", "注", "駐"]
+      },
+      {
+        "index": 12,
+        "wrong": "陪",
+        "correct": "培",
+        "options": ["賠", "陪", "培", "配"]
+      },
+      {
+        "index": 34,
+        "wrong": "旁",
+        "correct": "龐",
+        "options": ["旁", "龐", "傍", "滂"]
+      }
+    ]
+  },
+  {
+    "id": "q111",
+    "content": "若是做事膚衍不肯用心，那麼就算天資聰影，聰明過人，最終也將倫落到一事無成的地步。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "膚",
+        "correct": "敷",
+        "options": ["夫", "膚", "敷", "扶"]
+      },
+      {
+        "index": 14,
+        "wrong": "影",
+        "correct": "穎",
+        "options": ["影", "穎", "隱", "引"]
+      },
+      {
+        "index": 24,
+        "wrong": "倫",
+        "correct": "淪",
+        "options": ["論", "淪", "輪", "倫"]
+      }
+    ]
+  },
+  {
+    "id": "q112",
+    "content": "下班後踏著沉重的步屢回家，家事和公事讓人忙到分身伐術，雖然如此，我卻十分珍惜和家人相處的時光，就算是靈碎而稀少，也是消除皮累的最佳量方。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "屢",
+        "correct": "履",
+        "options": ["旅", "履", "屢", "縷"]
+      },
+      {
+        "index": 19,
+        "wrong": "伐",
+        "correct": "乏",
+        "options": ["罰", "乏", "伐", "法"]
+      },
+      {
+        "index": 36,
+        "wrong": "靈",
+        "correct": "零",
+        "options": ["零", "靈", "鈴", "凌"]
+      },
+      {
+        "index": 45,
+        "wrong": "皮",
+        "correct": "疲",
+        "options": ["披", "疲", "皮", "脾"]
+      },
+      {
+        "index": 49,
+        "wrong": "量",
+        "correct": "良",
+        "options": ["良", "涼", "梁", "量"]
+      }
+    ]
+  },
+  {
+    "id": "q113",
+    "content": "在忙錄的生活中，我們每天都要花許多時間去處理鎖碎的事情，如果還不能善用時間，就會變成時間的奴吏。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "錄",
+        "correct": "碌",
+        "options": ["碌", "錄", "鹿", "陸"]
+      },
+      {
+        "index": 20,
+        "wrong": "鎖",
+        "correct": "瑣",
+        "options": ["索", "瑣", "鎖", "所"]
+      },
+      {
+        "index": 46,
+        "wrong": "吏",
+        "correct": "隸",
+        "options": ["力", "隸", "吏", "利"]
+      }
+    ]
+  },
+  {
+    "id": "q114",
+    "content": "每一條堅實的康裝大道，都是經由無數個今天努力累績的成果。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "裝",
+        "correct": "莊",
+        "options": ["妝", "莊", "裝", "樁"]
+      },
+      {
+        "index": 23,
+        "wrong": "績",
+        "correct": "積",
+        "options": ["機", "積", "基", "績"]
+      }
+    ]
+  },
+  {
+    "id": "q115",
+    "content": "這個場地能同時容鈉上千人一同觀賞表演，卻免不了在表演結束後看到為數可關的垃圾，透過工作人員號時的檢拾與整理，才終於恢復原貌。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "鈉",
+        "correct": "納",
+        "options": ["納", "鈉", "那", "吶"]
+      },
+      {
+        "index": 29,
+        "wrong": "關",
+        "correct": "觀",
+        "options": ["關", "官", "觀", "慣"]
+      },
+      {
+        "index": 39,
+        "wrong": "號",
+        "correct": "耗",
+        "options": ["耗", "號", "好", "浩"]
+      },
+      {
+        "index": 42,
+        "wrong": "檢",
+        "correct": "撿",
+        "options": ["檢", "儉", "撿", "簡"]
+      }
+    ]
+  },
+  {
+    "id": "q116",
+    "content": "身處在結奏訊速、分秒必徵的時代，懂得把握時間就等於掌握製勝的關鍵，我用今日事今日畢的哲學來勉勵自己，所以時間從來不會不夫使用。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "結",
+        "correct": "節",
+        "options": ["結", "節", "截", "潔"]
+      },
+      {
+        "index": 5,
+        "wrong": "訊",
+        "correct": "迅",
+        "options": ["訊", "迅", "信", "訓"]
+      },
+      {
+        "index": 11,
+        "wrong": "徵",
+        "correct": "爭",
+        "options": ["徵", "睜", "爭", "蒸"]
+      },
+      {
+        "index": 25,
+        "wrong": "製",
+        "correct": "致",
+        "options": ["製", "致", "至", "智"]
+      },
+      {
+        "index": 55,
+        "wrong": "夫",
+        "correct": "敷",
+        "options": ["敷", "夫", "扶", "膚"]
+      }
+    ]
+  },
+  {
+    "id": "q117",
+    "content": "在我心中一直有一位仰幕已久的人，他不但個性溫靄可親，也滿副學識，從來不會空閒度日，因為他不想辜付自己寶貴的人生，這點讓我非常敬佩。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "幕",
+        "correct": "慕",
+        "options": ["暮", "慕", "幕", "目"]
+      },
+      {
+        "index": 20,
+        "wrong": "靄",
+        "correct": "藹",
+        "options": ["藹", "靄", "礙", "愛"]
+      },
+      {
+        "index": 26,
+        "wrong": "副",
+        "correct": "腹",
+        "options": ["複", "腹", "副", "富"]
+      },
+      {
+        "index": 43,
+        "wrong": "付",
+        "correct": "負",
+        "options": ["付", "負", "富", "婦"]
+      }
+    ]
+  },
+  {
+    "id": "q118",
+    "content": "畫中的仕女姿態儂鮮合度，既無乾癟之感，亦不過於豐萸，五官輪廓玲瀧標緻，流露出柔美與雅致並存的韻味。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "儂",
+        "correct": "穠",
+        "options": ["農", "穠", "儂", "濃"]
+      },
+      {
+        "index": 8,
+        "wrong": "鮮",
+        "correct": "纖",
+        "options": ["先", "鮮", "纖", "仙"]
+      },
+      {
+        "index": 19,
+        "wrong": "萸",
+        "correct": "腴",
+        "options": ["腴", "魚", "萸", "余"]
+      },
+      {
+        "index": 25,
+        "wrong": "瀧",
+        "correct": "瓏",
+        "options": ["瓏", "龍", "瀧", "聾"]
+      }
+    ]
+  },
+  {
+    "id": "q119",
+    "content": "早晨一陣陣清翠而又瞭亮的鳥鳴聲，將我從夢竟中渙醒。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "翠",
+        "correct": "脆",
+        "options": ["脆", "萃", "翠", "悴"]
+      },
+      {
+        "index": 9,
+        "wrong": "瞭",
+        "correct": "嘹",
+        "options": ["嘹", "聊", "療", "瞭"]
+      },
+      {
+        "index": 18,
+        "wrong": "竟",
+        "correct": "境",
+        "options": ["靜", "境", "竟", "鏡"]
+      },
+      {
+        "index": 20,
+        "wrong": "渙",
+        "correct": "喚",
+        "options": ["換", "喚", "渙", "患"]
+      }
+    ]
+  },
+  {
+    "id": "q120",
+    "content": "陳小姐今天穿著袋青色上衣，趁著白裙，看起來相當罩眼。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "袋",
+        "correct": "黛",
+        "options": ["代", "袋", "黛", "帶"]
+      },
+      {
+        "index": 12,
+        "wrong": "趁",
+        "correct": "襯",
+        "options": ["稱", "趁", "襯", "秤"]
+      },
+      {
+        "index": 23,
+        "wrong": "罩",
+        "correct": "照",
+        "options": ["召", "照", "罩", "兆"]
+      }
+    ]
+  },
+  {
+    "id": "q121",
+    "content": "稻田裡住立著一隻白鷺鷥，全著一條腳，看起來好不寂寞。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "住",
+        "correct": "佇",
+        "options": ["注", "住", "駐", "佇"]
+      },
+      {
+        "index": 12,
+        "wrong": "全",
+        "correct": "蜷",
+        "options": ["全", "蜷", "拳", "捲"]
+      }
+    ]
+  },
+  {
+    "id": "q122",
+    "content": "呱呱躁啼的烏鴨，是最被人討厭的，因為牠是不吉利的象徵。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "躁",
+        "correct": "噪",
+        "options": ["燥", "噪", "躁", "澡"]
+      },
+      {
+        "index": 6,
+        "wrong": "鴨",
+        "correct": "鴉",
+        "options": ["壓", "鴨", "鴉", "雅"]
+      }
+    ]
+  },
+  {
+    "id": "q123",
+    "content": "古代的紙淵就是今日的風箏，因為它的行狀像鷹，因此而得名。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "淵",
+        "correct": "鳶",
+        "options": ["淵", "鴛", "冤", "鳶"]
+      },
+      {
+        "index": 15,
+        "wrong": "行",
+        "correct": "形",
+        "options": ["行", "刑", "形", "型"]
+      }
+    ]
+  },
+  {
+    "id": "q124",
+    "content": "他宛如囚鳥般捲伏在命運的牢窿裡，無聲地承受生活的重壓，那些處目驚心的經曆早已刻進心底，難以抹去。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "捲",
+        "correct": "蜷",
+        "options": ["蜷", "捲", "圈", "眷"]
+      },
+      {
+        "index": 13,
+        "wrong": "窿",
+        "correct": "籠",
+        "options": ["籠", "隆", "窿", "龍"]
+      },
+      {
+        "index": 26,
+        "wrong": "處",
+        "correct": "觸",
+        "options": ["怵", "處", "觸", "黜"]
+      },
+      {
+        "index": 32,
+        "wrong": "曆",
+        "correct": "歷",
+        "options": ["曆", "歷", "厲", "力"]
+      }
+    ]
+  },
+  {
+    "id": "q125",
+    "content": "花園裡百花爭妍，色彩斑欄卻不顯雜亂，彼此搭配得洽到好處，展現出和協之美，一旁峭麗少女的笑容照眼，格外動人。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "欄",
+        "correct": "斕",
+        "options": ["欄", "瀾", "蘭", "斕"]
+      },
+      {
+        "index": 21,
+        "wrong": "洽",
+        "correct": "恰",
+        "options": ["洽", "恰", "洽", "切"]
+      },
+      {
+        "index": 30,
+        "wrong": "協",
+        "correct": "諧",
+        "options": ["協", "諧", "偕", "攜"]
+      },
+      {
+        "index": 36,
+        "wrong": "峭",
+        "correct": "俏",
+        "options": ["俏", "峭", "肖", "鞘"]
+      }
+    ]
+  },
+  {
+    "id": "q126",
+    "content": "他獨自鑄立在街角，眼神中透著迷網，心中滿是難以訴說的痠楚與苦悶，彷彿被困在無法逃脫的孤寂中。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "鑄",
+        "correct": "佇",
+        "options": ["住", "鑄", "佇", "駐"]
+      },
+      {
+        "index": 12,
+        "wrong": "網",
+        "correct": "惘",
+        "options": ["網", "惘", "罔", "往"]
+      },
+      {
+        "index": 22,
+        "wrong": "痠",
+        "correct": "酸",
+        "options": ["痠", "酸", "算", "蒜"]
+      }
+    ]
+  },
+  {
+    "id": "q127",
+    "content": "車站大廳人聲頂沸，暄譁聲與機械燥音此起彼落，唯有那寮亮的播報聲劃破塵囂，引人注意。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "頂",
+        "correct": "鼎",
+        "options": ["頂", "鼎", "丁", "定"]
+      },
+      {
+        "index": 9,
+        "wrong": "暄",
+        "correct": "喧",
+        "options": ["宣", "喧", "暄", "渲"]
+      },
+      {
+        "index": 15,
+        "wrong": "燥",
+        "correct": "噪",
+        "options": ["躁", "噪", "燥", "澡"]
+      },
+      {
+        "index": 24,
+        "wrong": "寮",
+        "correct": "嘹",
+        "options": ["嘹", "寮", "遼", "聊"]
+      }
+    ]
+  },
+  {
+    "id": "q128",
+    "content": "那隻嬌傲的雄孔鵲喬著尖尖的長啄，洩著長尾巴，非常神氣的樣子。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "嬌",
+        "correct": "驕",
+        "options": ["嬌", "驕", "矯", "交"]
+      },
+      {
+        "index": 6,
+        "wrong": "鵲",
+        "correct": "雀",
+        "options": ["鵲", "雀", "確", "卻"]
+      },
+      {
+        "index": 7,
+        "wrong": "喬",
+        "correct": "翹",
+        "options": ["喬", "翹", "橋", "瞧"]
+      },
+      {
+        "index": 13,
+        "wrong": "啄",
+        "correct": "喙",
+        "options": ["啄", "喙", "追", "逐"]
+      },
+      {
+        "index": 15,
+        "wrong": "洩",
+        "correct": "曳",
+        "options": ["洩", "曳", "液", "業"]
+      }
+    ]
+  },
+  {
+    "id": "q129",
+    "content": "菜市場裡人聲頂沸，突然看到一名頗腳的乞丐，倦曲著身體縮在角落，不覺悲從中來。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "頂",
+        "correct": "鼎",
+        "options": ["頂", "鼎", "定", "丁"]
+      },
+      {
+        "index": 14,
+        "wrong": "頗",
+        "correct": "跛",
+        "options": ["頗", "波", "跛", "撥"]
+      },
+      {
+        "index": 20,
+        "wrong": "倦",
+        "correct": "蜷",
+        "options": ["倦", "捲", "蜷", "眷"]
+      }
+    ]
+  },
+  {
+    "id": "q130",
+    "content": "明　清時代住在北京的達官桂人，最喜歡在格博上架著一隻鷹，上街蹓搭。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "桂",
+        "correct": "貴",
+        "options": ["桂", "櫃", "貴", "歸"]
+      },
+      {
+        "index": 18,
+        "wrong": "格",
+        "correct": "胳",
+        "options": ["格", "革", "胳", "閣"]
+      },
+      {
+        "index": 19,
+        "wrong": "博",
+        "correct": "膊",
+        "options": ["博", "搏", "膊", "薄"]
+      },
+      {
+        "index": 30,
+        "wrong": "搭",
+        "correct": "躂",
+        "options": ["搭", "達", "躂", "嗒"]
+      }
+    ]
+  },
+  {
+    "id": "q131",
+    "content": "被關在聾裡的雪貂，像是被宣判死形的求犯，無法掙脫悲慘的命運。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "聾",
+        "correct": "籠",
+        "options": ["龍", "聾", "籠", "隆"]
+      },
+      {
+        "index": 14,
+        "wrong": "形",
+        "correct": "刑",
+        "options": ["形", "刑", "行", "型"]
+      },
+      {
+        "index": 16,
+        "wrong": "求",
+        "correct": "囚",
+        "options": ["求", "球", "囚", "仇"]
+      }
+    ]
+  },
+  {
+    "id": "q132",
+    "content": "她的歌聲清翠瞭亮，身材豐臾而不擁腫，十分地濃纖合度，因此吸引萬千歌迷聆聽欣賞。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "翠",
+        "correct": "脆",
+        "options": ["萃", "脆", "翠", "悴"]
+      },
+      {
+        "index": 5,
+        "wrong": "瞭",
+        "correct": "嘹",
+        "options": ["瞭", "聊", "嘹", "僚"]
+      },
+      {
+        "index": 10,
+        "wrong": "臾",
+        "correct": "腴",
+        "options": ["臾", "腴", "魚", "愉"]
+      },
+      {
+        "index": 13,
+        "wrong": "擁",
+        "correct": "臃",
+        "options": ["庸", "擁", "臃", "壅"]
+      },
+      {
+        "index": 14,
+        "wrong": "腫",
+        "correct": "腫",
+        "options": ["腫", "踵", "種", "重"]
+      },
+      {
+        "index": 19,
+        "wrong": "濃",
+        "correct": "穠",
+        "options": ["濃", "農", "儂", "穠"]
+      }
+    ]
+  },
+  {
+    "id": "q133",
+    "content": "那隻色彩班爛的鳥兒，胸禁上的羽毛顏色特別罩眼。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "班",
+        "correct": "斑",
+        "options": ["班", "斑", "般", "搬"]
+      },
+      {
+        "index": 5,
+        "wrong": "爛",
+        "correct": "斕",
+        "options": ["爛", "蘭", "斕", "欄"]
+      },
+      {
+        "index": 11,
+        "wrong": "禁",
+        "correct": "襟",
+        "options": ["襟", "禁", "金", "巾"]
+      },
+      {
+        "index": 19,
+        "wrong": "罩",
+        "correct": "照",
+        "options": ["罩", "照", "召", "兆"]
+      }
+    ]
+  },
+  {
+    "id": "q134",
+    "content": "這個身材干癟的老婆婆，綣曲著身體躺在人家的奇樓下，真是可憐。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "干",
+        "correct": "乾",
+        "options": ["甘", "乾", "干", "敢"]
+      },
+      {
+        "index": 10,
+        "wrong": "綣",
+        "correct": "蜷",
+        "options": ["卷", "綣", "蜷", "拳"]
+      },
+      {
+        "index": 19,
+        "wrong": "奇",
+        "correct": "騎",
+        "options": ["騎", "奇", "齊", "旗"]
+      }
+    ]
+  },
+  {
+    "id": "q135",
+    "content": "在一片鼓燥喧譁的街道中，我瞧見地攤上那個色彩班爛的瓷瓶，一陣喜悅次上了我的心頭。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "燥",
+        "correct": "噪",
+        "options": ["躁", "燥", "噪", "澡"]
+      },
+      {
+        "index": 20,
+        "wrong": "班",
+        "correct": "斑",
+        "options": ["班", "斑", "般", "頒"]
+      },
+      {
+        "index": 21,
+        "wrong": "爛",
+        "correct": "斕",
+        "options": ["爛", "斕", "蘭", "攔"]
+      },
+      {
+        "index": 30,
+        "wrong": "次",
+        "correct": "刺",
+        "options": ["刺", "次", "賜", "伺"]
+      }
+    ]
+  },
+  {
+    "id": "q136",
+    "content": "這隻老鷹原本是高据在枝頭，而今被獵人補捉關在籠裡求禁著，沒有半點鄰視昂臧的神氣。",
+    "corrections": [
+      {
+        "index": 8,
+        "wrong": "据",
+        "correct": "踞",
+        "options": ["據", "踞", "居", "据"]
+      },
+      {
+        "index": 18,
+        "wrong": "補",
+        "correct": "捕",
+        "options": ["補", "捕", "哺", "甫"]
+      },
+      {
+        "index": 24,
+        "wrong": "求",
+        "correct": "囚",
+        "options": ["求", "球", "囚", "仇"]
+      },
+      {
+        "index": 32,
+        "wrong": "鄰",
+        "correct": "瞵",
+        "options": ["鄰", "臨", "瞵", "磷"]
+      },
+      {
+        "index": 35,
+        "wrong": "臧",
+        "correct": "藏",
+        "options": ["臧", "臟", "藏", "贓"]
+      }
+    ]
+  },
+  {
+    "id": "q137",
+    "content": "這些人青早就在街上鎦搭，過著真正悠間的生活。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "青",
+        "correct": "清",
+        "options": ["青", "清", "輕", "頃"]
+      },
+      {
+        "index": 9,
+        "wrong": "鎦",
+        "correct": "蹓",
+        "options": ["溜", "鎦", "蹓", "榴"]
+      },
+      {
+        "index": 10,
+        "wrong": "搭",
+        "correct": "躂",
+        "options": ["搭", "達", "躂", "嗒"]
+      },
+      {
+        "index": 16,
+        "wrong": "間",
+        "correct": "閒",
+        "options": ["間", "閒", "閑", "嫌"]
+      }
+    ]
+  },
+  {
+    "id": "q138",
+    "content": "海嘯過後的現場到處是令人處目警心的景象，等待救援的傷患，不斷發出棲絕的哀叫聲。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "處",
+        "correct": "觸",
+        "options": ["觸", "怵", "處", "黜"]
+      },
+      {
+        "index": 14,
+        "wrong": "警",
+        "correct": "驚",
+        "options": ["警", "驚", "京", "經"]
+      },
+      {
+        "index": 29,
+        "wrong": "棲",
+        "correct": "淒",
+        "options": ["棲", "凄", "淒", "妻"]
+      }
+    ]
+  },
+  {
+    "id": "q139",
+    "content": "貓頭鷹的另一種名稱叫蚩消，是夜行性的猛勤。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "蚩",
+        "correct": "鴟",
+        "options": ["蚩", "嗤", "鴟", "癡"]
+      },
+      {
+        "index": 11,
+        "wrong": "消",
+        "correct": "梟",
+        "options": ["消", "削", "梟", "蕭"]
+      },
+      {
+        "index": 18,
+        "wrong": "勤",
+        "correct": "禽",
+        "options": ["勤", "禽", "琴", "芹"]
+      }
+    ]
+  },
+  {
+    "id": "q140",
+    "content": "鳥的身驅都是鈴瓏飽滿的，細瘦而不乾癟，豐諛而不擁踵。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "驅",
+        "correct": "軀",
+        "options": ["驅", "區", "軀", "趨"]
+      },
+      {
+        "index": 6,
+        "wrong": "鈴",
+        "correct": "玲",
+        "options": ["鈴", "玲", "伶", "聆"]
+      },
+      {
+        "index": 18,
+        "wrong": "諛",
+        "correct": "腴",
+        "options": ["諛", "渝", "腴", "魚"]
+      },
+      {
+        "index": 21,
+        "wrong": "擁",
+        "correct": "臃",
+        "options": ["擁", "臃", "庸", "壅"]
+      },
+      {
+        "index": 22,
+        "wrong": "踵",
+        "correct": "腫",
+        "options": ["踵", "腫", "種", "鐘"]
+      }
+    ]
+  },
+  {
+    "id": "q141",
+    "content": "關在鳥籠裡的鳥兒，想要博扶謠而直上是不可能的事，因為牠會到處狀頭碰壁。",
+    "corrections": [
+      {
+        "index": 11,
+        "wrong": "博",
+        "correct": "搏",
+        "options": ["博", "搏", "薄", "膊"]
+      },
+      {
+        "index": 13,
+        "wrong": "謠",
+        "correct": "搖",
+        "options": ["謠", "搖", "遙", "瑤"]
+      },
+      {
+        "index": 27,
+        "wrong": "狀",
+        "correct": "撞",
+        "options": ["狀", "撞", "壯", "裝"]
+      }
+    ]
+  },
+  {
+    "id": "q142",
+    "content": "窗零上映著雀兒的身影，牠正用尖尖的鳥啄吃著蟲子。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "零",
+        "correct": "櫺",
+        "options": ["零", "靈", "櫺", "鈴"]
+      },
+      {
+        "index": 18,
+        "wrong": "啄",
+        "correct": "喙",
+        "options": ["啄", "喙", "逐", "囀"]
+      }
+    ]
+  },
+  {
+    "id": "q143",
+    "content": "另出如山，任何人都無法耍籟。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "另",
+        "correct": "令",
+        "options": ["另", "令", "領", "靈"]
+      },
+      {
+        "index": 11,
+        "wrong": "籟",
+        "correct": "賴",
+        "options": ["籟", "賴", "瀨", "懶"]
+      }
+    ]
+  },
+  {
+    "id": "q144",
+    "content": "與其故執不通，不如圓融以代。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "故",
+        "correct": "固",
+        "options": ["故", "固", "顧", "古"]
+      },
+      {
+        "index": 11,
+        "wrong": "代",
+        "correct": "待",
+        "options": ["代", "待", "帶", "袋"]
+      }
+    ]
+  },
+  {
+    "id": "q145",
+    "content": "以經決定的事，千萬不可隨意庚改。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "以",
+        "correct": "已",
+        "options": ["以", "已", "乙", "矣"]
+      },
+      {
+        "index": 12,
+        "wrong": "庚",
+        "correct": "更",
+        "options": ["庚", "更", "耕", "羹"]
+      }
+    ]
+  },
+  {
+    "id": "q146",
+    "content": "這件案子措綜複雜，他卻能噹機立斷，理出頭緒。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "措",
+        "correct": "錯",
+        "options": ["措", "錯", "厝", "挫"]
+      },
+      {
+        "index": 10,
+        "wrong": "噹",
+        "correct": "當",
+        "options": ["噹", "當", "擋", "檔"]
+      }
+    ]
+  },
+  {
+    "id": "q147",
+    "content": "在社群煤體上分享生活時，要留意不可侵犯別人的穩私或盜用圖片，以免陷入法律赳紛。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "煤",
+        "correct": "媒",
+        "options": ["煤", "媒", "霉", "沒"]
+      },
+      {
+        "index": 20,
+        "wrong": "穩",
+        "correct": "隱",
+        "options": ["穩", "隱", "癮", "尹"]
+      },
+      {
+        "index": 35,
+        "wrong": "赳",
+        "correct": "糾",
+        "options": ["赳", "糾", "究", "久"]
+      }
+    ]
+  },
+  {
+    "id": "q148",
+    "content": "莉莉平常很注重制慧財產權，不會隨便下載盜板影片，但有一次她不小心點了朋友分享的非法連結，發現後馬上關掉，警踢自己後要更小心確認內容來原。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "制",
+        "correct": "智",
+        "options": ["制", "智", "志", "質"]
+      },
+      {
+        "index": 18,
+        "wrong": "板",
+        "correct": "版",
+        "options": ["板", "版", "辦", "斑"]
+      },
+      {
+        "index": 49,
+        "wrong": "踢",
+        "correct": "惕",
+        "options": ["踢", "惕", "剔", "替"]
+      },
+      {
+        "index": 62,
+        "wrong": "原",
+        "correct": "源",
+        "options": ["原", "源", "圓", "緣"]
+      }
+    ]
+  },
+  {
+    "id": "q149",
+    "content": "阿哲昨晚玩線上遊戲時，一時氣奮罵了隊友。結果被人檢櫸，帳號還被禁言，令他後悔漠及。",
+    "corrections": [
+      {
+        "index": 13,
+        "wrong": "奮",
+        "correct": "憤",
+        "options": ["奮", "憤", "份", "糞"]
+      },
+      {
+        "index": 22,
+        "wrong": "櫸",
+        "correct": "舉",
+        "options": ["櫸", "舉", "咀", "矩"]
+      },
+      {
+        "index": 36,
+        "wrong": "漠",
+        "correct": "莫",
+        "options": ["漠", "莫", "末", "墨"]
+      }
+    ]
+  },
+  {
+    "id": "q150",
+    "content": "天天因與室友起沖圖，一時衝動便在綱路上散布瑤言，結果吃上官司被判刑。這讓他明白，言論自由仍有其界限，處犯法律就得為自己的行為負責。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "沖",
+        "correct": "衝",
+        "options": ["沖", "衝", "充", "憧"]
+      },
+      {
+        "index": 8,
+        "wrong": "圖",
+        "correct": "突",
+        "options": ["圖", "突", "徒", "途"]
+      },
+      {
+        "index": 15,
+        "wrong": "綱",
+        "correct": "網",
+        "options": ["綱", "網", "罔", "岡"]
+      },
+      {
+        "index": 20,
+        "wrong": "瑤",
+        "correct": "謠",
+        "options": ["瑤", "謠", "遙", "搖"]
+      },
+      {
+        "index": 45,
+        "wrong": "處",
+        "correct": "觸",
+        "options": ["處", "觸", "怵", "黜"]
+      }
+    ]
+  },
+  {
+    "id": "q151",
+    "content": "歐哥平日都很守法，但有次開車不小心超涑，收到罰簞後雖然心疼錢包，但也提省自己下次要更注意，必竟安全才是最重要的。",
+    "corrections": [
+      {
+        "index": 16,
+        "wrong": "涑",
+        "correct": "速",
+        "options": ["涑", "速", "素", "宿"]
+      },
+      {
+        "index": 21,
+        "wrong": "簞",
+        "correct": "單",
+        "options": ["簞", "單", "擔", "丹"]
+      },
+      {
+        "index": 33,
+        "wrong": "省",
+        "correct": "醒",
+        "options": ["省", "醒", "腥", "行"]
+      },
+      {
+        "index": 43,
+        "wrong": "必",
+        "correct": "畢",
+        "options": ["必", "畢", "閉", "幣"]
+      }
+    ]
+  },
+  {
+    "id": "q152",
+    "content": "株殺無姑，包庇罪犯的人會被畔刑。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "株",
+        "correct": "誅",
+        "options": ["株", "誅", "珠", "蛛"]
+      },
+      {
+        "index": 3,
+        "wrong": "姑",
+        "correct": "辜",
+        "options": ["姑", "辜", "孤", "估"]
+      },
+      {
+        "index": 13,
+        "wrong": "畔",
+        "correct": "判",
+        "options": ["畔", "判", "叛", "盼"]
+      }
+    ]
+  },
+  {
+    "id": "q153",
+    "content": "在娛論的壓力下，他無法成虛而入，只好知難而退。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "娛",
+        "correct": "輿",
+        "options": ["娛", "輿", "余", "於"]
+      },
+      {
+        "index": 9,
+        "wrong": "成",
+        "correct": "乘",
+        "options": ["成", "乘", "承", "城"]
+      }
+    ]
+  },
+  {
+    "id": "q154",
+    "content": "為了惟護社會安全，對范人應檢舉而不該藏暱。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "惟",
+        "correct": "維",
+        "options": ["惟", "維", "唯", "為"]
+      },
+      {
+        "index": 9,
+        "wrong": "范",
+        "correct": "犯",
+        "options": ["范", "犯", "範", "飯"]
+      },
+      {
+        "index": 18,
+        "wrong": "暱",
+        "correct": "匿",
+        "options": ["暱", "匿", "逆", "溺"]
+      }
+    ]
+  },
+  {
+    "id": "q155",
+    "content": "陽明山的花季開羅了，徜徉在花團緊簇、草木扶蔬的林間小徑，讓一陳不變的生活增添濱紛的色綵。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "羅",
+        "correct": "鑼",
+        "options": ["羅", "鑼", "蘿", "邏"]
+      },
+      {
+        "index": 16,
+        "wrong": "緊",
+        "correct": "錦",
+        "options": ["緊", "錦", "僅", "謹"]
+      },
+      {
+        "index": 22,
+        "wrong": "蔬",
+        "correct": "疏",
+        "options": ["蔬", "疏", "梳", "書"]
+      },
+      {
+        "index": 31,
+        "wrong": "陳",
+        "correct": "成",
+        "options": ["陳", "成", "承", "沉"]
+      },
+      {
+        "index": 38,
+        "wrong": "濱",
+        "correct": "繽",
+        "options": ["濱", "繽", "賓", "檳"]
+      },
+      {
+        "index": 41,
+        "wrong": "綵",
+        "correct": "彩",
+        "options": ["綵", "彩", "採", "睬"]
+      }
+    ]
+  },
+  {
+    "id": "q156",
+    "content": "臺北市地峽人綢，房價居高不下，許多人只能租屋度日。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "峽",
+        "correct": "狹",
+        "options": ["峽", "狹", "俠", "匣"]
+      },
+      {
+        "index": 6,
+        "wrong": "綢",
+        "correct": "稠",
+        "options": ["綢", "稠", "愁", "酬"]
+      }
+    ]
+  },
+  {
+    "id": "q157",
+    "content": "娜英不僱家人反對，擅自離家與網友會面，引起全家的搔動和錯諤。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "僱",
+        "correct": "顧",
+        "options": ["僱", "顧", "故", "固"]
+      },
+      {
+        "index": 21,
+        "wrong": "搔",
+        "correct": "騷",
+        "options": ["搔", "騷", "掃", "嫂"]
+      },
+      {
+        "index": 24,
+        "wrong": "錯",
+        "correct": "錯",
+        "options": ["錯", "錯", "措", "挫"]
+      },
+      {
+        "index": 25,
+        "wrong": "諤",
+        "correct": "愕",
+        "options": ["諤", "愕", "惡", "鄂"]
+      }
+    ]
+  },
+  {
+    "id": "q158",
+    "content": "他做事總是輕服魯蟒，常因貿失誤事，而得罪許多好友。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "服",
+        "correct": "浮",
+        "options": ["服", "浮", "扶", "幅"]
+      },
+      {
+        "index": 7,
+        "wrong": "蟒",
+        "correct": "莽",
+        "options": ["蟒", "莽", "忙", "盲"]
+      },
+      {
+        "index": 11,
+        "wrong": "貿",
+        "correct": "冒",
+        "options": ["貿", "冒", "帽", "茂"]
+      }
+    ]
+  },
+  {
+    "id": "q159",
+    "content": "酷吏斷案常因人費法，因言改法，株殺無姑，另人憤概。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "費",
+        "correct": "廢",
+        "options": ["費", "廢", "肺", "費"]
+      },
+      {
+        "index": 15,
+        "wrong": "株",
+        "correct": "誅",
+        "options": ["株", "誅", "珠", "蛛"]
+      },
+      {
+        "index": 18,
+        "wrong": "姑",
+        "correct": "辜",
+        "options": ["姑", "辜", "孤", "估"]
+      },
+      {
+        "index": 20,
+        "wrong": "另",
+        "correct": "令",
+        "options": ["另", "令", "領", "靈"]
+      },
+      {
+        "index": 23,
+        "wrong": "概",
+        "correct": "慨",
+        "options": ["概", "慨", "丐", "鈣"]
+      }
+    ]
+  },
+  {
+    "id": "q160",
+    "content": "他因亂丟煙締不服取諦，被警察置留在警察局。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "締",
+        "correct": "蒂",
+        "options": ["締", "蒂", "帝", "啼"]
+      },
+      {
+        "index": 9,
+        "wrong": "諦",
+        "correct": "締",
+        "options": ["諦", "締", "帝", "地"]
+      },
+      {
+        "index": 14,
+        "wrong": "置",
+        "correct": "滯",
+        "options": ["置", "滯", "致", "至"]
+      }
+    ]
+  },
+  {
+    "id": "q161",
+    "content": "古代聽到「畢」令，就要躲膩起來，不可以在路上徘徊。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "畢",
+        "correct": "蹕",
+        "options": ["避", "閉", "畢", "蹕"]
+      },
+      {
+        "index": 12,
+        "wrong": "膩",
+        "correct": "匿",
+        "options": ["膩", "暱", "匿", "泥"]
+      }
+    ]
+  },
+  {
+    "id": "q162",
+    "content": "天子氾法，與蔗民同罪，理當受乏。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "氾",
+        "correct": "犯",
+        "options": ["犯", "氾", "範", "飯"]
+      },
+      {
+        "index": 6,
+        "wrong": "蔗",
+        "correct": "庶",
+        "options": ["庶", "遮", "蔗", "者"]
+      },
+      {
+        "index": 14,
+        "wrong": "乏",
+        "correct": "罰",
+        "options": ["乏", "罰", "伐", "法"]
+      }
+    ]
+  },
+  {
+    "id": "q163",
+    "content": "小明無法實事求事，以致頃家盪產，居無定所。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "事",
+        "correct": "是",
+        "options": ["士", "事", "是", "室"]
+      },
+      {
+        "index": 11,
+        "wrong": "頃",
+        "correct": "傾",
+        "options": ["傾", "頃", "輕", "頃"]
+      },
+      {
+        "index": 13,
+        "wrong": "盪",
+        "correct": "蕩",
+        "options": ["蕩", "檔", "盪", "擋"]
+      }
+    ]
+  },
+  {
+    "id": "q164",
+    "content": "在倫餡區裡，有幾家能夠共享天淪之樂呢。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "倫",
+        "correct": "淪",
+        "options": ["倫", "淪", "輪", "論"]
+      },
+      {
+        "index": 2,
+        "wrong": "餡",
+        "correct": "陷",
+        "options": ["陷", "餡", "現", "羨"]
+      },
+      {
+        "index": 11,
+        "wrong": "淪",
+        "correct": "倫",
+        "options": ["淪", "倫", "輪", "論"]
+      }
+    ]
+  },
+  {
+    "id": "q165",
+    "content": "這家店哺的老闆喜歡補風捉影，把別人的家務事當作茶餘飯後的逍遣。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "哺",
+        "correct": "鋪",
+        "options": ["哺", "鋪", "捕", "補"]
+      },
+      {
+        "index": 9,
+        "wrong": "補",
+        "correct": "捕",
+        "options": ["補", "捕", "哺", "甫"]
+      },
+      {
+        "index": 22,
+        "wrong": "逍",
+        "correct": "消",
+        "options": ["逍", "消", "銷", "蕭"]
+      }
+    ]
+  },
+  {
+    "id": "q166",
+    "content": "自從莒家搬簽到這裡來，這是我第一次有空閒到附近走走狂狂，賀然發現在後山有一處清撤的水潭，讓我不敢相信原來美景就在我身邊。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "莒",
+        "correct": "舉",
+        "options": ["舉", "莒", "矩", "沮"]
+      },
+      {
+        "index": 5,
+        "wrong": "簽",
+        "correct": "遷",
+        "options": ["遷", "簽", "牽", "千"]
+      },
+      {
+        "index": 23,
+        "wrong": "狂",
+        "correct": "逛",
+        "options": ["狂", "逛", "廣", "光"]
+      },
+      {
+        "index": 26,
+        "wrong": "賀",
+        "correct": "赫",
+        "options": ["赫", "賀", "鶴", "喝"]
+      },
+      {
+        "index": 35,
+        "wrong": "撤",
+        "correct": "澈",
+        "options": ["澈", "徹", "撤", "徹"]
+      }
+    ]
+  },
+  {
+    "id": "q167",
+    "content": "心裡有不愉快的情緒，要找人訴說，否則長時間壓仰情緒，將造成內心不可某滅的傷害，朋友之間互相成擔彼此的情緒，也是增進友義的一種方式。",
+    "corrections": [
+      {
+        "index": 19,
+        "wrong": "仰",
+        "correct": "抑",
+        "options": ["抑", "仰", "仰", "秧"]
+      },
+      {
+        "index": 30,
+        "wrong": "某",
+        "correct": "抹",
+        "options": ["某", "抹", "磨", "墨"]
+      },
+      {
+        "index": 42,
+        "wrong": "成",
+        "correct": "承",
+        "options": ["成", "承", "誠", "呈"]
+      },
+      {
+        "index": 55,
+        "wrong": "義",
+        "correct": "誼",
+        "options": ["義", "誼", "宜", "意"]
+      }
+    ]
+  },
+  {
+    "id": "q168",
+    "content": "茶汁貫穿侯道，茶香充赤鼻間，茶色金黃有致，我合眼杼立著，手中緊握留有於溫的茶杯，耳朵玲聽著悠揚的音樂，彷彿置身天堂。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "侯",
+        "correct": "喉",
+        "options": ["侯", "喉", "猴", "候"]
+      },
+      {
+        "index": 9,
+        "wrong": "赤",
+        "correct": "斥",
+        "options": ["赤", "斥", "敕", "翅"]
+      },
+      {
+        "index": 19,
+        "wrong": "杼",
+        "correct": "佇",
+        "options": ["杼", "佇", "注", "柱"]
+      },
+      {
+        "index": 28,
+        "wrong": "於",
+        "correct": "餘",
+        "options": ["於", "餘", "魚", "娛"]
+      },
+      {
+        "index": 35,
+        "wrong": "玲",
+        "correct": "聆",
+        "options": ["玲", "聆", "靈", "齡"]
+      }
+    ]
+  },
+  {
+    "id": "q169",
+    "content": "當今全世界造成環境汙染的垃圾眾多，數量最多的就是塑焦製品，其中寶待瓶的危害更是名列前矛。",
+    "corrections": [
+      {
+        "index": 22,
+        "wrong": "焦",
+        "correct": "膠",
+        "options": ["膠", "焦", "郊", "驕"]
+      },
+      {
+        "index": 29,
+        "wrong": "待",
+        "correct": "特",
+        "options": ["待", "特", "侍", "持"]
+      },
+      {
+        "index": 40,
+        "wrong": "矛",
+        "correct": "茅",
+        "options": ["茅", "矛", "毛", "貌"]
+      }
+    ]
+  },
+  {
+    "id": "q170",
+    "content": "回到山林裡，總有一種強烈的規屬感，讓我覺得特別安心，在大自然的無限思典中，我努力找尋自己的過去現在和未來，希望定意自己的價值。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "規",
+        "correct": "歸",
+        "options": ["規", "歸", "龜", "閨"]
+      },
+      {
+        "index": 29,
+        "wrong": "思",
+        "correct": "恩",
+        "options": ["思", "恩", "摁", "因"]
+      },
+      {
+        "index": 48,
+        "wrong": "意",
+        "correct": "義",
+        "options": ["意", "義", "議", "異"]
+      }
+    ]
+  },
+  {
+    "id": "q171",
+    "content": "開車要變換車道時，一定要先打方向燈。像他這樣茂然協切到另一車道的行為，跟本就像是故意要製造車禍，實在要不得。",
+    "corrections": [
+      {
+        "index": 21,
+        "wrong": "茂",
+        "correct": "貿",
+        "options": ["茂", "貿", "冒", "帽"]
+      },
+      {
+        "index": 23,
+        "wrong": "協",
+        "correct": "斜",
+        "options": ["協", "斜", "邪", "諧"]
+      },
+      {
+        "index": 33,
+        "wrong": "跟",
+        "correct": "根",
+        "options": ["跟", "根", "更", "艮"]
+      }
+    ]
+  },
+  {
+    "id": "q172",
+    "content": "經過多年的奮戰，他終於得到了兢技場上的最高榮曜，更值得欣衛的是，從前的年輕氣盛，如今只剩下成熟隱重，相信能為後進留下值得學習的點範。",
+    "corrections": [
+      {
+        "index": 13,
+        "wrong": "兢",
+        "correct": "競",
+        "options": ["兢", "競", "竟", "敬"]
+      },
+      {
+        "index": 20,
+        "wrong": "曜",
+        "correct": "耀",
+        "options": ["曜", "耀", "要", "藥"]
+      },
+      {
+        "index": 25,
+        "wrong": "欣",
+        "correct": "欣",
+        "options": ["新", "欣", "心", "薪"]
+      },
+      {
+        "index": 26,
+        "wrong": "衛",
+        "correct": "慰",
+        "options": ["衛", "慰", "位", "味"]
+      },
+      {
+        "index": 41,
+        "wrong": "隱",
+        "correct": "穩",
+        "options": ["隱", "穩", "尹", "癮"]
+      },
+      {
+        "index": 54,
+        "wrong": "點",
+        "correct": "典",
+        "options": ["點", "典", "碘", "甸"]
+      }
+    ]
+  },
+  {
+    "id": "q173",
+    "content": "每個人都在自己的環境中找尋任同感，彼此滿足須求進而成為團體，是人類正常交友形成團體的模式，在團體當中，一定要懂得站在他人的利場為他人著想，彼此才能和協相處。",
+    "corrections": [
+      {
+        "index": 13,
+        "wrong": "任",
+        "correct": "認",
+        "options": ["任", "認", "人", "韌"]
+      },
+      {
+        "index": 20,
+        "wrong": "須",
+        "correct": "需",
+        "options": ["須", "需", "虛", "旭"]
+      },
+      {
+        "index": 62,
+        "wrong": "利",
+        "correct": "立",
+        "options": ["利", "立", "例", "力"]
+      },
+      {
+        "index": 73,
+        "wrong": "協",
+        "correct": "諧",
+        "options": ["協", "諧", "偕", "攜"]
+      }
+    ]
+  },
+  {
+    "id": "q174",
+    "content": "種植作物前，首先要先松土，然後用適量的水進行灌概及滋閏，種下去的種子就會發牙、開花，甚至結出果實。就像是和大地談了一場練愛後，產出了愛的結晶。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "松",
+        "correct": "鬆",
+        "options": ["松", "鬆", "嵩", "淞"]
+      },
+      {
+        "index": 22,
+        "wrong": "概",
+        "correct": "溉",
+        "options": ["概", "溉", "蓋", "丐"]
+      },
+      {
+        "index": 25,
+        "wrong": "閏",
+        "correct": "潤",
+        "options": ["閏", "潤", "論", "閏"]
+      },
+      {
+        "index": 35,
+        "wrong": "牙",
+        "correct": "芽",
+        "options": ["牙", "芽", "雅", "訝"]
+      },
+      {
+        "index": 52,
+        "wrong": "練",
+        "correct": "戀",
+        "options": ["練", "戀", "鍊", "煉"]
+      }
+    ]
+  },
+  {
+    "id": "q175",
+    "content": "在盛夏午後的庭院中，尋一片樹蔭躺下打了個頓兒，箇中的滋味非筆默可以形容，只有享受過這種悠閒自在的人生，這被子才不算白活。",
+    "corrections": [
+      {
+        "index": 19,
+        "wrong": "頓",
+        "correct": "盹",
+        "options": ["頓", "盹", "盾", "鈍"]
+      },
+      {
+        "index": 28,
+        "wrong": "默",
+        "correct": "墨",
+        "options": ["默", "墨", "磨", "莫"]
+      },
+      {
+        "index": 48,
+        "wrong": "被",
+        "correct": "輩",
+        "options": ["被", "輩", "背", "備"]
+      }
+    ]
+  },
+  {
+    "id": "q176",
+    "content": "這座從森林的樹木延伸至房舍的大形雕刻作品，是近幾年來少見的桀作，若非對土地與自然有著深後的情感，同時有珍惜的心意，那麼是難以呈現如此真十的創作的。",
+    "corrections": [
+      {
+        "index": 14,
+        "wrong": "形",
+        "correct": "型",
+        "options": ["形", "型", "行", "刑"]
+      },
+      {
+        "index": 26,
+        "wrong": "桀",
+        "correct": "傑",
+        "options": ["桀", "傑", "杰", "結"]
+      },
+      {
+        "index": 39,
+        "wrong": "後",
+        "correct": "厚",
+        "options": ["後", "厚", "候", "后"]
+      },
+      {
+        "index": 62,
+        "wrong": "十",
+        "correct": "實",
+        "options": ["十", "實", "石", "時"]
+      }
+    ]
+  },
+  {
+    "id": "q177",
+    "content": "許多事件發生的當下，都令人印像深刻，但總在一段食日之後，就因為失去話題性而逐漸被人遺忘，這種情況總讓人有無立感卻又無法改變。",
+    "corrections": [
+      {
+        "index": 13,
+        "wrong": "像",
+        "correct": "象",
+        "options": ["像", "象", "相", "向"]
+      },
+      {
+        "index": 23,
+        "wrong": "食",
+        "correct": "時",
+        "options": ["食", "時", "十", "實"]
+      },
+      {
+        "index": 52,
+        "wrong": "立",
+        "correct": "力",
+        "options": ["立", "力", "利", "例"]
+      }
+    ]
+  },
+  {
+    "id": "q178",
+    "content": "在公園深處的一塊石板旁，有一處像是動物所挖絕出的朝穴，仔細一看內部空蕩蕩，只聽到水流所引發的共銘聲，讓人忍不住想更進一步探嗦。",
+    "corrections": [
+      {
+        "index": 18,
+        "wrong": "絕",
+        "correct": "掘",
+        "options": ["絕", "掘", "倔", "爵"]
+      },
+      {
+        "index": 21,
+        "wrong": "朝",
+        "correct": "巢",
+        "options": ["朝", "巢", "潮", "嘲"]
+      },
+      {
+        "index": 43,
+        "wrong": "銘",
+        "correct": "鳴",
+        "options": ["銘", "鳴", "名", "明"]
+      },
+      {
+        "index": 55,
+        "wrong": "嗦",
+        "correct": "索",
+        "options": ["嗦", "索", "縮", "鎖"]
+      }
+    ]
+  },
+  {
+    "id": "q179",
+    "content": "對於進行庚作的人來說，所有的水都是瀰足珍貴的，因為土地與水有著蜜不可分的關係，可說是共存共榮的一種表現。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "庚",
+        "correct": "耕",
+        "options": ["庚", "耕", "更", "耿"]
+      },
+      {
+        "index": 17,
+        "wrong": "瀰",
+        "correct": "彌",
+        "options": ["瀰", "彌", "迷", "謎"]
+      },
+      {
+        "index": 30,
+        "wrong": "蜜",
+        "correct": "密",
+        "options": ["蜜", "密", "祕", "謐"]
+      }
+    ]
+  },
+  {
+    "id": "q180",
+    "content": "要保護水資源，首先就應立法保護水源地。因為水資源並非取之不進用之不節，若不能從根本進行保護則一切都將是空談，等到終於乾窟不再有水流出時將候悔莫急。",
+    "corrections": [
+      {
+        "index": 25,
+        "wrong": "進",
+        "correct": "盡",
+        "options": ["進", "盡", "近", "勁"]
+      },
+      {
+        "index": 29,
+        "wrong": "節",
+        "correct": "竭",
+        "options": ["節", "竭", "結", "潔"]
+      },
+      {
+        "index": 52,
+        "wrong": "窟",
+        "correct": "枯",
+        "options": ["窟", "枯", "苦", "酷"]
+      },
+      {
+        "index": 62,
+        "wrong": "候",
+        "correct": "後",
+        "options": ["候", "後", "厚", "后"]
+      },
+      {
+        "index": 65,
+        "wrong": "急",
+        "correct": "及",
+        "options": ["急", "及", "集", "級"]
+      }
+    ]
+  },
+  {
+    "id": "q181",
+    "content": "為了找出漏水的政據，我們將給予所有人伸訴的機會，只要願意親自蕁找答案，必定能有水落石出的一天。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "政",
+        "correct": "證",
+        "options": ["政", "證", "正", "鄭"]
+      },
+      {
+        "index": 17,
+        "wrong": "伸",
+        "correct": "申",
+        "options": ["伸", "申", "身", "深"]
+      },
+      {
+        "index": 28,
+        "wrong": "蕁",
+        "correct": "尋",
+        "options": ["蕁", "尋", "循", "詢"]
+      }
+    ]
+  },
+  {
+    "id": "q182",
+    "content": "聽說你將到西藏朝聖，那可是千戴難逢的好機會，西藏的風光像一副畫，美不盛收。對著神明頂禮模拜的時候，記得祁求國泰民安喔！",
+    "corrections": [
+      {
+        "index": 14,
+        "wrong": "戴",
+        "correct": "載",
+        "options": ["戴", "載", "再", "在"]
+      },
+      {
+        "index": 28,
+        "wrong": "副",
+        "correct": "幅",
+        "options": ["副", "幅", "福", "服"]
+      },
+      {
+        "index": 33,
+        "wrong": "盛",
+        "correct": "勝",
+        "options": ["盛", "勝", "聖", "剩"]
+      },
+      {
+        "index": 43,
+        "wrong": "模",
+        "correct": "膜",
+        "options": ["模", "膜", "磨", "摩"]
+      },
+      {
+        "index": 51,
+        "wrong": "祁",
+        "correct": "祈",
+        "options": ["祁", "祈", "齊", "啟"]
+      }
+    ]
+  },
+  {
+    "id": "q183",
+    "content": "異國風格優美的建築，微風徐徐吹來，安靜、切意，沒有暄囂、吵雜，舒適甜靜的芬圍讓這間民宿聲名大燥，吸引許多觀光客。",
+    "corrections": [
+      {
+        "index": 15,
+        "wrong": "切",
+        "correct": "愜",
+        "options": ["切", "愜", "怯", "茄"]
+      },
+      {
+        "index": 20,
+        "wrong": "暄",
+        "correct": "喧",
+        "options": ["暄", "喧", "宣", "暄"]
+      },
+      {
+        "index": 28,
+        "wrong": "甜",
+        "correct": "恬",
+        "options": ["甜", "恬", "填", "添"]
+      },
+      {
+        "index": 31,
+        "wrong": "芬",
+        "correct": "氛",
+        "options": ["芬", "氛", "分", "紛"]
+      },
+      {
+        "index": 41,
+        "wrong": "燥",
+        "correct": "噪",
+        "options": ["燥", "噪", "躁", "澡"]
+      }
+    ]
+  },
+  {
+    "id": "q184",
+    "content": "莉莉看著窗外的琉星雨，閉上眼睛，許下一個小小的院望：希望身邊所有的人都能健慷平安。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "琉",
+        "correct": "流",
+        "options": ["琉", "流", "留", "劉"]
+      },
+      {
+        "index": 21,
+        "wrong": "院",
+        "correct": "願",
+        "options": ["院", "願", "怨", "元"]
+      },
+      {
+        "index": 36,
+        "wrong": "慷",
+        "correct": "康",
+        "options": ["慷", "康", "糠", "扛"]
+      }
+    ]
+  },
+  {
+    "id": "q185",
+    "content": "咖非店裡，你輕笑著分享最近鋁行的趣事，陽光穿透波璃，在你髮稍間跳曜，我偷偷按下快門，留住這美好的一刻。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "非",
+        "correct": "啡",
+        "options": ["非", "啡", "飛", "扉"]
+      },
+      {
+        "index": 12,
+        "wrong": "鋁",
+        "correct": "旅",
+        "options": ["鋁", "旅", "履", "呂"]
+      },
+      {
+        "index": 21,
+        "wrong": "波",
+        "correct": "玻",
+        "options": ["波", "玻", "坡", "潑"]
+      },
+      {
+        "index": 26,
+        "wrong": "稍",
+        "correct": "梢",
+        "options": ["稍", "梢", "捎", "筲"]
+      },
+      {
+        "index": 29,
+        "wrong": "曜",
+        "correct": "躍",
+        "options": ["曜", "躍", "耀", "要"]
+      }
+    ]
+  },
+  {
+    "id": "q186",
+    "content": "小維望著窗外的大雨，輕輕綴飲手中的熱咖啡，聽著雨點塙打屋頂的聲音，等待著雨停後的天情。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "綴",
+        "correct": "啜",
+        "options": ["綴", "啜", "贅", "墜"]
+      },
+      {
+        "index": 24,
+        "wrong": "塙",
+        "correct": "敲",
+        "options": ["塙", "敲", "高", "搞"]
+      },
+      {
+        "index": 39,
+        "wrong": "情",
+        "correct": "晴",
+        "options": ["情", "晴", "清", "輕"]
+      }
+    ]
+  },
+  {
+    "id": "q187",
+    "content": "熙來壤往的夜市裡，蝕物的香味、攤飯的叫賣聲、人群的笑語都混雜在一起，喧囂聲讓找不到爸媽的阿強感到慌亂，只能茫然地在原地不知所錯。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "壤",
+        "correct": "攘",
+        "options": ["壤", "攘", "嚷", "穰"]
+      },
+      {
+        "index": 9,
+        "wrong": "蝕",
+        "correct": "食",
+        "options": ["蝕", "食", "時", "實"]
+      },
+      {
+        "index": 16,
+        "wrong": "飯",
+        "correct": "販",
+        "options": ["飯", "販", "犯", "泛"]
+      },
+      {
+        "index": 59,
+        "wrong": "錯",
+        "correct": "措",
+        "options": ["錯", "措", "厝", "挫"]
+      }
+    ]
+  },
+  {
+    "id": "q188",
+    "content": "每一次的相隅和別籬，都是生命中無法預期的彰節，要好好珍惜那些曾經的美好，並期待末來發生的新故事。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "隅",
+        "correct": "遇",
+        "options": ["隅", "遇", "寓", "預"]
+      },
+      {
+        "index": 8,
+        "wrong": "籬",
+        "correct": "離",
+        "options": ["籬", "離", "黎", "梨"]
+      },
+      {
+        "index": 20,
+        "wrong": "彰",
+        "correct": "章",
+        "options": ["彰", "章", "張", "樟"]
+      },
+      {
+        "index": 39,
+        "wrong": "末",
+        "correct": "未",
+        "options": ["末", "未", "味", "衛"]
+      }
+    ]
+  },
+  {
+    "id": "q189",
+    "content": "看到孩子停停玉立的模樣，就想起當年白手啟家，連個遮風敝雨的地方都沒有，宿夜匪邂地努力，現在總算闖出自己的一片天了。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "停",
+        "correct": "亭",
+        "options": ["停", "亭", "庭", "廷"]
+      },
+      {
+        "index": 15,
+        "wrong": "啟",
+        "correct": "起",
+        "options": ["啟", "起", "豈", "企"]
+      },
+      {
+        "index": 22,
+        "wrong": "敝",
+        "correct": "蔽",
+        "options": ["敝", "蔽", "必", "閉"]
+      },
+      {
+        "index": 32,
+        "wrong": "宿",
+        "correct": "夙",
+        "options": ["宿", "夙", "速", "素"]
+      },
+      {
+        "index": 35,
+        "wrong": "邂",
+        "correct": "懈",
+        "options": ["邂", "懈", "謝", "解"]
+      }
+    ]
+  },
+  {
+    "id": "q190",
+    "content": "雨落下，美麗翅冀展開，那傘與傘副副相連，沿著瓠形的路勁，連成無懈可擊的園。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "冀",
+        "correct": "翼",
+        "options": ["冀", "翼", "異", "易"]
+      },
+      {
+        "index": 15,
+        "wrong": "副",
+        "correct": "幅",
+        "options": ["副", "幅", "福", "服"]
+      },
+      {
+        "index": 22,
+        "wrong": "瓠",
+        "correct": "弧",
+        "options": ["瓠", "弧", "葫", "湖"]
+      },
+      {
+        "index": 26,
+        "wrong": "勁",
+        "correct": "徑",
+        "options": ["勁", "徑", "進", "近"]
+      },
+      {
+        "index": 35,
+        "wrong": "園",
+        "correct": "圓",
+        "options": ["園", "圓", "元", "原"]
+      }
+    ]
+  },
+  {
+    "id": "q191",
+    "content": "昨天天氣真怪，烏雲密步之後頃盆大雨，比颱風天更強的風一陣吹來，民眾狂聲尖叫，雨傘開花，瘦弱女性被暴風吹到根本站不起來，只好緊緊抓住旁邊花埔，直到有人伸出援手，才終於狼輩爬進房子內。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "步",
+        "correct": "布",
+        "options": ["步", "布", "部", "怖"]
+      },
+      {
+        "index": 13,
+        "wrong": "頃",
+        "correct": "傾",
+        "options": ["頃", "傾", "輕", "頃"]
+      },
+      {
+        "index": 70,
+        "wrong": "埔",
+        "correct": "圃",
+        "options": ["埔", "圃", "普", "補"]
+      },
+      {
+        "index": 85,
+        "wrong": "輩",
+        "correct": "狽",
+        "options": ["輩", "狽", "背", "貝"]
+      }
+    ]
+  },
+  {
+    "id": "q192",
+    "content": "這名警衛因為善離職守，導致公司損失千萬，得知噩號的他戰抖不已，如坐針饘，不知如何是好。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "善",
+        "correct": "擅",
+        "options": ["善", "擅", "膳", "禪"]
+      },
+      {
+        "index": 22,
+        "wrong": "號",
+        "correct": "耗",
+        "options": ["號", "耗", "好", "浩"]
+      },
+      {
+        "index": 25,
+        "wrong": "戰",
+        "correct": "顫",
+        "options": ["戰", "顫", "站", "瞻"]
+      },
+      {
+        "index": 33,
+        "wrong": "饘",
+        "correct": "氈",
+        "options": ["饘", "氈", "展", "戰"]
+      }
+    ]
+  },
+  {
+    "id": "q193",
+    "content": "這位藝術家個性帥真隨性，作品也反應他的個性，有著撒脫不受拘束的風格，而他不修邊輻的樣子常讓人誤以為是清潔工。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "帥",
+        "correct": "率",
+        "options": ["帥", "率", "衰", "摔"]
+      },
+      {
+        "index": 15,
+        "wrong": "應",
+        "correct": "映",
+        "options": ["應", "映", "硬", "迎"]
+      },
+      {
+        "index": 23,
+        "wrong": "撒",
+        "correct": "灑",
+        "options": ["撒", "灑", "傻", "颯"]
+      },
+      {
+        "index": 36,
+        "wrong": "輻",
+        "correct": "幅",
+        "options": ["輻", "幅", "福", "副"]
+      }
+    ]
+  },
+  {
+    "id": "q194",
+    "content": "咕咕鐘是德國著名的公藝品，有傳統可愛的設計，也有現代感的新造型，簡約純萃的外型，還有探出頭的咕咕鳥讓鐘顯得特別可愛，有些還有美妙的音苻，總令人愛不繹手。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "公",
+        "correct": "工",
+        "options": ["公", "工", "功", "攻"]
+      },
+      {
+        "index": 28,
+        "wrong": "萃",
+        "correct": "粹",
+        "options": ["萃", "粹", "翠", "碎"]
+      },
+      {
+        "index": 62,
+        "wrong": "苻",
+        "correct": "符",
+        "options": ["苻", "符", "服", "扶"]
+      },
+      {
+        "index": 68,
+        "wrong": "繹",
+        "correct": "釋",
+        "options": ["繹", "釋", "式", "飾"]
+      }
+    ]
+  },
+  {
+    "id": "q195",
+    "content": "從早晨起，空氣悶得像嶂礙著呼吸。忽然天空俏俏地陋了個洞，天外的涼風一陣陣沖進來。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "嶂",
+        "correct": "障",
+        "options": ["嶂", "障", "彰", "瘴"]
+      },
+      {
+        "index": 20,
+        "wrong": "俏",
+        "correct": "悄",
+        "options": ["俏", "悄", "敲", "峭"]
+      },
+      {
+        "index": 23,
+        "wrong": "陋",
+        "correct": "漏",
+        "options": ["陋", "漏", "露", "路"]
+      },
+      {
+        "index": 35,
+        "wrong": "沖",
+        "correct": "衝",
+        "options": ["沖", "衝", "充", "憧"]
+      }
+    ]
+  },
+  {
+    "id": "q196",
+    "content": "某閤揆預定於女兒出格之日，舉辦草地音樂會，邀請民眾合第光臨，共同感受浪漫氣氛。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "閤",
+        "correct": "閣",
+        "options": ["閤", "閣", "格", "各"]
+      },
+      {
+        "index": 10,
+        "wrong": "格",
+        "correct": "閣",
+        "options": ["格", "閣", "各", "閤"]
+      },
+      {
+        "index": 25,
+        "wrong": "合",
+        "correct": "闔",
+        "options": ["合", "闔", "河", "盒"]
+      }
+    ]
+  },
+  {
+    "id": "q197",
+    "content": "行駛在彎蜓的山路中，真令人感到心驚，所以要抱持滇重的態度面對，也千萬不能超戴，才能閣家歡樂旅遊。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "彎",
+        "correct": "蜿",
+        "options": ["彎", "蜿", "灣", "完"]
+      },
+      {
+        "index": 4,
+        "wrong": "蜓",
+        "correct": "蜒",
+        "options": ["蜓", "蜒", "延", "岩"]
+      },
+      {
+        "index": 18,
+        "wrong": "滇",
+        "correct": "慎",
+        "options": ["滇", "慎", "甚", "申"]
+      },
+      {
+        "index": 30,
+        "wrong": "戴",
+        "correct": "載",
+        "options": ["戴", "載", "再", "在"]
+      },
+      {
+        "index": 35,
+        "wrong": "閣",
+        "correct": "闔",
+        "options": ["閣", "闔", "合", "河"]
+      }
+    ]
+  },
+  {
+    "id": "q198",
+    "content": "遇到心怡的對像常使人心跳加快、不知所挫，甚至語無輪次，有時為了吸引對方的注意，還會弄巧成絀發生窘境。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "怡",
+        "correct": "儀",
+        "options": ["怡", "儀", "宜", "移"]
+      },
+      {
+        "index": 5,
+        "wrong": "像",
+        "correct": "象",
+        "options": ["像", "象", "相", "向"]
+      },
+      {
+        "index": 15,
+        "wrong": "挫",
+        "correct": "措",
+        "options": ["挫", "措", "錯", "厝"]
+      },
+      {
+        "index": 21,
+        "wrong": "輪",
+        "correct": "倫",
+        "options": ["輪", "倫", "論", "侖"]
+      },
+      {
+        "index": 42,
+        "wrong": "絀",
+        "correct": "拙",
+        "options": ["絀", "拙", "出", "黜"]
+      }
+    ]
+  },
+  {
+    "id": "q199",
+    "content": "人生就像雨傘，就算你不知道雨要下多久，一樣要收放自茹。「沒有夕陽產業，只有夕陽產品。」一位傘公司的董事長一語道破從息日雨傘製作代工，轉向品牌之路的企機與絕心，造就了他的傘王國。",
+    "corrections": [
+      {
+        "index": 24,
+        "wrong": "茹",
+        "correct": "如",
+        "options": ["茹", "如", "儒", "孺"]
+      },
+      {
+        "index": 51,
+        "wrong": "息",
+        "correct": "昔",
+        "options": ["息", "昔", "夕", "西"]
+      },
+      {
+        "index": 67,
+        "wrong": "企",
+        "correct": "契",
+        "options": ["企", "契", "氣", "棄"]
+      },
+      {
+        "index": 70,
+        "wrong": "絕",
+        "correct": "決",
+        "options": ["絕", "決", "覺", "掘"]
+      }
+    ]
+  },
+  {
+    "id": "q200",
+    "content": "「與人善言，暖於布勃；傷人之言，深於矛戟」這句話的意思是對別人說善意的言語，比讓他穿衣服還溫暖；用惡語傷人，比用矛戟刺人深害更深，蛻利的話語傷人於無形，三思而後言，僅言慎行能避免難以瀰補的遺憾。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "勃",
+        "correct": "帛",
+        "options": ["勃", "帛", "薄", "伯"]
+      },
+      {
+        "index": 60,
+        "wrong": "深",
+        "correct": "傷",
+        "options": ["深", "傷", "上", "商"]
+      },
+      {
+        "index": 64,
+        "wrong": "蛻",
+        "correct": "銳",
+        "options": ["蛻", "銳", "瑞", "瑞"]
+      },
+      {
+        "index": 79,
+        "wrong": "僅",
+        "correct": "謹",
+        "options": ["僅", "謹", "緊", "進"]
+      },
+      {
+        "index": 87,
+        "wrong": "瀰",
+        "correct": "彌",
+        "options": ["瀰", "彌", "迷", "謎"]
+      }
+    ]
+  },
+  {
+    "id": "q201",
+    "content": "蝙福既不是鳥類也不是昆蟲，而是一種能飛行的補乳動物，最大的特徵是具有飛冀。除前肢第一指外，前肢、後肢、尾巴與身體間都被一片二層薄的皮糢連起來，有許多的小血管密布，具有散熱作用。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "福",
+        "correct": "蝠",
+        "options": ["蝠", "福", "幅", "輻"]
+      },
+      {
+        "index": 17,
+        "wrong": "補",
+        "correct": "哺",
+        "options": ["補", "哺", "捕", "甫"]
+      },
+      {
+        "index": 28,
+        "wrong": "冀",
+        "correct": "翼",
+        "options": ["翼", "冀", "異", "易"]
+      },
+      {
+        "index": 56,
+        "wrong": "糢",
+        "correct": "膜",
+        "options": ["膜", "糢", "模", "摸"]
+      }
+    ]
+  },
+  {
+    "id": "q202",
+    "content": "山中景致真是多元又千變萬化，沿途看到許多的山涯峭壁，深鴛溪谷，爆布落石，令人眼界大開。",
+    "corrections": [
+      {
+        "index": 21,
+        "wrong": "涯",
+        "correct": "崖",
+        "options": ["崖", "涯", "睚", "牙"]
+      },
+      {
+        "index": 26,
+        "wrong": "鴛",
+        "correct": "淵",
+        "options": ["淵", "鴛", "冤", "鳶"]
+      },
+      {
+        "index": 30,
+        "wrong": "爆",
+        "correct": "瀑",
+        "options": ["爆", "瀑", "曝", "暴"]
+      }
+    ]
+  },
+  {
+    "id": "q203",
+    "content": "因為思鎖著如何解決這個極手的問題，我竟然就在辦公桌前一坐就是十幾個小時，魂然不知天色已晚，時光流逝。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "鎖",
+        "correct": "索",
+        "options": ["索", "鎖", "所", "瑣"]
+      },
+      {
+        "index": 11,
+        "wrong": "極",
+        "correct": "棘",
+        "options": ["極", "棘", "急", "疾"]
+      },
+      {
+        "index": 36,
+        "wrong": "魂",
+        "correct": "渾",
+        "options": ["魂", "渾", "混", "昏"]
+      }
+    ]
+  },
+  {
+    "id": "q204",
+    "content": "自從他離開家鄉到國外求學之後，我就與他斷了連繫，完全沒有他的音訓，所以只能偶耳回到過去我們一起成長的故鄉，找尋舊日的回憶，徙增傷感。",
+    "corrections": [
+      {
+        "index": 27,
+        "wrong": "訓",
+        "correct": "訊",
+        "options": ["訊", "訓", "迅", "信"]
+      },
+      {
+        "index": 34,
+        "wrong": "耳",
+        "correct": "爾",
+        "options": ["耳", "爾", "兒", "邇"]
+      },
+      {
+        "index": 56,
+        "wrong": "徙",
+        "correct": "徒",
+        "options": ["徒", "徙", "圖", "途"]
+      }
+    ]
+  },
+  {
+    "id": "q205",
+    "content": "因為吃不到糖而當場散潑的妹妹，被媽媽大聲赤責一番後，終於慢慢平靜下來，剛剛的捶胸盾足也逐漸變成溫煦和風的笑容。",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "散",
+        "correct": "撒",
+        "options": ["散", "撒", "灑", "煞"]
+      },
+      {
+        "index": 19,
+        "wrong": "赤",
+        "correct": "斥",
+        "options": ["赤", "斥", "敕", "刺"]
+      },
+      {
+        "index": 36,
+        "wrong": "盾",
+        "correct": "頓",
+        "options": ["盾", "頓", "鈍", "噸"]
+      }
+    ]
+  },
+  {
+    "id": "q206",
+    "content": "如此無裡取鬧，又到處撒也，真是缺伐家教，令人無法勾同。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "裡",
+        "correct": "理",
+        "options": ["裡", "理", "禮", "李"]
+      },
+      {
+        "index": 10,
+        "wrong": "也",
+        "correct": "野",
+        "options": ["也", "野", "冶", "耶"]
+      },
+      {
+        "index": 14,
+        "wrong": "伐",
+        "correct": "乏",
+        "options": ["伐", "乏", "法", "罰"]
+      },
+      {
+        "index": 23,
+        "wrong": "勾",
+        "correct": "茍",
+        "options": ["勾", "茍", "苟", "狗"]
+      }
+    ]
+  },
+  {
+    "id": "q207",
+    "content": "這西湖的湖泮種滿了一整排的柳樹，迎風搖曳生滋，好不美麗，在這春暖花開的季節裡，陽光穿過柳葉灑落在景物上，形成一幅更勝仙境的人間圖畫，讓人將俗世的煩腦全都拋諸腦後。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "泮",
+        "correct": "畔",
+        "options": ["泮", "畔", "判", "伴"]
+      },
+      {
+        "index": 19,
+        "wrong": "滋",
+        "correct": "姿",
+        "options": ["滋", "姿", "資", "茲"]
+      },
+      {
+        "index": 76,
+        "wrong": "腦",
+        "correct": "惱",
+        "options": ["腦", "惱", "瑙", "努"]
+      }
+    ]
+  },
+  {
+    "id": "q208",
+    "content": "畫畫最難的就是臨模動物，要思考如何觀察，畫出輪郭和陰影，才能呈現出許許如生的樣貌，常常拚了命地練習，卻仍然無法呈現出滿意的作品。",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "模",
+        "correct": "摹",
+        "options": ["模", "摹", "摩", "磨"]
+      },
+      {
+        "index": 21,
+        "wrong": "郭",
+        "correct": "廓",
+        "options": ["郭", "廓", "擴", "括"]
+      },
+      {
+        "index": 31,
+        "wrong": "許",
+        "correct": "栩",
+        "options": ["許", "栩", "羽", "詡"]
+      }
+    ]
+  },
+  {
+    "id": "q209",
+    "content": "小晴和樂樂約定要用繪畫來記綠她們的友情，從第一次見面時的清瑟，到一起旅行的歡聲笑語，所有珍貴的回意都透過色彩和線條耀然紙上。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "綠",
+        "correct": "錄",
+        "options": ["綠", "錄", "鹿", "陸"]
+      },
+      {
+        "index": 27,
+        "wrong": "清",
+        "correct": "青",
+        "options": ["清", "青", "輕", "頃"]
+      },
+      {
+        "index": 28,
+        "wrong": "瑟",
+        "correct": "澀",
+        "options": ["瑟", "澀", "色", "嗇"]
+      },
+      {
+        "index": 46,
+        "wrong": "意",
+        "correct": "憶",
+        "options": ["意", "憶", "亦", "益"]
+      },
+      {
+        "index": 55,
+        "wrong": "耀",
+        "correct": "躍",
+        "options": ["耀", "躍", "要", "藥"]
+      }
+    ]
+  },
+  {
+    "id": "q210",
+    "content": "阿愷與小杰是多年的好友，曾約好要一起還遊世界，然而一場意外讓小杰奏逝，阿愷在追掉會上，想起那些未竟的夢想，悲傷不己。",
+    "corrections": [
+      {
+        "index": 16,
+        "wrong": "還",
+        "correct": "環",
+        "options": ["還", "環", "寰", "桓"]
+      },
+      {
+        "index": 29,
+        "wrong": "奏",
+        "correct": "驟",
+        "options": ["奏", "驟", "皺", "走"]
+      },
+      {
+        "index": 36,
+        "wrong": "掉",
+        "correct": "悼",
+        "options": ["掉", "悼", "吊", "調"]
+      },
+      {
+        "index": 52,
+        "wrong": "己",
+        "correct": "已",
+        "options": ["己", "已", "巳", "以"]
+      }
+    ]
+  },
+  {
+    "id": "q211",
+    "content": "柔伊習慣將她對生命的思拷融入到創作中，她的繪畫作品充滿了紬象的線條和灃富的色彩，巧妙地全釋了她對於生死折學的獨特見解。",
+    "corrections": [
+      {
+        "index": 11,
+        "wrong": "拷",
+        "correct": "考",
+        "options": ["拷", "考", "烤", "靠"]
+      },
+      {
+        "index": 27,
+        "wrong": "紬",
+        "correct": "抽",
+        "options": ["紬", "抽", "愁", "稠"]
+      },
+      {
+        "index": 33,
+        "wrong": "灃",
+        "correct": "豐",
+        "options": ["灃", "豐", "風", "鋒"]
+      },
+      {
+        "index": 42,
+        "wrong": "全",
+        "correct": "詮",
+        "options": ["全", "詮", "權", "泉"]
+      },
+      {
+        "index": 49,
+        "wrong": "折",
+        "correct": "哲",
+        "options": ["折", "哲", "折", "澤"]
+      }
+    ]
+  },
+  {
+    "id": "q212",
+    "content": "莉絲總愛帶著她的畫具到郊外寫生，她細逆地觀察著眼前隨光線變幻的風景，透過手中的畫筆，將舜間的美麗永遠定隔在畫布上",
+    "corrections": [
+      {
+        "index": 17,
+        "wrong": "逆",
+        "correct": "膩",
+        "options": ["逆", "膩", "暱", "匿"]
+      },
+      {
+        "index": 40,
+        "wrong": "舜",
+        "correct": "瞬",
+        "options": ["舜", "瞬", "順", "循"]
+      },
+      {
+        "index": 47,
+        "wrong": "隔",
+        "correct": "格",
+        "options": ["隔", "格", "革", "閣"]
+      }
+    ]
+  },
+  {
+    "id": "q213",
+    "content": "馬哥醉心於懾影，他不謹嬗長用境頭捕捉世界各地的壯麗風景，更會運用高超的電腦繪圖技術，將每一張照片轉化為獨具風格的數位繪畫作品。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "懾",
+        "correct": "攝",
+        "options": ["懾", "攝", "社", "設"]
+      },
+      {
+        "index": 8,
+        "wrong": "謹",
+        "correct": "僅",
+        "options": ["謹", "僅", "盡", "緊"]
+      },
+      {
+        "index": 9,
+        "wrong": "嬗",
+        "correct": "擅",
+        "options": ["嬗", "擅", "善", "扇"]
+      },
+      {
+        "index": 12,
+        "wrong": "境",
+        "correct": "鏡",
+        "options": ["境", "鏡", "徑", "敬"]
+      }
+    ]
+  },
+  {
+    "id": "q214",
+    "content": "從孩題時代，我就一直對畫畫有著濃厚的興趣，即使父母並不讚同我走上藝術這條路，但出於添性的喜愛不容抹滅，最終我成為了一留的畫家。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "題",
+        "correct": "提",
+        "options": ["題", "提", "啼", "蹄"]
+      },
+      {
+        "index": 27,
+        "wrong": "讚",
+        "correct": "贊",
+        "options": ["讚", "贊", "站", "佔"]
+      },
+      {
+        "index": 40,
+        "wrong": "添",
+        "correct": "天",
+        "options": ["添", "天", "田", "填"]
+      },
+      {
+        "index": 55,
+        "wrong": "留",
+        "correct": "流",
+        "options": ["留", "流", "劉", "溜"]
+      }
+    ]
+  },
+  {
+    "id": "q215",
+    "content": "她的皮膚白析如雪，眼神十分揉和，從來都不會因為美貌而高奧自付，是同學之中最受到歡迎的人物。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "析",
+        "correct": "皙",
+        "options": ["析", "皙", "晰", "淅"]
+      },
+      {
+        "index": 13,
+        "wrong": "揉",
+        "correct": "柔",
+        "options": ["揉", "柔", "揉", "蹂"]
+      },
+      {
+        "index": 25,
+        "wrong": "奧",
+        "correct": "傲",
+        "options": ["奧", "傲", "懊", "襖"]
+      },
+      {
+        "index": 27,
+        "wrong": "付",
+        "correct": "負",
+        "options": ["付", "負", "富", "婦"]
+      }
+    ]
+  },
+  {
+    "id": "q216",
+    "content": "平常看似個性溫瞬的明珠，竟然在私底下洞嚇同學，威協逼迫，讓總是在她面前導蛋的我，著實嚇了好大一跳，完全不敢相信這是真的。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "瞬",
+        "correct": "順",
+        "options": ["瞬", "順", "舜", "訓"]
+      },
+      {
+        "index": 17,
+        "wrong": "洞",
+        "correct": "恫",
+        "options": ["洞", "恫", "同", "童"]
+      },
+      {
+        "index": 23,
+        "wrong": "協",
+        "correct": "脅",
+        "options": ["協", "脅", "邪", "鞋"]
+      },
+      {
+        "index": 33,
+        "wrong": "導",
+        "correct": "搗",
+        "options": ["導", "搗", "島", "倒"]
+      }
+    ]
+  },
+  {
+    "id": "q217",
+    "content": "這裡的景色宜人，天空勘藍，而且還有小溪的纏纏流水，微風嫵摸著我的臉，一切是那麼地美好，若不是聽到一陣吵雜的喜鬧聲，我還真會以為自己身處在人間仙境中呢！",
+    "corrections": [
+      {
+        "index": 10,
+        "wrong": "勘",
+        "correct": "湛",
+        "options": ["勘", "湛", "堪", "戡"]
+      },
+      {
+        "index": 19,
+        "wrong": "纏",
+        "correct": "潺",
+        "options": ["纏", "潺", "孱", "禪"]
+      },
+      {
+        "index": 26,
+        "wrong": "嫵",
+        "correct": "撫",
+        "options": ["嫵", "撫", "扶", "無"]
+      },
+      {
+        "index": 52,
+        "wrong": "喜",
+        "correct": "嬉",
+        "options": ["喜", "嬉", "嘻", "禧"]
+      }
+    ]
+  },
+  {
+    "id": "q218",
+    "content": "襯著天氣大好，我約了我的摯友一同出游，我們是一同記宿在學校的室友，多年來一起學習和生活，因此培養出讀一無二的感情。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "襯",
+        "correct": "趁",
+        "options": ["襯", "趁", "秤", "稱"]
+      },
+      {
+        "index": 16,
+        "wrong": "游",
+        "correct": "遊",
+        "options": ["游", "遊", "由", "尤"]
+      },
+      {
+        "index": 22,
+        "wrong": "記",
+        "correct": "寄",
+        "options": ["記", "寄", "紀", "濟"]
+      },
+      {
+        "index": 44,
+        "wrong": "讀",
+        "correct": "獨",
+        "options": ["讀", "獨", "毒", "篤"]
+      }
+    ]
+  },
+  {
+    "id": "q219",
+    "content": "因為看書太過全神慣注，她完全沒有查覺我的靠近，正好利用這個機會，從側面好好地寧視著她的臉旁，才突然覺得，她真的算得上是位清新脫俗的大美女。",
+    "corrections": [
+      {
+        "index": 8,
+        "wrong": "慣",
+        "correct": "貫",
+        "options": ["慣", "貫", "灌", "冠"]
+      },
+      {
+        "index": 16,
+        "wrong": "查",
+        "correct": "察",
+        "options": ["查", "察", "察", "茶"]
+      },
+      {
+        "index": 33,
+        "wrong": "寧",
+        "correct": "凝",
+        "options": ["寧", "凝", "擰", "甯"]
+      },
+      {
+        "index": 39,
+        "wrong": "旁",
+        "correct": "龐",
+        "options": ["旁", "龐", "傍", "滂"]
+      }
+    ]
+  },
+  {
+    "id": "q220",
+    "content": "因為削像權的官司未完，疇碼不足，再加上團隊其他人的能力孫色許多，一直以來受人祟拜的總經理，也難逃被公司冷凍的命運。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "削",
+        "correct": "肖",
+        "options": ["削", "肖", "消", "宵"]
+      },
+      {
+        "index": 11,
+        "wrong": "疇",
+        "correct": "籌",
+        "options": ["疇", "籌", "酬", "愁"]
+      },
+      {
+        "index": 26,
+        "wrong": "孫",
+        "correct": "遜",
+        "options": ["孫", "遜", "損", "巽"]
+      },
+      {
+        "index": 38,
+        "wrong": "祟",
+        "correct": "崇",
+        "options": ["祟", "崇", "充", "衝"]
+      }
+    ]
+  },
+  {
+    "id": "q221",
+    "content": "因為這種節然不同的生活方式，對我造成極大的衝即，我總是有一種難以言諭的痛楚，無法跟旁人說清楚講明白，因此只能默默地成受著。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "節",
+        "correct": "截",
+        "options": ["節", "截", "潔", "結"]
+      },
+      {
+        "index": 19,
+        "wrong": "即",
+        "correct": "擊",
+        "options": ["即", "擊", "及", "急"]
+      },
+      {
+        "index": 28,
+        "wrong": "諭",
+        "correct": "喻",
+        "options": ["諭", "喻", "愈", "欲"]
+      },
+      {
+        "index": 52,
+        "wrong": "成",
+        "correct": "承",
+        "options": ["成", "承", "誠", "呈"]
+      }
+    ]
+  },
+  {
+    "id": "q222",
+    "content": "因為說話總是聖氣零人，加上個性衝動易怒，所以即便成績總是名列前矛，甚至獨占熬頭，她始終都不得人喜愛，人媛極差。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "聖",
+        "correct": "盛",
+        "options": ["聖", "盛", "勝", "剩"]
+      },
+      {
+        "index": 8,
+        "wrong": "零",
+        "correct": "凌",
+        "options": ["零", "凌", "靈", "鈴"]
+      },
+      {
+        "index": 30,
+        "wrong": "矛",
+        "correct": "茅",
+        "options": ["矛", "茅", "毛", "貌"]
+      },
+      {
+        "index": 36,
+        "wrong": "熬",
+        "correct": "鰲",
+        "options": ["熬", "鰲", "敖", "傲"]
+      },
+      {
+        "index": 48,
+        "wrong": "媛",
+        "correct": "緣",
+        "options": ["媛", "緣", "圓", "源"]
+      }
+    ]
+  },
+  {
+    "id": "q223",
+    "content": "草叢旁是一段廢棄的舊河提，上面因人煙罕至而爬滿了枯枝，完全癮沒在這樹林之中，此地雖然隱蜜，但總有一種說不出的荒涼感，也許往上遊看看，能找到不一樣的風景。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "提",
+        "correct": "堤",
+        "options": ["提", "堤", "題", "蹄"]
+      },
+      {
+        "index": 28,
+        "wrong": "癮",
+        "correct": "隱",
+        "options": ["癮", "隱", "尹", "引"]
+      },
+      {
+        "index": 40,
+        "wrong": "蜜",
+        "correct": "密",
+        "options": ["蜜", "密", "祕", "謐"]
+      },
+      {
+        "index": 60,
+        "wrong": "遊",
+        "correct": "游",
+        "options": ["遊", "游", "油", "由"]
+      }
+    ]
+  },
+  {
+    "id": "q224",
+    "content": "因為陽光的照曜，一切景色變得迷忙看不清，我盾時有種目炫神迷的感受，分不清此刻是身處天上還是人間。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "曜",
+        "correct": "耀",
+        "options": ["曜", "耀", "要", "藥"]
+      },
+      {
+        "index": 14,
+        "wrong": "忙",
+        "correct": "茫",
+        "options": ["忙", "茫", "盲", "莽"]
+      },
+      {
+        "index": 20,
+        "wrong": "盾",
+        "correct": "頓",
+        "options": ["盾", "頓", "鈍", "噸"]
+      },
+      {
+        "index": 25,
+        "wrong": "炫",
+        "correct": "眩",
+        "options": ["炫", "眩", "選", "旋"]
+      }
+    ]
+  },
+  {
+    "id": "q225",
+    "content": "展纜室裡都是老師的作品，但為了讓我有參與感，老師特別密而不宣地玄掛了一副我的畫作，期待大家一起觀賞，或許也能聽到大家真心的評價。",
+    "corrections": [
+      {
+        "index": 1,
+        "wrong": "纜",
+        "correct": "覽",
+        "options": ["纜", "覽", "攬", "藍"]
+      },
+      {
+        "index": 24,
+        "wrong": "密",
+        "correct": "祕",
+        "options": ["密", "祕", "秘", "蜜"]
+      },
+      {
+        "index": 29,
+        "wrong": "玄",
+        "correct": "懸",
+        "options": ["玄", "懸", "選", "旋"]
+      },
+      {
+        "index": 33,
+        "wrong": "副",
+        "correct": "幅",
+        "options": ["副", "幅", "福", "服"]
+      }
+    ]
+  },
+  {
+    "id": "q226",
+    "content": "她一生鐘情於刺繡，作品悄奪天工。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "鐘",
+        "correct": "鍾",
+        "options": ["鐘", "鍾", "中", "終"]
+      },
+      {
+        "index": 11,
+        "wrong": "悄",
+        "correct": "巧",
+        "options": ["悄", "巧", "敲", "橋"]
+      }
+    ]
+  },
+  {
+    "id": "q227",
+    "content": "她吃了減肥藥之後，竟然變得老態龍鐘，真是弄悄成拙。",
+    "corrections": [
+      {
+        "index": 14,
+        "wrong": "鐘",
+        "correct": "鍾",
+        "options": ["鐘", "鍾", "中", "終"]
+      },
+      {
+        "index": 19,
+        "wrong": "悄",
+        "correct": "巧",
+        "options": ["悄", "巧", "俏", "敲"]
+      }
+    ]
+  },
+  {
+    "id": "q228",
+    "content": "他穿著木屜走路，聲音響轍街頭巷尾。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "屜",
+        "correct": "屐",
+        "options": ["屜", "屐", "履", "劇"]
+      },
+      {
+        "index": 11,
+        "wrong": "轍",
+        "correct": "徹",
+        "options": ["轍", "徹", "撤", "澈"]
+      }
+    ]
+  },
+  {
+    "id": "q229",
+    "content": "他的表答能力很不好，常常達非所問。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "答",
+        "correct": "達",
+        "options": ["答", "達", "搭", "打"]
+      },
+      {
+        "index": 13,
+        "wrong": "達",
+        "correct": "答",
+        "options": ["達", "答", "搭", "打"]
+      }
+    ]
+  },
+  {
+    "id": "q230",
+    "content": "面對盜賊，他占占兢兢，徨恐不以。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "占",
+        "correct": "戰",
+        "options": ["占", "戰", "站", "瞻"]
+      },
+      {
+        "index": 10,
+        "wrong": "徨",
+        "correct": "惶",
+        "options": ["徨", "惶", "皇", "黃"]
+      },
+      {
+        "index": 13,
+        "wrong": "以",
+        "correct": "已",
+        "options": ["以", "已", "乙", "矣"]
+      }
+    ]
+  },
+  {
+    "id": "q231",
+    "content": "前有懸涯，後有追兵，他只好孤注一直，放手一博。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "涯",
+        "correct": "崖",
+        "options": ["涯", "崖", "牙", "芽"]
+      },
+      {
+        "index": 15,
+        "wrong": "直",
+        "correct": "擲",
+        "options": ["直", "擲", "值", "執"]
+      },
+      {
+        "index": 20,
+        "wrong": "博",
+        "correct": "搏",
+        "options": ["博", "搏", "薄", "膊"]
+      }
+    ]
+  },
+  {
+    "id": "q232",
+    "content": "他以腳碾踏公園裡的花草，這種行為令人不恥。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "碾",
+        "correct": "蹍",
+        "options": ["碾", "蹍", "展", "輾"]
+      },
+      {
+        "index": 19,
+        "wrong": "恥",
+        "correct": "齒",
+        "options": ["恥", "齒", "馳", "侈"]
+      }
+    ]
+  },
+  {
+    "id": "q233",
+    "content": "教他的老師墨墨無聞，而他的作品卻名聞暇邇，真是青出於籃。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "墨",
+        "correct": "默",
+        "options": ["墨", "默", "末", "莫"]
+      },
+      {
+        "index": 17,
+        "wrong": "暇",
+        "correct": "遐",
+        "options": ["暇", "遐", "霞", "瑕"]
+      },
+      {
+        "index": 25,
+        "wrong": "籃",
+        "correct": "藍",
+        "options": ["籃", "藍", "蘭", "攔"]
+      }
+    ]
+  },
+  {
+    "id": "q234",
+    "content": "雖然他悄言令色，但小英還是對他情有獨鐘。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "悄",
+        "correct": "巧",
+        "options": ["悄", "巧", "俏", "敲"]
+      },
+      {
+        "index": 18,
+        "wrong": "鐘",
+        "correct": "鍾",
+        "options": ["鐘", "鍾", "中", "終"]
+      }
+    ]
+  },
+  {
+    "id": "q235",
+    "content": "要增廣見文，才能夠贏得青出於籃的讚遇。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "文",
+        "correct": "聞",
+        "options": ["文", "聞", "紋", "問"]
+      },
+      {
+        "index": 14,
+        "wrong": "籃",
+        "correct": "藍",
+        "options": ["籃", "藍", "蘭", "攔"]
+      },
+      {
+        "index": 17,
+        "wrong": "遇",
+        "correct": "譽",
+        "options": ["遇", "譽", "預", "育"]
+      }
+    ]
+  },
+  {
+    "id": "q236",
+    "content": "刻薄的諷敕和狂妄的舉指，不但有失厚道，而且令人不恥。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "敕",
+        "correct": "刺",
+        "options": ["敕", "刺", "赤", "叱"]
+      },
+      {
+        "index": 10,
+        "wrong": "指",
+        "correct": "止",
+        "options": ["指", "止", "紙", "只"]
+      },
+      {
+        "index": 24,
+        "wrong": "恥",
+        "correct": "齒",
+        "options": ["恥", "齒", "馳", "尺"]
+      }
+    ]
+  },
+  {
+    "id": "q237",
+    "content": "他一界不取，尤如不食人間煙火的仙人。",
+    "corrections": [
+      {
+        "index": 2,
+        "wrong": "界",
+        "correct": "介",
+        "options": ["界", "介", "屆", "借"]
+      },
+      {
+        "index": 6,
+        "wrong": "尤",
+        "correct": "猶",
+        "options": ["尤", "猶", "由", "油"]
+      }
+    ]
+  },
+  {
+    "id": "q238",
+    "content": "這篇小品文足以成現他的急噪個性。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "成",
+        "correct": "呈",
+        "options": ["成", "呈", "程", "承"]
+      },
+      {
+        "index": 12,
+        "wrong": "噪",
+        "correct": "躁",
+        "options": ["噪", "躁", "燥", "澡"]
+      }
+    ]
+  },
+  {
+    "id": "q239",
+    "content": "由於他個性急燥，思慮不夠瞋密，又將全部金錢孤注一值的投資，結果造成支票跳票，影響公司聲諭慎鉅。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "燥",
+        "correct": "躁",
+        "options": ["燥", "躁", "噪", "澡"]
+      },
+      {
+        "index": 12,
+        "wrong": "瞋",
+        "correct": "縝",
+        "options": ["瞋", "縝", "鎮", "慎"]
+      },
+      {
+        "index": 24,
+        "wrong": "值",
+        "correct": "擲",
+        "options": ["值", "擲", "直", "執"]
+      },
+      {
+        "index": 43,
+        "wrong": "諭",
+        "correct": "譽",
+        "options": ["諭", "譽", "預", "愈"]
+      },
+      {
+        "index": 44,
+        "wrong": "慎",
+        "correct": "甚",
+        "options": ["慎", "甚", "腎", "滲"]
+      }
+    ]
+  },
+  {
+    "id": "q240",
+    "content": "眼看作業被同學撕破，他嗔目以對，鈍時，教室一片死寂。",
+    "corrections": [
+      {
+        "index": 11,
+        "wrong": "嗔",
+        "correct": "瞋",
+        "options": ["嗔", "瞋", "伸", "稱"]
+      },
+      {
+        "index": 16,
+        "wrong": "鈍",
+        "correct": "頓",
+        "options": ["鈍", "頓", "盾", "噸"]
+      }
+    ]
+  },
+  {
+    "id": "q241",
+    "content": "這篇文章撿潔生動，趣味衡生。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "撿",
+        "correct": "簡",
+        "options": ["撿", "簡", "檢", "減"]
+      },
+      {
+        "index": 9,
+        "wrong": "衡",
+        "correct": "橫",
+        "options": ["橫", "衡", "恆", "珩"]
+      }
+    ]
+  },
+  {
+    "id": "q242",
+    "content": "為了一點小事，他就奮恨不平，真是個娟介小人啊！",
+    "corrections": [
+      {
+        "index": 9,
+        "wrong": "奮",
+        "correct": "憤",
+        "options": ["憤", "奮", "糞", "份"]
+      },
+      {
+        "index": 16,
+        "wrong": "娟",
+        "correct": "狷",
+        "options": ["狷", "娟", "涓", "絹"]
+      }
+    ]
+  },
+  {
+    "id": "q243",
+    "content": "天氣炎熱，冰店的生意興隆，川流不息的客人使得老闆映接不遐。",
+    "corrections": [
+      {
+        "index": 21,
+        "wrong": "映",
+        "correct": "應",
+        "options": ["應", "映", "硬", "迎"]
+      },
+      {
+        "index": 24,
+        "wrong": "遐",
+        "correct": "暇",
+        "options": ["暇", "遐", "霞", "瑕"]
+      }
+    ]
+  },
+  {
+    "id": "q244",
+    "content": "這本書專門記戴一些名人的易聞鎖事。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "戴",
+        "correct": "載",
+        "options": ["載", "戴", "再", "在"]
+      },
+      {
+        "index": 11,
+        "wrong": "易",
+        "correct": "軼",
+        "options": ["軼", "易", "逸", "藝"]
+      },
+      {
+        "index": 13,
+        "wrong": "鎖",
+        "correct": "瑣",
+        "options": ["瑣", "鎖", "索", "所"]
+      }
+    ]
+  },
+  {
+    "id": "q245",
+    "content": "父母的恩惠浩天罔極，為人子女的應該要及時抱達親恩。",
+    "corrections": [
+      {
+        "index": 5,
+        "wrong": "浩",
+        "correct": "昊",
+        "options": ["昊", "浩", "皓", "好"]
+      },
+      {
+        "index": 17,
+        "wrong": "抱",
+        "correct": "報",
+        "options": ["報", "抱", "暴", "爆"]
+      },
+      {
+        "index": 18,
+        "wrong": "達",
+        "correct": "答",
+        "options": ["答", "達", "搭", "打"]
+      }
+    ]
+  },
+  {
+    "id": "q246",
+    "content": "這個地方鐘靈裕秀，自古以來造就了許多文學家。",
+    "corrections": [
+      {
+        "index": 4,
+        "wrong": "鐘",
+        "correct": "鍾",
+        "options": ["鍾", "鐘", "中", "終"]
+      },
+      {
+        "index": 6,
+        "wrong": "裕",
+        "correct": "毓",
+        "options": ["毓", "裕", "育", "慾"]
+      }
+    ]
+  },
+  {
+    "id": "q247",
+    "content": "顫顫兢兢，如屢薄冰，這是處事戒慎的表現；猷豫不前，則是徨恐不安的流露。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "顫",
+        "correct": "戰",
+        "options": ["戰", "顫", "站", "綻"]
+      },
+      {
+        "index": 6,
+        "wrong": "屢",
+        "correct": "履",
+        "options": ["履", "屢", "旅", "縷"]
+      },
+      {
+        "index": 16,
+        "wrong": "猷",
+        "correct": "猶",
+        "options": ["猶", "猷", "由", "游"]
+      },
+      {
+        "index": 23,
+        "wrong": "徨",
+        "correct": "惶",
+        "options": ["惶", "徨", "皇", "黃"]
+      }
+    ]
+  },
+  {
+    "id": "q248",
+    "content": "旅游業的發展，需要仰賴具備豐富經驗的領對、導遊及相關專業的經英，才能提供旅客完善的服物與體驗。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "旅",
+        "correct": "遊",
+        "options": ["遊", "旅", "履", "縷"]
+      },
+      {
+        "index": 15,
+        "wrong": "對",
+        "correct": "隊",
+        "options": ["隊", "對", "兌", "堆"]
+      },
+      {
+        "index": 24,
+        "wrong": "經",
+        "correct": "菁",
+        "options": ["菁", "經", "精", "驚"]
+      },
+      {
+        "index": 32,
+        "wrong": "物",
+        "correct": "務",
+        "options": ["務", "物", "誤", "霧"]
+      }
+    ]
+  },
+  {
+    "id": "q249",
+    "content": "他為了摩鍊自己，每次任務都抱持始命必達的態度，不慈風雨地堅持到底，從不輕言放棄。",
+    "corrections": [
+      {
+        "index": 3,
+        "wrong": "摩",
+        "correct": "磨",
+        "options": ["磨", "摩", "魔", "模"]
+      },
+      {
+        "index": 12,
+        "wrong": "始",
+        "correct": "使",
+        "options": ["使", "始", "史", "駛"]
+      },
+      {
+        "index": 20,
+        "wrong": "慈",
+        "correct": "辭",
+        "options": ["辭", "慈", "詞", "祠"]
+      }
+    ]
+  },
+  {
+    "id": "q250",
+    "content": "員夢過程中的每段回億，往往讓人慶辛自己曾勇敢追求過夢想，因為那些片刻的美好，將永遠留存在心中，成為人生診貴的氧分與動力。",
+    "corrections": [
+      {
+        "index": 0,
+        "wrong": "員",
+        "correct": "圓",
+        "options": ["圓", "員", "元", "原"]
+      },
+      {
+        "index": 9,
+        "wrong": "億",
+        "correct": "憶",
+        "options": ["憶", "億", "益", "藝"]
+      },
+      {
+        "index": 15,
+        "wrong": "辛",
+        "correct": "幸",
+        "options": ["幸", "辛", "信", "倖"]
+      },
+      {
+        "index": 44,
+        "wrong": "診",
+        "correct": "珍",
+        "options": ["珍", "診", "真", "貞"]
+      },
+      {
+        "index": 47,
+        "wrong": "氧",
+        "correct": "養",
+        "options": ["養", "氧", "癢", "仰"]
+      }
+    ]
+  },
+  {
+    "id": "q251",
+    "content": "雖然生活捉襟見帚，但他仍努力節檢存錢，夢想著有朝一日能參加關光團，出國旅遊開柘視野。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "帚",
+        "correct": "肘",
+        "options": ["肘", "帚", "舟", "周"]
+      },
+      {
+        "index": 14,
+        "wrong": "檢",
+        "correct": "儉",
+        "options": ["儉", "檢", "簡", "減"]
+      },
+      {
+        "index": 26,
+        "wrong": "關",
+        "correct": "觀",
+        "options": ["觀", "關", "官", "冠"]
+      },
+      {
+        "index": 35,
+        "wrong": "柘",
+        "correct": "拓",
+        "options": ["拓", "柘", "托", "拖"]
+      }
+    ]
+  },
+  {
+    "id": "q252",
+    "content": "領隊不僅需要應對旅途中的鎖事，更呈擔著為旅客創造美好回憶與實現夢想的責認，展現出服務的劾心價值與人祭連結的重要意義。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "鎖",
+        "correct": "瑣",
+        "options": ["瑣", "鎖", "索", "所"]
+      },
+      {
+        "index": 16,
+        "wrong": "呈",
+        "correct": "承",
+        "options": ["承", "呈", "成", "誠"]
+      },
+      {
+        "index": 33,
+        "wrong": "認",
+        "correct": "任",
+        "options": ["任", "認", "人", "韌"]
+      },
+      {
+        "index": 40,
+        "wrong": "劾",
+        "correct": "核",
+        "options": ["核", "劾", "和", "合"]
+      },
+      {
+        "index": 46,
+        "wrong": "祭",
+        "correct": "際",
+        "options": ["際", "祭", "濟", "季"]
+      }
+    ]
+  },
+  {
+    "id": "q253",
+    "content": "小雄幼年與外婆相伊為命，鄰家木匠時常與他玩耍並傳綬他木工計巧，這段經歷啟發他對建築的初步悻趣。",
+    "corrections": [
+      {
+        "index": 7,
+        "wrong": "伊",
+        "correct": "依",
+        "options": ["依", "伊", "衣", "醫"]
+      },
+      {
+        "index": 18,
+        "wrong": "綬",
+        "correct": "授",
+        "options": ["授", "綬", "受", "手"]
+      },
+      {
+        "index": 22,
+        "wrong": "計",
+        "correct": "技",
+        "options": ["技", "計", "季", "記"]
+      },
+      {
+        "index": 37,
+        "wrong": "悻",
+        "correct": "興",
+        "options": ["興", "悻", "性", "幸"]
+      }
+    ]
+  },
+  {
+    "id": "q254",
+    "content": "西伯利亞鐵路的風憬從廣闊的草原到冰雪負蓋的森林，展現大地的壯麗與療闊。",
+    "corrections": [
+      {
+        "index": 8,
+        "wrong": "憬",
+        "correct": "景",
+        "options": ["景", "憬", "警", "頸"]
+      },
+      {
+        "index": 17,
+        "wrong": "負",
+        "correct": "覆",
+        "options": ["覆", "負", "付", "富"]
+      },
+      {
+        "index": 33,
+        "wrong": "療",
+        "correct": "遼",
+        "options": ["遼", "療", "聊", "瞭"]
+      }
+    ]
+  },
+  {
+    "id": "q255",
+    "content": "菁英教育常被式為成功的唯一途逕，但歐文總忍不住執疑，是否每個人都必須沿著同樣的路線走到盡頭。他在高中肆業後，選擇了另一條路，用自己的方式定義何謂學習與成長。",
+    "corrections": [
+      {
+        "index": 6,
+        "wrong": "式",
+        "correct": "視",
+        "options": ["視", "式", "試", "示"]
+      },
+      {
+        "index": 13,
+        "wrong": "逕",
+        "correct": "徑",
+        "options": ["徑", "逕", "勁", "淨"]
+      },
+      {
+        "index": 21,
+        "wrong": "執",
+        "correct": "質",
+        "options": ["質", "執", "職", "止"]
+      },
+      {
+        "index": 43,
+        "wrong": "肆",
+        "correct": "肄",
+        "options": ["肄", "肆", "肆", "四"]
+      }
+    ]
+  },
+  {
+    "id": "q256",
+    "content": "阿忠原本只是照著父母的安徘升學，但當他首次造仿「光之教會」，體驗到自然光線的寐力，新中萌生從事建築的孟想。",
+    "corrections": [
+      {
+        "index": 12,
+        "wrong": "徘",
+        "correct": "排",
+        "options": ["排", "徘", "牌", "派"]
+      },
+      {
+        "index": 20,
+        "wrong": "仿",
+        "correct": "訪",
+        "options": ["訪", "仿", "紡", "防"]
+      },
+      {
+        "index": 36,
+        "wrong": "寐",
+        "correct": "魅",
+        "options": ["魅", "寐", "妹", "媚"]
+      },
+      {
+        "index": 39,
+        "wrong": "新",
+        "correct": "心",
+        "options": ["心", "新", "欣", "薪"]
+      },
+      {
+        "index": 48,
+        "wrong": "孟",
+        "correct": "夢",
+        "options": ["夢", "孟", "猛", "矇"]
+      }
+    ]
+  },
+  {
+    "id": "q257",
+    "content": "國中畢業後，他改讀高工機卸科，開始自學建築，為了出國看建築，他考取職業卷擊賽值照，踏上探瑣之路。",
+    "corrections": [
+      {
+        "index": 11,
+        "wrong": "卸",
+        "correct": "械",
+        "options": ["械", "卸", "謝", "懈"]
+      },
+      {
+        "index": 29,
+        "wrong": "卷",
+        "correct": "拳",
+        "options": ["拳", "卷", "全", "權"]
+      },
+      {
+        "index": 32,
+        "wrong": "值",
+        "correct": "執",
+        "options": ["執", "值", "職", "直"]
+      },
+      {
+        "index": 38,
+        "wrong": "瑣",
+        "correct": "索",
+        "options": ["索", "瑣", "鎖", "所"]
       }
     ]
   }
