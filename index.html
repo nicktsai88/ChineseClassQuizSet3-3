@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>童軍科目互動練習</title>
+    <!-- 引入 React 和 ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- 引入 Babel 用於解析 JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 自定義樣式 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Lucide Icons 組件封裝
+        const Icon = ({ name, className }) => {
+            const lucide = window.lucide;
+            if (!lucide) return null;
+            
+            React.useEffect(() => {
+                lucide.createIcons();
+            });
+
+            return <i data-lucide={name} className={className}></i>;
+        };
+
+        const Play = ({ className }) => <Icon name="play" className={className} />;
+        const CheckCircle = ({ className }) => <Icon name="check-circle" className={className} />;
+        const XCircle = ({ className }) => <Icon name="x-circle" className={className} />;
+        const RefreshCw = ({ className }) => <Icon name="refresh-cw" className={className} />;
+        const ChevronRight = ({ className }) => <Icon name="chevron-right" className={className} />;
+        const Award = ({ className }) => <Icon name="award" className={className} />;
+        const BookOpen = ({ className }) => <Icon name="book-open" className={className} />;
+        const CheckSquare = ({ className }) => <Icon name="check-square" className={className} />;
+        const Eye = ({ className }) => <Icon name="eye" className={className} />;
+        const Home = ({ className }) => <Icon name="home" className={className} />;
+
+        const ScoutQuizApp = () => {
+            // view 狀態: 'start' | 'quiz' | 'score' | 'study'
+            const [currentView, setCurrentView] = React.useState('start');
+            const [score, setScore] = React.useState(0);
+            
+            // answers 改為陣列，索引對應題目索引
+            const [answers, setAnswers] = React.useState(Array(30).fill(null));
+
+            // 題目資料庫
+            const questions = [
+                {
+                    id: 1,
+                    question: "小美與奇奇想在小隊聯團露營時帶大家玩破冰遊戲,「為了確認大家都聽得懂遊戲規則,他們兩個示範了三次」。請問:示範的目的是什麼?",
+                    options: [
+                        "(A)加深參加者的印象",
+                        "(B)再次確認流程",
+                        "(C)遊戲變化由易至難",
+                        "(D)遊戲掌握公平公正"
+                    ],
+                    answer: "A"
+                },
+                {
+                    id: 2,
+                    question: "關於背包裝填原則如下,請選出正確的組合。(甲)不可壓縮物品。(乙)急需物品放上層。(丙)柔軟貼背。(丁)左右平衡。(戊)物品不外掛。(己)物品可外掛。",
+                    options: [
+                        "(A)甲丙丁戊",
+                        "(B)甲丙丁己",
+                        "(C)乙丙丁戊",
+                        "(D)乙丙丁己"
+                    ],
+                    answer: "C"
+                },
+                {
+                    id: 3,
+                    question: "打開網路搜尋關鍵字:危險露營。斗大的新聞標題即在眼前:知名爆紅露營區位「山崩地滑區」!官消極、民陷危機。記者調查30家桃竹苗知名營區,發現有16家位在「山崩與地滑、土石流潛勢區」的敏感地帶。請問:上述新聞是在提醒大家選擇營地時應注意什麼?",
+                    options: [
+                        "(A)水源補給",
+                        "(B)有無雨棚",
+                        "(C)海拔高度",
+                        "(D)遠離危險"
+                    ],
+                    answer: "D"
+                },
+                {
+                    id: 4,
+                    question: "乖乖童軍團預計到宜蘭清水公園附近的營地露營,順便搭上端午節的氣氛,在冬山河來場小隊龍舟競賽。請問:乖乖童軍團規畫此次主題是屬於什麼體驗?",
+                    options: [
+                        "(A)農村生活體驗",
+                        "(B)傳統文化體驗",
+                        "(C)觀星體驗",
+                        "(D)原住民文化體驗"
+                    ],
+                    answer: "B"
+                },
+                {
+                    id: 5,
+                    question: "臺灣山區風景迷人,百岳當中有些只需半日即可輕鬆完成攀登,也有些山需要好幾日才能完成,但山區天氣變化大,雨衣絕對是不可缺少的裝備。請問:雨衣的放置應考量哪一項打包技巧?",
+                    options: [
+                        "(A)平衡",
+                        "(B)易取",
+                        "(C)流線",
+                        "(D)壓縮"
+                    ],
+                    answer: "B"
+                },
+                {
+                    id: 6,
+                    question: "此類型營地的基本需求就是汽車可直接到達營位旁,提供充足水電,其次是對於休閒設施的要求。此類型營地於歐美國家相當盛行,臺灣近年來也愈來愈多,如新北市福隆營地、臺北市貴子坑露營場等。請問:上述是屬於何種露營?",
+                    options: [
+                        "(A)野營式露營",
+                        "(B)營舍式露營",
+                        "(C)綜合度假式露營",
+                        "(D)露營車式露營"
+                    ],
+                    answer: "D"
+                },
+                {
+                    id: 7,
+                    question: "曉菁和同學一起去參加隔宿露營,結果忘了帶□□,睡覺時覺得地面有異物感,半夜不斷冷醒,早上起床睡袋也有點溼溼的。請問:曉菁忘了帶什麼裝備?",
+                    options: [
+                        "(A)枕頭",
+                        "(B)睡墊",
+                        "(C)帳篷",
+                        "(D)雨衣"
+                    ],
+                    answer: "B"
+                },
+                {
+                    id: 8,
+                    question: "只要打開交通部觀光署露營區資訊查詢專區,就能查到全臺各地合法的露營場,這樣就能提供露營者選擇的營地。請問:□□應填入下列哪一個選項?",
+                    options: [
+                        "(A)便利",
+                        "(B)人氣",
+                        "(C)合格",
+                        "(D)國營"
+                    ],
+                    answer: "C"
+                },
+                {
+                    id: 9,
+                    question: "海南島曾經發生多宗在椰子樹下露營或者休息時,因濱海風大,被成熟的椰子「瓜熟蒂落」而造成人員受傷的事件。請問:上述在提醒我們選擇營地時必須注意什麼?",
+                    options: [
+                        "(A)遠離危險",
+                        "(B)水源補給",
+                        "(C)營地平整",
+                        "(D)交通便利"
+                    ],
+                    answer: "A"
+                },
+                {
+                    id: 10,
+                    question: "小丸子一群人在討論營火內容,大家分工如下:花輪表示他們家的管家可以協助搭建營火;班長表示他想負責營邊談話;豬太郎想負責點火;小丸子則認領帶大家哼唱晚會歌的重責大任。請將上述人員的工作依營火順序進行排列。",
+                    options: [
+                        "(A)花輪家→豬太郎→小丸子→班長",
+                        "(B)花輪家→豬太郎→班長→小丸子",
+                        "(C)花輪家→小丸子→豬太郎→班長",
+                        "(D)花輪家→班長→小丸子→豬太郎"
+                    ],
+                    answer: "C"
+                },
+                {
+                    id: 11,
+                    question: "國中生小萃希望拍照時能更纖細苗條,開始記錄自己的飲食與運動。下列哪天的記錄對維持健康體態較適宜?",
+                    options: [
+                        "(A)Day1飲食:早餐/蜂蜜水一杯;午餐/芭樂一顆+蜂蜜水一杯;晚餐/蔬菜豆腐清湯。運動:慢跑一小時。",
+                        "(B)Day2飲食:早餐/茶葉蛋+蘋果一顆;午餐/五穀飯一碗+青菜兩種+滷雞腿一支;晚餐/地瓜+水炒青菜+蒸魚肉。運動:慢跑半小時、重訓15分鐘。",
+                        "(C)Day3飲食:早餐/無;午餐/牛肉漢堡+薯條+可樂;晚餐/炸排骨便當+冬瓜檸檬。運動:空中腳踏半小時。",
+                        "(D)Day4飲食:早餐/小黃瓜一條;午餐/地瓜一條;晚餐/水煮白肉一掌心。運動:重訓半小時、跳舞半小時。"
+                    ],
+                    answer: "B"
+                },
+                {
+                    id: 12,
+                    question: "若為自己三代同堂的家人規畫露營,會以哪些條件為優先?(甲)距離。(乙)雨棚。(丙)採買。(丁)電源。",
+                    options: [
+                        "(A)甲乙丙",
+                        "(B)甲乙丁",
+                        "(C)乙丙丁",
+                        "(D)甲乙丙丁"
+                    ],
+                    answer: "D"
+                },
+                {
+                    id: 13,
+                    question: "奇奇為了參加隔宿露營,列出許多要買的東西。請問:關於新手準備裝備的原則,下列何者錯誤?",
+                    options: [
+                        "(A)工欲善其事,一定要一次到位添購完備",
+                        "(B)家中能用的就用",
+                        "(C)向親友詢問借用",
+                        "(D)到露營器材出租店租用"
+                    ],
+                    answer: "A"
+                },
+                {
+                    id: 14,
+                    question: "其實營火沒有固定的形式,但就如同阿美族的豐年祭、賽夏族人的矮靈祭等,童軍營火還是有特別的地方,下列哪些是童軍營火特別之處?(甲)火域的用火安全。(乙)懷著感恩的心。(丙)學習分工。(丁)邊烤食物邊唱歌跳舞,將火的功能發揮到最大。",
+                    options: [
+                        "(A)甲乙丙",
+                        "(B)甲乙丁",
+                        "(C)甲丙丁",
+                        "(D)乙丙丁"
+                    ],
+                    answer: "A"
+                },
+                {
+                    id: 15,
+                    question: "臺灣邁向高齡化社會,博暐95歲的爺爺這幾年總是懷疑家人偷他的錢;而且半夜睡不著,吵著要出去工作;忘記自己說過的話而責備家人。請問:博暐的爺爺可能面臨何種狀況?",
+                    options: [
+                        "(A)離婚",
+                        "(B)遭竊",
+                        "(C)失智",
+                        "(D)水災"
+                    ],
+                    answer: "C"
+                },
+                {
+                    id: 16,
+                    question: "羽絨背心的靈活穿搭,深受各年齡層的喜愛,一方面可將溫度鎖住,另一方面因背心剪裁使得雙手活動較方便。請問:這是屬於戶外活動穿搭系統的哪一層?",
+                    options: [
+                        "(A)保暖層",
+                        "(B)活動層",
+                        "(C)防水層",
+                        "(D)排汗層"
+                    ],
+                    answer: "A"
+                },
+                {
+                    id: 17,
+                    question: "鳳梨嫩雞沙拉,食譜如下: 食材:雞胸肉150克、罐頭鳳梨一片、各式生菜適量、和風沙拉醬兩茶匙。做法: 1.完整雞胸肉加入切丁鳳梨後蒸熟。2.雞胸肉取出斜切成片。3.放入生菜並擺上雞肉片,淋上雞汁及和風醬汁即可。製作這道菜看需要哪些工具?(甲)電鍋(乙)菜刀 (丙)砧板(丁)烤箱。",
+                    options: [
+                        "(A)甲乙丙",
+                        "(B)乙丙丁",
+                        "(C)丙丁",
+                        "(D)甲乙丙丁"
+                    ],
+                    answer: "A"
+                },
+                {
+                    id: 18,
+                    question: "近年流行的氣炸鍋,其原理為上方的加熱器產生高溫熱風,藉由對流的方式讓食物被熱空氣包圍、高溫烘烤,把食物本身的油脂逼出,產生「油炸」的效果。依據氣炸鍋的原理,下列何種菜肴不適合用氣炸鍋製作?",
+                    options: [
+                        "(A)地瓜QQ球",
+                        "(B)涼拌海蜇皮",
+                        "(C)香草烤雞腿",
+                        "(D)戚風蛋糕"
+                    ],
+                    answer: "B"
+                },
+                {
+                    id: 19,
+                    question: "海島型氣候的臺灣一到夏天就變得又悶又熱!穿著人造纖維材質的衣物,可減少肌膚與衣物黏在一塊兒的問溼感。上述是指戶外活動穿搭系統的哪一層?",
+                    options: [
+                        "(A)保暖層",
+                        "(B)活動層",
+                        "(C)防水層",
+                        "(D)排汗層"
+                    ],
+                    answer: "D"
+                },
+                {
+                    id: 20,
+                    question: "位在陽明山的營地有著得天獨厚的條件,營區旁就有國家公園,可以安排步道主題探訪露營;湍急的小溪也可以請專業人員評估,是否適合從事溯溪體驗。請問:上述露營是屬於哪一種類型?",
+                    options: [
+                        "(A)服務活動",
+                        "(B)體能活動",
+                        "(C)自然體驗活動",
+                        "(D)靜態活動"
+                    ],
+                    answer: "C"
+                },
+                {
+                    id: 21,
+                    question: "營地是非經人工規畫的自然野地,使用者的主要目的是登山,露營只是手段而已,此類露營地,通常處於深山之中。請問這屬於什麼類型的營地?",
+                    options: [
+                        "(A)野營式露營",
+                        "(B)營舍式露營",
+                        "(C)露營車式露營",
+                        "(D)綜合度假式露營"
+                    ],
+                    answer: "A"
+                },
+                {
+                    id: 22,
+                    question: "奇奇和蒂蒂參加學校隔宿露營活動,晚上則是住在廢棄校舍改建的大通鋪。請問:這是屬於哪一種形式的露營?",
+                    options: [
+                        "(A)野營式露營",
+                        "(B)營舍式露營",
+                        "(C)綜合度假式露營",
+                        "(D)露營車式露營"
+                    ],
+                    answer: "B"
+                },
+                {
+                    id: 23,
+                    question: "「綠林營地為休閒農場,有果園、稻田及可容納50人的平坦草地,鄰近老街、客家文化中心。」請問:綠林營地適合提供何種主題的露營體驗?",
+                    options: [
+                        "(A)溯溪體驗",
+                        "(B)童軍體驗",
+                        "(C)觀星體驗",
+                        "(D)農村生活體驗"
+                    ],
+                    answer: "D"
+                },
+                {
+                    id: 24,
+                    question: "露營除了活潑的團康活動外,還有各具意義的儀典,透過這些儀典,更能體驗露營活動的不同風貌。 , 就是露營最特殊的儀典之一。請問: 處可能是指下列哪個選項?",
+                    options: [
+                        "(A)營火",
+                        "(B)晨操",
+                        "(C)觀星",
+                        "(D)大地遊戲"
+                    ],
+                    answer: "A"
+                },
+                {
+                    id: 25,
+                    question: "在活動設計、帶領過程中,小隊內若意見不同時,應該會使用什麼方式溝通、解決問題?",
+                    options: [
+                        "(A)力爭到底",
+                        "(B)理性溝通",
+                        "(C)強力辯論",
+                        "(D)武力解決"
+                    ],
+                    answer: "B"
+                },
+                {
+                    id: 26,
+                    question: "遊戲是露營中的調劑活動,而好的遊戲帶領有以下幾個步驟,請選出正確的排列順序。(甲)示範。(乙)發問。(丙)行動。(丁)說明。(戊)適應。",
+                    options: [
+                        "(A)甲乙丙丁戊",
+                        "(B)乙甲丁戊丙",
+                        "(C)丙甲戊乙丁",
+                        "(D)丁甲乙丙戊"
+                    ],
+                    answer: "D"
+                },
+                {
+                    id: 27,
+                    question: "近來國人瘋露營,認為到戶外可放鬆心情,所以將許多設備都搬到戶外,如投影機、K歌麥克風、遊戲機等。請問:下列哪些選項較符合露營禮儀?(甲)沒有明定的露營法律或禮儀條文也需自我約束。(乙)不干擾與麻煩他人是最佳準則。(丙)通常十點後要降低音量,勿大聲喧譁。(丁)不要隨易點燃煙火或施放天燈。",
+                    options: [
+                        "(A)甲乙丙",
+                        "(B)甲丙丁",
+                        "(C)乙丙丁",
+                        "(D)甲乙丙丁"
+                    ],
+                    answer: "D"
+                },
+                {
+                    id: 28,
+                    question: "新北市龍門營地、宜蘭縣武荖坑露營區,以及臺南市走馬瀨農場等都是臺灣很棒的營地,此類營地通常會結合各類設施,如游泳池、漆彈場,或臨近海水浴場及溪流而衍伸戲水活動等。請問:上述是屬於何種露營?",
+                    options: [
+                        "(A)野營式露營",
+                        "(B)營舍式露營",
+                        "(C)綜合度假式露營",
+                        "(D)露營車式露營"
+                    ],
+                    answer: "C"
+                },
+                {
+                    id: 29,
+                    question: "上週末小新和家人去露營,在營區看到許多景象令他們大開眼界。爸爸:「我看到有年輕人以營燈代替燒營火耶!」媽媽:「居然還有人帶投影機放電影,儼然是蚊子電影院!」小新:「我看到別人家的晚餐根本滿漢全席!」妹妹:「我去洗碗的時候看到廚餘多到滿出來了,好噁心!」請問:上述哪一位家庭成員所看到景象較符合無痕露營?",
+                    options: [
+                        "(A)爸爸",
+                        "(B)媽媽",
+                        "(C)小新",
+                        "(D)妹妹"
+                    ],
+                    answer: "A"
+                },
+                {
+                    id: 30,
+                    question: "牛羚小隊規畫到原住民部落進行兩天一夜的原鄉體驗營露營活動。請問:他們需要考慮哪些因素?(甲)活動時間。(乙)交通方式。(丙)體驗內容。(丁)所需經費。",
+                    options: [
+                        "(A)甲乙丙",
+                        "(B)乙丙丁",
+                        "(C)甲乙丁",
+                        "(D)甲乙丙丁"
+                    ],
+                    answer: "D"
+                }
+            ];
+
+            const handleOptionClick = (questionIndex, optionIndex) => {
+                if (answers[questionIndex] !== null) return;
+
+                const choiceMap = ['A', 'B', 'C', 'D'];
+                const choice = choiceMap[optionIndex];
+                const correct = choice === questions[questionIndex].answer;
+
+                const newAnswers = [...answers];
+                newAnswers[questionIndex] = {
+                    correct,
+                    choice,
+                    correctAnswer: questions[questionIndex].answer,
+                    selectedIndex: optionIndex
+                };
+                setAnswers(newAnswers);
+
+                if (correct) {
+                    setScore(prev => prev + 1);
+                }
+            };
+
+            const handleFinish = () => {
+                setCurrentView('score');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            const restartQuiz = () => {
+                setScore(0);
+                setCurrentView('start');
+                setAnswers(Array(30).fill(null));
+            };
+
+            const startQuiz = () => {
+                setAnswers(Array(30).fill(null));
+                setScore(0);
+                setCurrentView('quiz');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            const startStudy = () => {
+                setCurrentView('study');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            const goHome = () => {
+                setCurrentView('start');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Start Screen
+            if (currentView === 'start') {
+                return (
+                    <div className="flex flex-col items-center justify-center min-h-screen bg-green-50 p-4 font-sans text-gray-800">
+                        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl overflow-hidden p-8 text-center border-b-4 border-green-500">
+                            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <BookOpen className="w-10 h-10 text-green-600" />
+                            </div>
+                            <h1 className="text-3xl font-bold text-gray-800 mb-2">童軍科目互動練習</h1>
+                            <p className="text-gray-600 mb-8">精選 30 題童軍考題，請選擇練習模式！</p>
+                            
+                            <div className="space-y-4">
+                                <button 
+                                    onClick={startQuiz}
+                                    className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 text-white text-lg font-bold rounded-xl transition duration-200 flex items-center justify-center shadow-lg transform hover:-translate-y-1"
+                                >
+                                    <Play className="w-6 h-6 mr-3" />
+                                    開始挑戰
+                                </button>
+                                
+                                <button 
+                                    onClick={startStudy}
+                                    className="w-full py-4 px-6 bg-blue-500 hover:bg-blue-600 text-white text-lg font-bold rounded-xl transition duration-200 flex items-center justify-center shadow-lg transform hover:-translate-y-1"
+                                >
+                                    <Eye className="w-6 h-6 mr-3" />
+                                    學習模式 (含解答)
+                                </button>
+                            </div>
+                            
+                            <div className="mt-8 text-sm text-gray-500">
+                                祝你學習愉快，滿分通關！
+                            </div>
+                        </div>
+                    </div>
+                );
+            }
+
+            // Score Screen
+            if (currentView === 'score') {
+                return (
+                    <div className="flex flex-col items-center justify-center min-h-screen bg-green-50 p-4 font-sans text-gray-800">
+                        <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
+                            
+                            <div className="p-8 text-center bg-green-600 text-white shrink-0">
+                                <h2 className="text-3xl font-bold mb-2">測驗完成！</h2>
+                                <div className="flex items-center justify-center space-x-2 text-xl">
+                                    <span>你的得分：</span>
+                                    <span className="text-4xl font-extrabold text-yellow-300">{score}</span>
+                                    <span className="text-2xl">/ {questions.length}</span>
+                                </div>
+                                <p className="mt-2 text-green-100">
+                                    {score === 30 ? "太神啦！童軍大師就是你！" : 
+                                    score >= 24 ? "很棒喔！擁有豐富的童軍知識！" : 
+                                    score >= 18 ? "不錯不錯，再接再厲！" : "別氣餒，多練習幾次就熟了！"}
+                                </p>
+                            </div>
+
+                            <div className="flex-1 overflow-y-auto p-6 bg-gray-50">
+                                <h3 className="text-lg font-bold text-gray-700 mb-4 flex items-center">
+                                    <BookOpen className="w-5 h-5 mr-2" /> 
+                                    答題檢討列表
+                                </h3>
+                                <div className="space-y-4">
+                                    {questions.map((q, index) => {
+                                        const answerState = answers[index];
+                                        const isUserCorrect = answerState?.correct;
+                                        const userChoice = answerState?.choice;
+                                        const hasAnswered = answerState !== null;
+
+                                        return (
+                                            <div key={q.id} className={`p-4 rounded-lg border-l-4 ${
+                                                !hasAnswered ? 'bg-gray-100 border-gray-300' :
+                                                isUserCorrect ? 'bg-white border-green-500 shadow-sm' : 'bg-red-50 border-red-500'
+                                            }`}>
+                                                <div className="flex justify-between items-start mb-2">
+                                                    <span className="font-bold text-gray-500 text-sm">第 {q.id} 題</span>
+                                                    {hasAnswered ? (
+                                                        isUserCorrect ? (
+                                                            <span className="flex items-center text-green-600 text-sm font-bold"><CheckCircle className="w-4 h-4 mr-1"/> 正確</span>
+                                                        ) : (
+                                                            <span className="flex items-center text-red-500 text-sm font-bold"><XCircle className="w-4 h-4 mr-1"/> 錯誤 (選了 {userChoice})</span>
+                                                        )
+                                                    ) : (
+                                                        <span className="flex items-center text-gray-400 text-sm font-bold">未作答</span>
+                                                    )}
+                                                </div>
+                                                <p className="text-gray-800 font-medium mb-2">{q.question}</p>
+                                                {(!isUserCorrect || !hasAnswered) && (
+                                                    <p className="text-sm text-green-700 font-bold bg-green-100 p-2 rounded">
+                                                        正確答案：({q.answer})
+                                                    </p>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+
+                            <div className="p-4 bg-white border-t border-gray-200 shrink-0">
+                                <button 
+                                    onClick={restartQuiz}
+                                    className="w-full py-3 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-xl transition duration-200 flex items-center justify-center"
+                                >
+                                    <RefreshCw className="w-5 h-5 mr-2" />
+                                    回到首頁
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                );
+            }
+
+            // Study Mode View
+            if (currentView === 'study') {
+                return (
+                    <div className="flex flex-col items-center min-h-screen bg-blue-50 font-sans text-gray-800">
+                        <div className="w-full bg-blue-600 text-white p-4 shadow-md sticky top-0 z-10 flex justify-between items-center">
+                            <h2 className="text-lg font-bold flex items-center"><Eye className="w-5 h-5 mr-2"/> 學習模式</h2>
+                            <button 
+                                onClick={goHome}
+                                className="px-3 py-1 bg-blue-700 hover:bg-blue-800 rounded-lg text-sm flex items-center transition"
+                            >
+                                <Home className="w-4 h-4 mr-1"/> 回首頁
+                            </button>
+                        </div>
+
+                        <div className="max-w-2xl w-full p-4 space-y-6 pb-12">
+                            {questions.map((q, qIndex) => (
+                                <div key={q.id} className="bg-white rounded-2xl shadow-md overflow-hidden">
+                                    <div className="p-4 border-b border-blue-100 bg-blue-50/50">
+                                        <div className="flex items-start">
+                                            <span className="bg-blue-200 text-blue-800 text-xs font-bold px-2 py-1 rounded mr-2 mt-1">
+                                                Q{q.id}
+                                            </span>
+                                            <h3 className="text-lg font-bold text-gray-800 leading-relaxed">
+                                                {q.question}
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="p-4 space-y-2">
+                                        {q.options.map((option, optIndex) => {
+                                            const choiceMap = ['A', 'B', 'C', 'D'];
+                                            const isCorrect = choiceMap[optIndex] === q.answer;
+
+                                            return (
+                                                <div 
+                                                    key={optIndex}
+                                                    className={`w-full text-left p-3 rounded-xl border-2 font-medium flex items-center
+                                                        ${isCorrect 
+                                                            ? 'border-green-500 bg-green-50 text-green-900 shadow-sm' 
+                                                            : 'border-transparent text-gray-500'}`}
+                                                >
+                                                    <span className={`w-7 h-7 rounded-full border-2 flex items-center justify-center mr-3 text-xs font-bold shrink-0
+                                                        ${isCorrect ? 'border-green-600 bg-green-600 text-white' : 'border-gray-300 text-gray-400'}
+                                                    `}>
+                                                        {choiceMap[optIndex]}
+                                                    </span>
+                                                    <span className="text-sm">{option.substring(3)}</span>
+                                                    {isCorrect && <CheckCircle className="w-5 h-5 ml-auto text-green-600"/>}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                );
+            }
+
+            // Quiz - Waterfall View
+            return (
+                <div className="flex flex-col items-center min-h-screen bg-gray-100 font-sans text-gray-800">
+                    <div className="w-full bg-gray-800 text-white p-4 shadow-md sticky top-0 z-10 flex justify-between items-center">
+                        <h2 className="text-lg font-bold">童軍科目測驗</h2>
+                        <div className="flex items-center space-x-3">
+                            <div className="text-sm bg-gray-700 px-3 py-1 rounded-full">
+                                已作答: {answers.filter(a => a !== null).length} / {questions.length}
+                            </div>
+                            <button 
+                                onClick={goHome}
+                                className="p-2 bg-gray-700 hover:bg-gray-600 rounded-full transition"
+                                title="回首頁"
+                            >
+                                <Home className="w-4 h-4"/>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="max-w-2xl w-full p-4 space-y-6 pb-24">
+                        {questions.map((q, qIndex) => {
+                            const answerState = answers[qIndex];
+                            const hasAnswered = answerState !== null;
+                            const isCorrect = answerState?.correct;
+
+                            return (
+                                <div key={q.id} className="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300">
+                                    <div className={`p-4 border-b ${hasAnswered 
+                                        ? (isCorrect ? 'bg-green-50 border-green-100' : 'bg-red-50 border-red-100') 
+                                        : 'bg-white border-gray-100'}`}>
+                                        <div className="flex items-start">
+                                            <span className="bg-gray-200 text-gray-700 text-xs font-bold px-2 py-1 rounded mr-2 mt-1">
+                                                Q{q.id}
+                                            </span>
+                                            <h3 className="text-lg font-bold text-gray-800 leading-relaxed">
+                                                {q.question}
+                                            </h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="p-4 space-y-3">
+                                        {q.options.map((option, optIndex) => {
+                                            let btnClass = "w-full text-left p-3 rounded-xl border-2 transition-all duration-200 font-medium flex items-center ";
+                                            
+                                            if (!hasAnswered) {
+                                                btnClass += "border-gray-200 hover:border-green-500 hover:bg-green-50 text-gray-700 cursor-pointer";
+                                            } else {
+                                                const choiceMap = ['A', 'B', 'C', 'D'];
+                                                const isThisOptionCorrect = choiceMap[optIndex] === q.answer;
+                                                const isThisOptionSelected = answerState.selectedIndex === optIndex;
+
+                                                if (isThisOptionCorrect) {
+                                                    btnClass += "border-green-500 bg-green-100 text-green-800";
+                                                } else if (isThisOptionSelected && !isThisOptionCorrect) {
+                                                    btnClass += "border-red-500 bg-red-100 text-red-800";
+                                                } else {
+                                                    btnClass += "border-gray-100 text-gray-400 opacity-60 cursor-default";
+                                                }
+                                            }
+
+                                            return (
+                                                <button
+                                                    key={optIndex}
+                                                    onClick={() => handleOptionClick(qIndex, optIndex)}
+                                                    disabled={hasAnswered}
+                                                    className={btnClass}
+                                                >
+                                                    <span className={`w-7 h-7 rounded-full border-2 flex items-center justify-center mr-3 text-xs font-bold shrink-0
+                                                        ${hasAnswered && ['A','B','C','D'][optIndex] === q.answer ? 'border-green-600 bg-green-600 text-white' : 
+                                                        hasAnswered && answerState.selectedIndex === optIndex ? 'border-red-500 text-red-500' : 'border-gray-300 text-gray-500'}
+                                                    `}>
+                                                        {['A', 'B', 'C', 'D'][optIndex]}
+                                                    </span>
+                                                    <span className="text-sm">{option.substring(3)}</span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+
+                                    {hasAnswered && (
+                                        <div className={`px-4 py-3 text-sm font-bold flex items-center ${isCorrect ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+                                            {isCorrect ? (
+                                                <React.Fragment><CheckCircle className="w-5 h-5 mr-2" /> 答對了！</React.Fragment>
+                                            ) : (
+                                                <React.Fragment><XCircle className="w-5 h-5 mr-2" /> 答案是 ({q.answer})</React.Fragment>
+                                            )}
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    <div className="fixed bottom-0 w-full bg-white border-t border-gray-200 p-4 shadow-lg flex justify-center z-20">
+                        <div className="max-w-2xl w-full flex space-x-4">
+                            <div className="flex-1 flex items-center justify-center text-gray-600 font-medium">
+                                目前得分: <span className="text-green-600 font-bold text-xl ml-2">{score}</span>
+                            </div>
+                            <button
+                                onClick={handleFinish}
+                                className="flex-1 py-3 bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-xl shadow-lg flex items-center justify-center transition-colors"
+                            >
+                                <CheckSquare className="w-5 h-5 mr-2" />
+                                交卷看成績
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<ScoutQuizApp />);
+    </script>
+</body>
+</html>
