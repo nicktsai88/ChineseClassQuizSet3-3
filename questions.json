@@ -34,7 +34,7 @@
         "options": ["遼", "繚", "撩", "潦"]
       },
       {
-        "index": 18,
+        "index": 17,
         "wrong": "摻",
         "correct": "滲",
         "options": ["參", "慘", "摻", "滲"]
@@ -154,13 +154,13 @@
         "options": ["會", "繪", "彙", "惠"]
       },
       {
-        "index": 21,
+        "index": 22,
         "wrong": "跌",
         "correct": "迭",
         "options": ["跌", "迭", "疊", "佚"]
       },
       {
-        "index": 29,
+        "index": 28,
         "wrong": "俱",
         "correct": "劇",
         "options": ["據", "劇", "聚", "俱"]
@@ -376,13 +376,13 @@
         "options": ["決", "鷸", "譎", "掘"]
       },
       {
-        "index": 16,
+        "index": 17,
         "wrong": "振",
         "correct": "震",
         "options": ["震", "朕", "陣", "振"]
       },
       {
-        "index": 17,
+        "index": 18,
         "wrong": "憾",
         "correct": "撼",
         "options": ["憾", "撼", "焊", "翰"]
@@ -502,13 +502,13 @@
         "options": ["出", "齣", "初", "除"]
       },
       {
-        "index": 18,
+        "index": 17,
         "wrong": "響",
         "correct": "饗",
         "options": ["餉", "享", "饗", "響"]
       },
       {
-        "index": 19,
+        "index": 18,
         "wrong": "晏",
         "correct": "宴",
         "options": ["晏", "宴", "驗", "艷"]
