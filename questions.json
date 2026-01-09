@@ -4360,7 +4360,7 @@
         "options": ["陷", "餡", "現", "羨"]
       },
       {
-        "index": 11,
+        "index": 14,
         "wrong": "淪",
         "correct": "倫",
         "options": ["淪", "倫", "輪", "論"]
@@ -4384,7 +4384,7 @@
         "options": ["補", "捕", "哺", "甫"]
       },
       {
-        "index": 22,
+        "index": 28,
         "wrong": "逍",
         "correct": "消",
         "options": ["逍", "消", "銷", "蕭"]
@@ -4420,7 +4420,7 @@
         "options": ["赫", "賀", "鶴", "喝"]
       },
       {
-        "index": 35,
+        "index": 37,
         "wrong": "撤",
         "correct": "澈",
         "options": ["澈", "徹", "撤", "徹"]
@@ -4432,25 +4432,25 @@
     "content": "心裡有不愉快的情緒，要找人訴說，否則長時間壓仰情緒，將造成內心不可某滅的傷害，朋友之間互相成擔彼此的情緒，也是增進友義的一種方式。",
     "corrections": [
       {
-        "index": 19,
+        "index": 20,
         "wrong": "仰",
         "correct": "抑",
         "options": ["抑", "仰", "仰", "秧"]
       },
       {
-        "index": 30,
+        "index": 31,
         "wrong": "某",
         "correct": "抹",
         "options": ["某", "抹", "磨", "墨"]
       },
       {
-        "index": 42,
+        "index": 43,
         "wrong": "成",
         "correct": "承",
         "options": ["成", "承", "誠", "呈"]
       },
       {
-        "index": 55,
+        "index": 56,
         "wrong": "義",
         "correct": "誼",
         "options": ["義", "誼", "宜", "意"]
@@ -4468,25 +4468,25 @@
         "options": ["侯", "喉", "猴", "候"]
       },
       {
-        "index": 9,
+        "index": 10,
         "wrong": "赤",
         "correct": "斥",
         "options": ["赤", "斥", "敕", "翅"]
       },
       {
-        "index": 19,
+        "index": 24,
         "wrong": "杼",
         "correct": "佇",
         "options": ["杼", "佇", "注", "柱"]
       },
       {
-        "index": 28,
+        "index": 34,
         "wrong": "於",
         "correct": "餘",
         "options": ["於", "餘", "魚", "娛"]
       },
       {
-        "index": 35,
+        "index": 42,
         "wrong": "玲",
         "correct": "聆",
         "options": ["玲", "聆", "靈", "齡"]
@@ -4498,13 +4498,13 @@
     "content": "當今全世界造成環境汙染的垃圾眾多，數量最多的就是塑焦製品，其中寶待瓶的危害更是名列前矛。",
     "corrections": [
       {
-        "index": 22,
+        "index": 23,
         "wrong": "焦",
         "correct": "膠",
         "options": ["膠", "焦", "郊", "驕"]
       },
       {
-        "index": 29,
+        "index": 30,
         "wrong": "待",
         "correct": "特",
         "options": ["待", "特", "侍", "持"]
@@ -4522,19 +4522,19 @@
     "content": "回到山林裡，總有一種強烈的規屬感，讓我覺得特別安心，在大自然的無限思典中，我努力找尋自己的過去現在和未來，希望定意自己的價值。",
     "corrections": [
       {
-        "index": 12,
+        "index": 13,
         "wrong": "規",
         "correct": "歸",
         "options": ["規", "歸", "龜", "閨"]
       },
       {
-        "index": 29,
+        "index": 33,
         "wrong": "思",
         "correct": "恩",
         "options": ["思", "恩", "摁", "因"]
       },
       {
-        "index": 48,
+        "index": 56,
         "wrong": "意",
         "correct": "義",
         "options": ["意", "義", "議", "異"]
@@ -4546,19 +4546,19 @@
     "content": "開車要變換車道時，一定要先打方向燈。像他這樣茂然協切到另一車道的行為，跟本就像是故意要製造車禍，實在要不得。",
     "corrections": [
       {
-        "index": 21,
+        "index": 22,
         "wrong": "茂",
         "correct": "貿",
         "options": ["茂", "貿", "冒", "帽"]
       },
       {
-        "index": 23,
+        "index": 24,
         "wrong": "協",
         "correct": "斜",
         "options": ["協", "斜", "邪", "諧"]
       },
       {
-        "index": 33,
+        "index": 35,
         "wrong": "跟",
         "correct": "根",
         "options": ["跟", "根", "更", "艮"]
@@ -4576,31 +4576,31 @@
         "options": ["兢", "競", "竟", "敬"]
       },
       {
-        "index": 20,
+        "index": 21,
         "wrong": "曜",
         "correct": "耀",
         "options": ["曜", "耀", "要", "藥"]
       },
       {
-        "index": 25,
+        "index": 26,
         "wrong": "欣",
         "correct": "欣",
         "options": ["新", "欣", "心", "薪"]
       },
       {
-        "index": 26,
+        "index": 27,
         "wrong": "衛",
         "correct": "慰",
         "options": ["衛", "慰", "位", "味"]
       },
       {
-        "index": 41,
+        "index": 46,
         "wrong": "隱",
         "correct": "穩",
         "options": ["隱", "穩", "尹", "癮"]
       },
       {
-        "index": 54,
+        "index": 62,
         "wrong": "點",
         "correct": "典",
         "options": ["點", "典", "碘", "甸"]
@@ -4612,25 +4612,25 @@
     "content": "每個人都在自己的環境中找尋任同感，彼此滿足須求進而成為團體，是人類正常交友形成團體的模式，在團體當中，一定要懂得站在他人的利場為他人著想，彼此才能和協相處。",
     "corrections": [
       {
-        "index": 13,
+        "index": 14,
         "wrong": "任",
         "correct": "認",
         "options": ["任", "認", "人", "韌"]
       },
       {
-        "index": 20,
+        "index": 22,
         "wrong": "須",
         "correct": "需",
         "options": ["須", "需", "虛", "旭"]
       },
       {
-        "index": 62,
+        "index": 61,
         "wrong": "利",
         "correct": "立",
         "options": ["利", "立", "例", "力"]
       },
       {
-        "index": 73,
+        "index": 74,
         "wrong": "協",
         "correct": "諧",
         "options": ["協", "諧", "偕", "攜"]
@@ -4648,25 +4648,25 @@
         "options": ["松", "鬆", "嵩", "淞"]
       },
       {
-        "index": 22,
+        "index": 23,
         "wrong": "概",
         "correct": "溉",
         "options": ["概", "溉", "蓋", "丐"]
       },
       {
-        "index": 25,
+        "index": 26,
         "wrong": "閏",
         "correct": "潤",
         "options": ["閏", "潤", "論", "閏"]
       },
       {
-        "index": 35,
+        "index": 37,
         "wrong": "牙",
         "correct": "芽",
         "options": ["牙", "芽", "雅", "訝"]
       },
       {
-        "index": 52,
+        "index": 59,
         "wrong": "練",
         "correct": "戀",
         "options": ["練", "戀", "鍊", "煉"]
@@ -4678,7 +4678,7 @@
     "content": "在盛夏午後的庭院中，尋一片樹蔭躺下打了個頓兒，箇中的滋味非筆默可以形容，只有享受過這種悠閒自在的人生，這被子才不算白活。",
     "corrections": [
       {
-        "index": 19,
+        "index": 18,
         "wrong": "頓",
         "correct": "盹",
         "options": ["頓", "盹", "盾", "鈍"]
@@ -4690,7 +4690,7 @@
         "options": ["默", "墨", "磨", "莫"]
       },
       {
-        "index": 48,
+        "index": 50,
         "wrong": "被",
         "correct": "輩",
         "options": ["被", "輩", "背", "備"]
@@ -4708,19 +4708,19 @@
         "options": ["形", "型", "行", "刑"]
       },
       {
-        "index": 26,
+        "index": 28,
         "wrong": "桀",
         "correct": "傑",
         "options": ["桀", "傑", "杰", "結"]
       },
       {
-        "index": 39,
+        "index": 42,
         "wrong": "後",
         "correct": "厚",
         "options": ["後", "厚", "候", "后"]
       },
       {
-        "index": 62,
+        "index": 66,
         "wrong": "十",
         "correct": "實",
         "options": ["十", "實", "石", "時"]
@@ -4738,7 +4738,7 @@
         "options": ["像", "象", "相", "向"]
       },
       {
-        "index": 23,
+        "index": 22,
         "wrong": "食",
         "correct": "時",
         "options": ["食", "時", "十", "實"]
@@ -4756,25 +4756,25 @@
     "content": "在公園深處的一塊石板旁，有一處像是動物所挖絕出的朝穴，仔細一看內部空蕩蕩，只聽到水流所引發的共銘聲，讓人忍不住想更進一步探嗦。",
     "corrections": [
       {
-        "index": 18,
+        "index": 19,
         "wrong": "絕",
         "correct": "掘",
         "options": ["絕", "掘", "倔", "爵"]
       },
       {
-        "index": 21,
+        "index": 22,
         "wrong": "朝",
         "correct": "巢",
         "options": ["朝", "巢", "潮", "嘲"]
       },
       {
-        "index": 43,
+        "index": 45,
         "wrong": "銘",
         "correct": "鳴",
         "options": ["銘", "鳴", "名", "明"]
       },
       {
-        "index": 55,
+        "index": 59,
         "wrong": "嗦",
         "correct": "索",
         "options": ["嗦", "索", "縮", "鎖"]
@@ -4798,7 +4798,7 @@
         "options": ["瀰", "彌", "迷", "謎"]
       },
       {
-        "index": 30,
+        "index": 31,
         "wrong": "蜜",
         "correct": "密",
         "options": ["蜜", "密", "祕", "謐"]
@@ -4810,31 +4810,31 @@
     "content": "要保護水資源，首先就應立法保護水源地。因為水資源並非取之不進用之不節，若不能從根本進行保護則一切都將是空談，等到終於乾窟不再有水流出時將候悔莫急。",
     "corrections": [
       {
-        "index": 25,
+        "index": 24,
         "wrong": "進",
         "correct": "盡",
         "options": ["進", "盡", "近", "勁"]
       },
       {
-        "index": 29,
+        "index": 28,
         "wrong": "節",
         "correct": "竭",
         "options": ["節", "竭", "結", "潔"]
       },
       {
-        "index": 52,
+        "index": 54,
         "wrong": "窟",
         "correct": "枯",
         "options": ["窟", "枯", "苦", "酷"]
       },
       {
-        "index": 62,
+        "index": 63,
         "wrong": "候",
         "correct": "後",
         "options": ["候", "後", "厚", "后"]
       },
       {
-        "index": 65,
+        "index": 66,
         "wrong": "急",
         "correct": "及",
         "options": ["急", "及", "集", "級"]
@@ -4852,13 +4852,13 @@
         "options": ["政", "證", "正", "鄭"]
       },
       {
-        "index": 17,
+        "index": 18,
         "wrong": "伸",
         "correct": "申",
         "options": ["伸", "申", "身", "深"]
       },
       {
-        "index": 28,
+        "index": 30,
         "wrong": "蕁",
         "correct": "尋",
         "options": ["蕁", "尋", "循", "詢"]
@@ -4870,7 +4870,7 @@
     "content": "聽說你將到西藏朝聖，那可是千戴難逢的好機會，西藏的風光像一副畫，美不盛收。對著神明頂禮模拜的時候，記得祁求國泰民安喔！",
     "corrections": [
       {
-        "index": 14,
+        "index": 13,
         "wrong": "戴",
         "correct": "載",
         "options": ["戴", "載", "再", "在"]
@@ -4888,13 +4888,13 @@
         "options": ["盛", "勝", "聖", "剩"]
       },
       {
-        "index": 43,
+        "index": 42,
         "wrong": "模",
         "correct": "膜",
         "options": ["模", "膜", "磨", "摩"]
       },
       {
-        "index": 51,
+        "index": 50,
         "wrong": "祁",
         "correct": "祈",
         "options": ["祁", "祈", "齊", "啟"]
@@ -4906,31 +4906,31 @@
     "content": "異國風格優美的建築，微風徐徐吹來，安靜、切意，沒有暄囂、吵雜，舒適甜靜的芬圍讓這間民宿聲名大燥，吸引許多觀光客。",
     "corrections": [
       {
-        "index": 15,
+        "index": 20,
         "wrong": "切",
         "correct": "愜",
         "options": ["切", "愜", "怯", "茄"]
       },
       {
-        "index": 20,
+        "index": 25,
         "wrong": "暄",
         "correct": "喧",
         "options": ["暄", "喧", "宣", "暄"]
       },
       {
-        "index": 28,
+        "index": 33,
         "wrong": "甜",
         "correct": "恬",
         "options": ["甜", "恬", "填", "添"]
       },
       {
-        "index": 31,
+        "index": 36,
         "wrong": "芬",
         "correct": "氛",
         "options": ["芬", "氛", "分", "紛"]
       },
       {
-        "index": 41,
+        "index": 46,
         "wrong": "燥",
         "correct": "噪",
         "options": ["燥", "噪", "躁", "澡"]
@@ -4948,13 +4948,13 @@
         "options": ["琉", "流", "留", "劉"]
       },
       {
-        "index": 21,
+        "index": 23,
         "wrong": "院",
         "correct": "願",
         "options": ["院", "願", "怨", "元"]
       },
       {
-        "index": 36,
+        "index": 37,
         "wrong": "慷",
         "correct": "康",
         "options": ["慷", "康", "糠", "扛"]
@@ -4972,25 +4972,25 @@
         "options": ["非", "啡", "飛", "扉"]
       },
       {
-        "index": 12,
+        "index": 13,
         "wrong": "鋁",
         "correct": "旅",
         "options": ["鋁", "旅", "履", "呂"]
       },
       {
-        "index": 21,
+        "index": 23,
         "wrong": "波",
         "correct": "玻",
         "options": ["波", "玻", "坡", "潑"]
       },
       {
-        "index": 26,
+        "index": 29,
         "wrong": "稍",
         "correct": "梢",
         "options": ["稍", "梢", "捎", "筲"]
       },
       {
-        "index": 29,
+        "index": 32,
         "wrong": "曜",
         "correct": "躍",
         "options": ["曜", "躍", "耀", "要"]
@@ -5002,19 +5002,19 @@
     "content": "小維望著窗外的大雨，輕輕綴飲手中的熱咖啡，聽著雨點塙打屋頂的聲音，等待著雨停後的天情。",
     "corrections": [
       {
-        "index": 12,
+        "index": 13,
         "wrong": "綴",
         "correct": "啜",
         "options": ["綴", "啜", "贅", "墜"]
       },
       {
-        "index": 24,
+        "index": 26,
         "wrong": "塙",
         "correct": "敲",
         "options": ["塙", "敲", "高", "搞"]
       },
       {
-        "index": 39,
+        "index": 42,
         "wrong": "情",
         "correct": "晴",
         "options": ["情", "晴", "清", "輕"]
@@ -5044,7 +5044,7 @@
         "options": ["飯", "販", "犯", "泛"]
       },
       {
-        "index": 59,
+        "index": 63,
         "wrong": "錯",
         "correct": "措",
         "options": ["錯", "措", "厝", "挫"]
@@ -5092,25 +5092,25 @@
         "options": ["停", "亭", "庭", "廷"]
       },
       {
-        "index": 15,
+        "index": 19,
         "wrong": "啟",
         "correct": "起",
         "options": ["啟", "起", "豈", "企"]
       },
       {
-        "index": 22,
+        "index": 26,
         "wrong": "敝",
         "correct": "蔽",
         "options": ["敝", "蔽", "必", "閉"]
       },
       {
-        "index": 32,
+        "index": 35,
         "wrong": "宿",
         "correct": "夙",
         "options": ["宿", "夙", "速", "素"]
       },
       {
-        "index": 35,
+        "index": 38,
         "wrong": "邂",
         "correct": "懈",
         "options": ["邂", "懈", "謝", "解"]
@@ -5374,25 +5374,25 @@
         "options": ["怡", "儀", "宜", "移"]
       },
       {
-        "index": 5,
+        "index": 6,
         "wrong": "像",
         "correct": "象",
         "options": ["像", "象", "相", "向"]
       },
       {
-        "index": 15,
+        "index": 18,
         "wrong": "挫",
         "correct": "措",
         "options": ["挫", "措", "錯", "厝"]
       },
       {
-        "index": 21,
+        "index": 24,
         "wrong": "輪",
         "correct": "倫",
         "options": ["輪", "倫", "論", "侖"]
       },
       {
-        "index": 42,
+        "index": 44,
         "wrong": "絀",
         "correct": "拙",
         "options": ["絀", "拙", "出", "黜"]
@@ -5410,19 +5410,19 @@
         "options": ["茹", "如", "儒", "孺"]
       },
       {
-        "index": 51,
+        "index": 54,
         "wrong": "息",
         "correct": "昔",
         "options": ["息", "昔", "夕", "西"]
       },
       {
-        "index": 67,
+        "index": 70,
         "wrong": "企",
         "correct": "契",
         "options": ["企", "契", "氣", "棄"]
       },
       {
-        "index": 70,
+        "index": 73,
         "wrong": "絕",
         "correct": "決",
         "options": ["絕", "決", "覺", "掘"]
@@ -5440,25 +5440,25 @@
         "options": ["勃", "帛", "薄", "伯"]
       },
       {
-        "index": 60,
+        "index": 56,
         "wrong": "深",
         "correct": "傷",
         "options": ["深", "傷", "上", "商"]
       },
       {
-        "index": 64,
+        "index": 61,
         "wrong": "蛻",
         "correct": "銳",
         "options": ["蛻", "銳", "瑞", "瑞"]
       },
       {
-        "index": 79,
+        "index": 77,
         "wrong": "僅",
         "correct": "謹",
         "options": ["僅", "謹", "緊", "進"]
       },
       {
-        "index": 87,
+        "index": 86,
         "wrong": "瀰",
         "correct": "彌",
         "options": ["瀰", "彌", "迷", "謎"]
@@ -6046,19 +6046,19 @@
         "options": ["節", "截", "潔", "結"]
       },
       {
-        "index": 19,
+        "index": 22,
         "wrong": "即",
         "correct": "擊",
         "options": ["即", "擊", "及", "急"]
       },
       {
-        "index": 28,
+        "index": 33,
         "wrong": "諭",
         "correct": "喻",
         "options": ["諭", "喻", "愈", "欲"]
       },
       {
-        "index": 52,
+        "index": 57,
         "wrong": "成",
         "correct": "承",
         "options": ["成", "承", "誠", "呈"]
@@ -6082,19 +6082,19 @@
         "options": ["零", "凌", "靈", "鈴"]
       },
       {
-        "index": 30,
+        "index": 31,
         "wrong": "矛",
         "correct": "茅",
         "options": ["矛", "茅", "毛", "貌"]
       },
       {
-        "index": 36,
+        "index": 37,
         "wrong": "熬",
         "correct": "鰲",
         "options": ["熬", "鰲", "敖", "傲"]
       },
       {
-        "index": 48,
+        "index": 51,
         "wrong": "媛",
         "correct": "緣",
         "options": ["媛", "緣", "圓", "源"]
@@ -6106,25 +6106,25 @@
     "content": "草叢旁是一段廢棄的舊河提，上面因人煙罕至而爬滿了枯枝，完全癮沒在這樹林之中，此地雖然隱蜜，但總有一種說不出的荒涼感，也許往上遊看看，能找到不一樣的風景。",
     "corrections": [
       {
-        "index": 12,
+        "index": 11,
         "wrong": "提",
         "correct": "堤",
         "options": ["提", "堤", "題", "蹄"]
       },
       {
-        "index": 28,
+        "index": 29,
         "wrong": "癮",
         "correct": "隱",
         "options": ["癮", "隱", "尹", "引"]
       },
       {
-        "index": 40,
+        "index": 43,
         "wrong": "蜜",
         "correct": "密",
         "options": ["蜜", "密", "祕", "謐"]
       },
       {
-        "index": 60,
+        "index": 62,
         "wrong": "遊",
         "correct": "游",
         "options": ["遊", "游", "油", "由"]
@@ -6142,19 +6142,19 @@
         "options": ["曜", "耀", "要", "藥"]
       },
       {
-        "index": 14,
+        "index": 15,
         "wrong": "忙",
         "correct": "茫",
         "options": ["忙", "茫", "盲", "莽"]
       },
       {
-        "index": 20,
+        "index": 21,
         "wrong": "盾",
         "correct": "頓",
         "options": ["盾", "頓", "鈍", "噸"]
       },
       {
-        "index": 25,
+        "index": 26,
         "wrong": "炫",
         "correct": "眩",
         "options": ["炫", "眩", "選", "旋"]
@@ -6172,19 +6172,19 @@
         "options": ["纜", "覽", "攬", "藍"]
       },
       {
-        "index": 24,
+        "index": 26,
         "wrong": "密",
         "correct": "祕",
         "options": ["密", "祕", "秘", "蜜"]
       },
       {
-        "index": 29,
+        "index": 31,
         "wrong": "玄",
         "correct": "懸",
         "options": ["玄", "懸", "選", "旋"]
       },
       {
-        "index": 33,
+        "index": 35,
         "wrong": "副",
         "correct": "幅",
         "options": ["副", "幅", "福", "服"]
@@ -6214,13 +6214,13 @@
     "content": "她吃了減肥藥之後，竟然變得老態龍鐘，真是弄悄成拙。",
     "corrections": [
       {
-        "index": 14,
+        "index": 16,
         "wrong": "鐘",
         "correct": "鍾",
         "options": ["鐘", "鍾", "中", "終"]
       },
       {
-        "index": 19,
+        "index": 21,
         "wrong": "悄",
         "correct": "巧",
         "options": ["悄", "巧", "俏", "敲"]
@@ -6256,7 +6256,7 @@
         "options": ["答", "達", "搭", "打"]
       },
       {
-        "index": 13,
+        "index": 12,
         "wrong": "達",
         "correct": "答",
         "options": ["達", "答", "搭", "打"]
@@ -6268,19 +6268,19 @@
     "content": "面對盜賊，他占占兢兢，徨恐不以。",
     "corrections": [
       {
-        "index": 5,
+        "index": 6,
         "wrong": "占",
         "correct": "戰",
         "options": ["占", "戰", "站", "瞻"]
       },
       {
-        "index": 10,
+        "index": 11,
         "wrong": "徨",
         "correct": "惶",
         "options": ["徨", "惶", "皇", "黃"]
       },
       {
-        "index": 13,
+        "index": 14,
         "wrong": "以",
         "correct": "已",
         "options": ["以", "已", "乙", "矣"]
@@ -6298,13 +6298,13 @@
         "options": ["涯", "崖", "牙", "芽"]
       },
       {
-        "index": 15,
+        "index": 16,
         "wrong": "直",
         "correct": "擲",
         "options": ["直", "擲", "值", "執"]
       },
       {
-        "index": 20,
+        "index": 21,
         "wrong": "博",
         "correct": "搏",
         "options": ["博", "搏", "薄", "膊"]
@@ -6340,13 +6340,13 @@
         "options": ["墨", "默", "末", "莫"]
       },
       {
-        "index": 17,
+        "index": 18,
         "wrong": "暇",
         "correct": "遐",
         "options": ["暇", "遐", "霞", "瑕"]
       },
       {
-        "index": 25,
+        "index": 26,
         "wrong": "籃",
         "correct": "藍",
         "options": ["籃", "藍", "蘭", "攔"]
@@ -6520,10 +6520,10 @@
         "options": ["撿", "簡", "檢", "減"]
       },
       {
-        "index": 9,
+        "index": 11,
         "wrong": "衡",
         "correct": "橫",
-        "options": ["橫", "衡", "恆", "珩"]
+        "options": ["衡", "橫", "恆", "珩"]
       }
     ]
   },
@@ -6538,7 +6538,7 @@
         "options": ["憤", "奮", "糞", "份"]
       },
       {
-        "index": 16,
+        "index": 17,
         "wrong": "娟",
         "correct": "狷",
         "options": ["狷", "娟", "涓", "絹"]
@@ -6550,13 +6550,13 @@
     "content": "天氣炎熱，冰店的生意興隆，川流不息的客人使得老闆映接不遐。",
     "corrections": [
       {
-        "index": 21,
+        "index": 24,
         "wrong": "映",
         "correct": "應",
         "options": ["應", "映", "硬", "迎"]
       },
       {
-        "index": 24,
+        "index": 27,
         "wrong": "遐",
         "correct": "暇",
         "options": ["暇", "遐", "霞", "瑕"]
@@ -6580,7 +6580,7 @@
         "options": ["軼", "易", "逸", "藝"]
       },
       {
-        "index": 13,
+        "index": 14,
         "wrong": "鎖",
         "correct": "瑣",
         "options": ["瑣", "鎖", "索", "所"]
@@ -6598,13 +6598,13 @@
         "options": ["昊", "浩", "皓", "好"]
       },
       {
-        "index": 17,
+        "index": 20,
         "wrong": "抱",
         "correct": "報",
         "options": ["報", "抱", "暴", "爆"]
       },
       {
-        "index": 18,
+        "index": 21,
         "wrong": "達",
         "correct": "答",
         "options": ["答", "達", "搭", "打"]
@@ -6646,13 +6646,13 @@
         "options": ["履", "屢", "旅", "縷"]
       },
       {
-        "index": 16,
+        "index": 20,
         "wrong": "猷",
         "correct": "猶",
         "options": ["猶", "猷", "由", "游"]
       },
       {
-        "index": 23,
+        "index": 27,
         "wrong": "徨",
         "correct": "惶",
         "options": ["惶", "徨", "皇", "黃"]
@@ -6670,19 +6670,19 @@
         "options": ["遊", "旅", "履", "縷"]
       },
       {
-        "index": 15,
+        "index": 19,
         "wrong": "對",
         "correct": "隊",
         "options": ["隊", "對", "兌", "堆"]
       },
       {
-        "index": 24,
+        "index": 29,
         "wrong": "經",
         "correct": "菁",
         "options": ["菁", "經", "精", "驚"]
       },
       {
-        "index": 32,
+        "index": 42,
         "wrong": "物",
         "correct": "務",
         "options": ["務", "物", "誤", "霧"]
@@ -6700,13 +6700,13 @@
         "options": ["磨", "摩", "魔", "模"]
       },
       {
-        "index": 12,
+        "index": 15,
         "wrong": "始",
         "correct": "使",
         "options": ["使", "始", "史", "駛"]
       },
       {
-        "index": 20,
+        "index": 24,
         "wrong": "慈",
         "correct": "辭",
         "options": ["辭", "慈", "詞", "祠"]
@@ -6730,19 +6730,19 @@
         "options": ["憶", "億", "益", "藝"]
       },
       {
-        "index": 15,
+        "index": 16,
         "wrong": "辛",
         "correct": "幸",
         "options": ["幸", "辛", "信", "倖"]
       },
       {
-        "index": 44,
+        "index": 51,
         "wrong": "診",
         "correct": "珍",
         "options": ["珍", "診", "真", "貞"]
       },
       {
-        "index": 47,
+        "index": 54,
         "wrong": "氧",
         "correct": "養",
         "options": ["養", "氧", "癢", "仰"]
@@ -6760,19 +6760,19 @@
         "options": ["肘", "帚", "舟", "周"]
       },
       {
-        "index": 14,
+        "index": 15,
         "wrong": "檢",
         "correct": "儉",
         "options": ["儉", "檢", "簡", "減"]
       },
       {
-        "index": 26,
+        "index": 29,
         "wrong": "關",
         "correct": "觀",
         "options": ["觀", "關", "官", "冠"]
       },
       {
-        "index": 35,
+        "index": 38,
         "wrong": "柘",
         "correct": "拓",
         "options": ["拓", "柘", "托", "拖"]
@@ -6796,19 +6796,19 @@
         "options": ["承", "呈", "成", "誠"]
       },
       {
-        "index": 33,
+        "index": 34,
         "wrong": "認",
         "correct": "任",
         "options": ["任", "認", "人", "韌"]
       },
       {
-        "index": 40,
+        "index": 42,
         "wrong": "劾",
         "correct": "核",
         "options": ["核", "劾", "和", "合"]
       },
       {
-        "index": 46,
+        "index": 48,
         "wrong": "祭",
         "correct": "際",
         "options": ["際", "祭", "濟", "季"]
@@ -6820,25 +6820,25 @@
     "content": "小雄幼年與外婆相伊為命，鄰家木匠時常與他玩耍並傳綬他木工計巧，這段經歷啟發他對建築的初步悻趣。",
     "corrections": [
       {
-        "index": 7,
+        "index": 8,
         "wrong": "伊",
         "correct": "依",
         "options": ["依", "伊", "衣", "醫"]
       },
       {
-        "index": 18,
+        "index": 24,
         "wrong": "綬",
         "correct": "授",
         "options": ["授", "綬", "受", "手"]
       },
       {
-        "index": 22,
+        "index": 28,
         "wrong": "計",
         "correct": "技",
         "options": ["技", "計", "季", "記"]
       },
       {
-        "index": 37,
+        "index": 44,
         "wrong": "悻",
         "correct": "興",
         "options": ["興", "悻", "性", "幸"]
@@ -6856,13 +6856,13 @@
         "options": ["景", "憬", "警", "頸"]
       },
       {
-        "index": 17,
+        "index": 18,
         "wrong": "負",
         "correct": "覆",
         "options": ["覆", "負", "付", "富"]
       },
       {
-        "index": 33,
+        "index": 32,
         "wrong": "療",
         "correct": "遼",
         "options": ["遼", "療", "聊", "瞭"]
@@ -6880,13 +6880,13 @@
         "options": ["視", "式", "試", "示"]
       },
       {
-        "index": 13,
+        "index": 14,
         "wrong": "逕",
         "correct": "徑",
         "options": ["徑", "逕", "勁", "淨"]
       },
       {
-        "index": 21,
+        "index": 23,
         "wrong": "執",
         "correct": "質",
         "options": ["質", "執", "職", "止"]
@@ -6910,25 +6910,25 @@
         "options": ["排", "徘", "牌", "派"]
       },
       {
-        "index": 20,
+        "index": 22,
         "wrong": "仿",
         "correct": "訪",
         "options": ["訪", "仿", "紡", "防"]
       },
       {
-        "index": 36,
+        "index": 38,
         "wrong": "寐",
         "correct": "魅",
         "options": ["魅", "寐", "妹", "媚"]
       },
       {
-        "index": 39,
+        "index": 41,
         "wrong": "新",
         "correct": "心",
         "options": ["心", "新", "欣", "薪"]
       },
       {
-        "index": 48,
+        "index": 50,
         "wrong": "孟",
         "correct": "夢",
         "options": ["夢", "孟", "猛", "矇"]
@@ -6940,25 +6940,25 @@
     "content": "國中畢業後，他改讀高工機卸科，開始自學建築，為了出國看建築，他考取職業卷擊賽值照，踏上探瑣之路。",
     "corrections": [
       {
-        "index": 11,
+        "index": 12,
         "wrong": "卸",
         "correct": "械",
         "options": ["械", "卸", "謝", "懈"]
       },
       {
-        "index": 29,
+        "index": 31,
         "wrong": "卷",
         "correct": "拳",
         "options": ["拳", "卷", "全", "權"]
       },
       {
-        "index": 32,
+        "index": 34,
         "wrong": "值",
         "correct": "執",
         "options": ["執", "值", "職", "直"]
       },
       {
-        "index": 38,
+        "index": 40,
         "wrong": "瑣",
         "correct": "索",
         "options": ["索", "瑣", "鎖", "所"]
