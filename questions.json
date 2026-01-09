@@ -532,7 +532,7 @@
         "options": ["變", "遍", "編", "扁"]
       },
       {
-        "index": 15,
+        "index": 14,
         "wrong": "拈",
         "correct": "沾",
         "options": ["沾", "佔", "拈", "粘"]
@@ -562,7 +562,7 @@
         "options": ["曠", "誑", "況", "狂"]
       },
       {
-        "index": 32,
+        "index": 31,
         "wrong": "敝",
         "correct": "避",
         "options": ["避", "必", "閉", "敝"]
@@ -676,7 +676,7 @@
         "options": ["瑩", "迎", "盈", "贏"]
       },
       {
-        "index": 25,
+        "index": 23,
         "wrong": "煦",
         "correct": "許",
         "options": ["栩", "煦", "許", "需"]
@@ -724,7 +724,7 @@
         "options": ["遷", "謙", "牽", "簽"]
       },
       {
-        "index": 25,
+        "index": 26,
         "wrong": "矣",
         "correct": "已",
         "options": ["已", "乙", "以", "矣"]
@@ -742,13 +742,13 @@
         "options": ["閉", "幣", "必", "畢"]
       },
       {
-        "index": 15,
+        "index": 18,
         "wrong": "錯",
         "correct": "挫",
         "options": ["錯", "挫", "措", "厝"]
       },
       {
-        "index": 27,
+        "index": 30,
         "wrong": "營",
         "correct": "盈",
         "options": ["贏", "盈", "瑩", "營"]
@@ -802,13 +802,13 @@
         "options": ["密", "泌", "謐", "秘"]
       },
       {
-        "index": 5,
+        "index": 6,
         "wrong": "息",
         "correct": "襲",
         "options": ["習", "息", "襲", "吸"]
       },
       {
-        "index": 11,
+        "index": 12,
         "wrong": "蹄",
         "correct": "啼",
         "options": ["提", "蹄", "啼", "題"]
@@ -820,7 +820,7 @@
         "options": ["獨", "毒", "讀", "篤"]
       },
       {
-        "index": 34,
+        "index": 36,
         "wrong": "倦",
         "correct": "眷",
         "options": ["券", "眷", "倦", "圈"]
@@ -910,25 +910,25 @@
         "options": ["偵", "真", "珍", "甄"]
       },
       {
-        "index": 39,
+        "index": 40,
         "wrong": "滄",
         "correct": "蒼",
         "options": ["蒼", "倉", "滄", "槍"]
       },
       {
-        "index": 40,
+        "index": 41,
         "wrong": "滄",
         "correct": "蒼",
         "options": ["蒼", "倉", "滄", "艙"]
       },
       {
-        "index": 48,
+        "index": 49,
         "wrong": "搓",
         "correct": "嗟",
         "options": ["蹉", "嗟", "差", "搓"]
       },
       {
-        "index": 61,
+        "index": 62,
         "wrong": "記",
         "correct": "濟",
         "options": ["濟", "既", "際", "記"]
@@ -946,13 +946,13 @@
         "options": ["棄", "妻", "緝", "氣"]
       },
       {
-        "index": 12,
+        "index": 13,
         "wrong": "露",
         "correct": "漏",
         "options": ["漏", "露", "路", "陸"]
       },
       {
-        "index": 23,
+        "index": 24,
         "wrong": "突",
         "correct": "徒",
         "options": ["突", "徒", "圖", "途"]
@@ -994,13 +994,13 @@
     "content": "陳老師神態威嚴，只要臉色一變，那些調皮的同學都會正巾危坐，不敢再造刺。",
     "corrections": [
       {
-        "index": 23,
+        "index": 25,
         "wrong": "巾",
         "correct": "襟",
         "options": ["禁", "襟", "金", "巾"]
       },
       {
-        "index": 31,
+        "index": 33,
         "wrong": "刺",
         "correct": "次",
         "options": ["刺", "次", "賜", "伺"]
@@ -1066,7 +1066,7 @@
         "options": ["頭", "透", "投", "偷"]
       },
       {
-        "index": 29,
+        "index": 32,
         "wrong": "提",
         "correct": "啼",
         "options": ["提", "蹄", "啼", "題"]
@@ -1084,13 +1084,13 @@
         "options": ["郊", "絞", "茭", "皎"]
       },
       {
-        "index": 13,
+        "index": 15,
         "wrong": "殲",
         "correct": "纖",
         "options": ["殲", "纖", "籤", "懺"]
       },
       {
-        "index": 15,
+        "index": 17,
         "wrong": "宿",
         "correct": "素",
         "options": ["速", "宿", "素", "肅"]
@@ -1114,13 +1114,13 @@
         "options": ["警", "儆", "敬", "景"]
       },
       {
-        "index": 20,
+        "index": 22,
         "wrong": "禁",
         "correct": "噤",
         "options": ["禁", "噤", "襟", "金"]
       },
       {
-        "index": 30,
+        "index": 33,
         "wrong": "禁",
         "correct": "錮",
         "options": ["錮", "固", "顧", "禁"]
@@ -1138,19 +1138,19 @@
         "options": ["淵", "冤", "鳶", "鴛"]
       },
       {
-        "index": 11,
+        "index": 13,
         "wrong": "綱",
         "correct": "網",
         "options": ["罔", "網", "綱", "岡"]
       },
       {
-        "index": 30,
+        "index": 37,
         "wrong": "祥",
         "correct": "詳",
         "options": ["祥", "詳", "翔", "想"]
       },
       {
-        "index": 38,
+        "index": 46,
         "wrong": "剃",
         "correct": "涕",
         "options": ["剃", "涕", "替", "悌"]
@@ -1186,13 +1186,13 @@
     "content": "吳起母親病殁，他沒回故鄉奔桑，引起曾參不悅，與吳起斷決了師生關係。",
     "corrections": [
       {
-        "index": 11,
+        "index": 13,
         "wrong": "桑",
         "correct": "喪",
         "options": ["喪", "桑", "嗓", "傷"]
       },
       {
-        "index": 22,
+        "index": 26,
         "wrong": "決",
         "correct": "絕",
         "options": ["決", "絕", "覺", "掘"]
@@ -1210,7 +1210,7 @@
         "options": ["晝", "咒", "皺", "宙"]
       },
       {
-        "index": 22,
+        "index": 25,
         "wrong": "向",
         "correct": "象",
         "options": ["向", "相", "象", "像"]
@@ -1252,13 +1252,13 @@
         "options": ["柱", "杼", "抒", "佇"]
       },
       {
-        "index": 12,
+        "index": 13,
         "wrong": "紮",
         "correct": "札",
         "options": ["札", "紮", "扎", "軋"]
       },
       {
-        "index": 18,
+        "index": 19,
         "wrong": "配",
         "correct": "佩",
         "options": ["配", "佩", "珮", "倍"]
@@ -1270,19 +1270,19 @@
     "content": "人世的滄桑和半生的漂凌不安，彷彿月的贏虧，給人深刻的感悟。",
     "corrections": [
       {
-        "index": 8,
+        "index": 9,
         "wrong": "漂",
         "correct": "飄",
         "options": ["漂", "飄", "瓢", "標"]
       },
       {
-        "index": 9,
+        "index": 10,
         "wrong": "凌",
         "correct": "零",
         "options": ["靈", "零", "凌", "鈴"]
       },
       {
-        "index": 16,
+        "index": 18,
         "wrong": "贏",
         "correct": "盈",
         "options": ["盈", "贏", "瑩", "營"]
