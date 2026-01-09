@@ -10,7 +10,7 @@
         "options": ["剎", "霎", "煞", "殺"]
       },
       {
-        "index": 28,
+        "index": 27,
         "wrong": "五",
         "correct": "舞",
         "options": ["午", "五", "舞", "武"]
@@ -34,7 +34,7 @@
         "options": ["遼", "繚", "撩", "潦"]
       },
       {
-        "index": 17,
+        "index": 18,
         "wrong": "摻",
         "correct": "滲",
         "options": ["參", "慘", "摻", "滲"]
@@ -178,25 +178,25 @@
         "options": ["聯", "廉", "連", "憐"]
       },
       {
-        "index": 12,
+        "index": 13,
         "wrong": "碩",
         "correct": "爍",
         "options": ["爍", "碩", "朔", "鑠"]
       },
       {
-        "index": 19,
+        "index": 20,
         "wrong": "禧",
         "correct": "嬉",
         "options": ["禧", "嘻", "嬉", "喜"]
       },
       {
-        "index": 27,
+        "index": 28,
         "wrong": "揚",
         "correct": "洋",
         "options": ["陽", "洋", "揚", "羊"]
       },
       {
-        "index": 33,
+        "index": 34,
         "wrong": "詳",
         "correct": "祥",
         "options": ["詳", "翔", "祥", "降"]
@@ -262,19 +262,19 @@
         "options": ["葡", "圃", "匍", "蒲"]
       },
       {
-        "index": 20,
+        "index": 19,
         "wrong": "締",
         "correct": "蒂",
         "options": ["帝", "締", "蒂", "啼"]
       },
       {
-        "index": 50,
+        "index": 49,
         "wrong": "遂",
         "correct": "逐",
         "options": ["逐", "遂", "隧", "家"]
       },
       {
-        "index": 52,
+        "index": 51,
         "wrong": "酥",
         "correct": "蘇",
         "options": ["酥", "甦", "蘇", "蔬"]
@@ -310,7 +310,7 @@
         "options": ["淋", "林", "琳", "霖"]
       },
       {
-        "index": 29,
+        "index": 28,
         "wrong": "待",
         "correct": "殆",
         "options": ["待", "代", "怠", "殆"]
@@ -466,25 +466,25 @@
         "options": ["籠", "壟", "攏", "龍"]
       },
       {
-        "index": 13,
+        "index": 12,
         "wrong": "怜",
         "correct": "伶",
         "options": ["鈴", "伶", "怜", "零"]
       },
       {
-        "index": 19,
+        "index": 18,
         "wrong": "淹",
         "correct": "掩",
         "options": ["淹", "演", "掩", "衍"]
       },
       {
-        "index": 33,
+        "index": 30,
         "wrong": "具",
         "correct": "懼",
         "options": ["具", "懼", "聚", "劇"]
       },
       {
-        "index": 38,
+        "index": 35,
         "wrong": "泄",
         "correct": "洩",
         "options": ["泄", "卸", "洩", "懈"]
